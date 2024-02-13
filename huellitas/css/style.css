@@ -19,7 +19,7 @@ body {
 .navbar-full{
     top: 0;
     position: fixed;
-    background-color: #FF8080;
+    background-color: #FFCF96;
     width: 100%;
     display: flex;
     /*margen 0 arriba y abajo, auto derecha e izquierda*/
@@ -54,7 +54,7 @@ body {
 
 /*cambio de color al pasar el mouse*/
 .navbar-options a:hover {
-    background-color: #ff7474;
+    background-color: #ffa074;
     color: rgb(249, 242, 233);
 }
 
@@ -80,16 +80,18 @@ body {
     left: 7%;
     background-color: #ffe8c93f;
     backdrop-filter: blur(4px);
-    width: 35%;
+    width: 40%;
     height: 50%;
     margin: 1vw;
     border-radius: 1vw;
-    padding: 0.5vw 3vw;
+    padding: 0.4vw 3vw;
     color: black;
     font-family: 'Amatic SC', sans-serif;
-    font-size: 2.2vw;
+    font-size: 2.5vw;
     text-align: center;
+    line-height: 5.2vw;
     overflow: auto;
+    font-style: bold;
 
 }
 
@@ -339,17 +341,21 @@ footer h3{
 }
 .mapa{
     border-radius: 1vw;
-    filter: grayscale(50%);
+    
+    margin: 1vw 0;
 }
-
-
-
-.contact-logos{
+.flex-container-contactanos{
     display: inline-flex;
     justify-content: space-evenly;
     margin: 1vw 0;
     margin-top: 2rem;
     align-items: center;
+}
+
+.contact-logos{
     height: 3vw;
     width: auto;
+    border-radius: 1vw;
+    margin: 0 1vw;
+    box-shadow: 0 0 40px rgba(2, 2, 2, 0.1);
 }
