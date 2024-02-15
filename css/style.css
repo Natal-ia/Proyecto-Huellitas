@@ -9,6 +9,12 @@ lima pastel     #CDFADB
 */
 
 /*---------------------------------LANDING PAGE---------------------------------------*/
+
+*{
+    scroll-behavior: smooth;
+    scroll-margin-top: 7vw;
+}
+
 body {
     margin: auto;
     margin-top: 2%;
@@ -101,7 +107,7 @@ body {
     width: 12vw;
 }
 */
-.flex-container {
+.welcome {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -112,7 +118,7 @@ body {
 }
 
 
-.flex-container div {
+.welcome div {
     width: 35%;
     padding: 1vw;
     border-radius: 1vw;
@@ -120,7 +126,7 @@ body {
     font-size: 1.25vw;
 }
 
-.flex-container h1 {
+.welcome h1 {
     font-size: 2vw;
 }
 
@@ -324,8 +330,10 @@ footer div{
 }
 
 footer h3{
-    font-size: 1.3vw;
+    font-size: 1.4vw;
     margin-top: 1rem;
+    font-style: bold;
+    
 }
 
 .hospital-hours h5{
@@ -344,7 +352,7 @@ footer h3{
     
     margin: 1vw 0;
 }
-.flex-container-contactanos{
+.welcome-contactanos{
     display: inline-flex;
     justify-content: space-evenly;
     margin: 1vw 0;
