@@ -9,6 +9,12 @@ lima pastel     #CDFADB
 */
 
 /*---------------------------------LANDING PAGE---------------------------------------*/
+
+*{
+    scroll-behavior: smooth;
+    scroll-margin-top: 7vw;
+}
+
 body {
     margin: auto;
     margin-top: 2%;
@@ -24,7 +30,7 @@ body {
     display: flex;
     /*margen 0 arriba y abajo, auto derecha e izquierda*/
     margin: 0 auto;
-    /*para que este por encima de otros elementos*/
+    /*para que este por encima de otros elvwentos*/
     z-index: 9999;
     padding-left: 0.5vw;
 }
@@ -101,7 +107,7 @@ body {
     width: 12vw;
 }
 */
-.flex-container {
+.welcome {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -112,7 +118,7 @@ body {
 }
 
 
-.flex-container div {
+.welcome div {
     width: 35%;
     padding: 1vw;
     border-radius: 1vw;
@@ -120,7 +126,7 @@ body {
     font-size: 1.25vw;
 }
 
-.flex-container h1 {
+.welcome h1 {
     font-size: 2vw;
 }
 
@@ -146,7 +152,7 @@ body {
 .service{
     display: inline-flex;
     justify-content: space-evenly;
-    align-items: left;
+    align-itvws: left;
     margin: 2vw 0;
     padding: 1vw;
     margin-top: 0vw;
@@ -166,9 +172,9 @@ body {
     max-width: 70%;
     max-height: 32vw;
     height: auto;
-    border-radius: 1em;
-    margin: 2em auto;
-    margin-right: 2rem;
+    border-radius: 1vw;
+    margin: 2vw auto;
+    margin-right: 2rvw;
     position: relative;
     overflow: hidden;
     
@@ -202,7 +208,7 @@ li.slide{
     float:none;
     filter: contrast(10);
     margin-top: 2vw;
-    margin-bottom:0em;
+    margin-bottom:0vw;
     margin-right:-4px;
 
    }
@@ -285,7 +291,7 @@ li.slide{
     background-color: #FBECD9;
 }
 .slide:nth-child(6) {
-    background-color: #FFCF96;
+    background-color: #e2d4ff;
 }
 /*ocultar barra de deslice de slider*/
 .slides-container {
@@ -307,14 +313,14 @@ footer{
 
 footer div{
     text-align: center;
-    padding: 0 5rem;
+    padding: 0 5rvw;
 }
 
 
 .hospital-hours{
     text-align: left;
-    margin-left: 5rem;
-    width: 25rem;
+    margin-left: 5rvw;
+    width: 25rvw;
     
 }
 
@@ -324,15 +330,17 @@ footer div{
 }
 
 footer h3{
-    font-size: 1.3vw;
-    margin-top: 1rem;
+    font-size: 1.4vw;
+    margin-top: 1rvw;
+    font-style: bold;
+    
 }
 
 .hospital-hours h5{
     font-size: small;
     font-weight: 50;
-    margin-top: 1.5rem;
-    margin-bottom: 0.5REM;
+    margin-top: 1.5rvw;
+    margin-bottom: 0.5Rvw;
 }
 
 .hospital-hours span{
@@ -344,12 +352,12 @@ footer h3{
     
     margin: 1vw 0;
 }
-.flex-container-contactanos{
+.welcome-contactanos{
     display: inline-flex;
     justify-content: space-evenly;
     margin: 1vw 0;
-    margin-top: 2rem;
-    align-items: center;
+    margin-top: 2rvw;
+    align-itvws: center;
 }
 
 .contact-logos{
