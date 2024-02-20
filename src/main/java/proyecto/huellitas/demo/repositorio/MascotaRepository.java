@@ -11,7 +11,7 @@ public class MascotaRepository {
     private Map<Integer, Mascota> data = new HashMap<>(); // Changed to LinkedHashMap
 
     public MascotaRepository() {
-        data.put(1, new Mascota(1,"Pepito", "Beagle", 10, 14.57, "Tos", "foto1", "Jarabe"));
+        data.put(1, new Mascota(1,"Pepito", "Beagle", 10, 14.57, "Calvo", "https://i.pinimg.com/736x/6b/7c/1d/6b7c1dc10e2da54a36494effe9bf56f9.jpg", "Jarabe"));
         data.put(2, new Mascota(2,"Firulais", "Pastor Aleman", 9, 20.57, "Diarrea", "foto2", "Pastillas"));
         data.put(3, new Mascota(3,"Lola", "Pitbull", 3, 25.57, "Vomito", "foto3", "Inyeccion"));
         data.put(4, new Mascota(4,"Luna", "Golden Retriever", 5, 25.57, "Dolor", "foto4", "Inyeccion"));

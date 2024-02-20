@@ -392,3 +392,38 @@ footer h3 {
 }
 
 /* Mascotas table */
+#mascota-container{
+    padding: 2vw;
+    margin: 2vw;
+    border-radius: 1vw;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+#detalles-mascota{
+    display: inline-flex;
+    justify-content: space-evenly;
+    margin: 2vw 0;
+    padding: 1vw;
+    margin-top: 0vw;
+    border-radius: 1vw;
+    width: 100%;
+    align-self: left;
+}
+#mascota-container img{
+    border-radius: 500px;
+    width: 25vw;
+    height: 25vw;
+    overflow: hidden;
+    align-self: center;
+}
+
+#informacionMascota{
+    padding: 2vw;
+    margin-left: 2vw;
+    width: 30vw;
+    border-radius: 1vw;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    align-self: center;
+}

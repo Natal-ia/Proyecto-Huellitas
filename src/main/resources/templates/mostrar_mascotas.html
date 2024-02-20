@@ -2,51 +2,56 @@
 
 
 <html lang="en">
-    <html lang="en" xmlns:th="http://www.thymeleaf.org">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Mostrar Mascotas</title>
-        <link rel="stylesheet" th:href="@{css/style.css}">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
-        </head>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
-<body>
-    <title>Detalle de Mascota</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Mascotas</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="mascota-container">
-        <h2>Detalle de Mascota</h2>
-        <img alt="Foto de la mascota" th:src="${mascota.foto}">
-        <p><strong>ID:</strong> <span th:text="${mascota.id}"></span></p>
-        <p><strong>Nombre:</strong> <span th:text="${mascota.nombre}"></span></p>
-        <p><strong>Raza:</strong> <span th:text="${mascota.raza}"></span></p>
-        <p><strong>Edad:</strong> <span th:text="${mascota.edad}"></span></p>
-        <p><strong>Peso:</strong> <span th:text="${mascota.peso}"></span></p>
-        <p><strong>Enfermedad:</strong> <span th:text="${mascota.enfermedad}"></span></p>
-        <p><strong>Tratamiento:</strong> <span th:text="${mascota.tratamiento}"></span></p>
-        <a href="javascript:history.back()">Volver</a>
-    </div>    
+    <title>Detalle de Mascota</title>
+    </head>
 
-</body>
+    <body>
+        <div id="mascota-container">
+            <h2>Detalle de Mascota</h2>
+            <div id="detalles-mascota">
+                <img src="" alt="Foto de la mascota" th:src="${mascota.foto}">
+                <div id="informacionMascota">
+                    <p><strong>ID:</strong> <span th:text="${mascota.id}"></span></p>
+                    <p><strong>Nombre:</strong> <span th:text="${mascota.nombre}"></span></p>
+                    <p><strong>Raza:</strong> <span th:text="${mascota.raza}"></span></p>
+                    <p><strong>Edad:</strong> <span th:text="${mascota.edad}"></span></p>
+                    <p><strong>Peso:</strong> <span th:text="${mascota.peso}"></span></p>
+                    <p><strong>Enfermedad:</strong> <span th:text="${mascota.enfermedad}"></span></p>
+                    <p><strong>Tratamiento:</strong> <span th:text="${mascota.tratamiento}"></span></p>
+                </div>
+            </div>
+            <a href="javascript:history.back()">Volver</a>
+        </div>
+
+    </body>
 
 </body>
 
