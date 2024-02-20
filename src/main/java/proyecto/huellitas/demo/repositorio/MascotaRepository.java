@@ -1,6 +1,6 @@
 package proyecto.huellitas.demo.repositorio;
 import java.util.Collection;
-import java.util.LinkedHashMap;
+import java.util.HashMap;
 import java.util.Map;
 import org.springframework.stereotype.Repository;
 import proyecto.huellitas.demo.entidad.Mascota;
@@ -8,7 +8,7 @@ import proyecto.huellitas.demo.entidad.Mascota;
 @Repository
 public class MascotaRepository {
     
-    private Map<Integer, Mascota> data = new LinkedHashMap<>(); // Changed to LinkedHashMap
+    private Map<Integer, Mascota> data = new HashMap<>(); // Changed to LinkedHashMap
 
     public MascotaRepository() {
         data.put(1, new Mascota("Pepito", "Beagle", 10, 14.57, "Tos", "foto1", "Jarabe"));

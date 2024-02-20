@@ -10,7 +10,7 @@ lima pastel     #CDFADB
 
 /*---------------------------------LANDING PAGE---------------------------------------*/
 
-*{
+* {
     scroll-behavior: smooth;
     scroll-margin-top: 7vw;
 }
@@ -22,7 +22,7 @@ body {
 }
 
 /*menu de navegación*/
-.navbar-full{
+.navbar-full {
     top: 0;
     position: fixed;
     background-color: #FFCF96;
@@ -34,15 +34,17 @@ body {
     z-index: 9999;
     padding-left: 0.5vw;
 }
-.navbar-full h2{
+
+.navbar-full h2 {
     font-family: 'Amatic SC', sans-serif;
     font-size: 1.6vw;
 }
+
 .navbar-options {
     font-size: larger;
     width: 100%;
     display: flex;
-    justify-content: space-evenly;  
+    justify-content: space-evenly;
 }
 
 /*opciones de navegación*/
@@ -54,7 +56,8 @@ body {
     border-radius: 0.5vw;
     font-weight: bold;
 }
-.btn-login{
+
+.btn-login {
     background-color: rgb(244, 244, 244);
 }
 
@@ -142,6 +145,7 @@ body {
     border-radius: 1vw;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
 }
+
 .our-services h1 {
     font-size: 2vw;
     margin-bottom: 0;
@@ -149,7 +153,7 @@ body {
     padding-top: 3vw;
 }
 
-.service{
+.service {
     display: inline-flex;
     justify-content: space-evenly;
     align-itvws: left;
@@ -158,16 +162,17 @@ body {
     margin-top: 0vw;
 }
 
-.our-services h1{
+.our-services h1 {
     text-align: center;
 }
 
-#service-image{
+#service-image {
     width: 40%;
     height: auto;
     border-radius: 1vw;
     margin: 2vw;
 }
+
 .slider-wrapper {
     max-width: 70%;
     max-height: 32vw;
@@ -177,7 +182,7 @@ body {
     margin-right: 2rvw;
     position: relative;
     overflow: hidden;
-    
+
 }
 
 .slides-container {
@@ -192,34 +197,34 @@ body {
 }
 
 
-li.slide{
-    font-size:140%;
-    white-space:normal;
+li.slide {
+    font-size: 140%;
+    white-space: normal;
     text-align: center;
     height: auto;
 
-   }
+}
 
-.slide img{
-    display:inline-block;
-    width:10vw;
+.slide img {
+    display: inline-block;
+    width: 10vw;
     transform: translatex(2px) translatey(19px);
-    clear:none;
-    float:none;
+    clear: none;
+    float: none;
     filter: contrast(10);
     margin-top: 2vw;
-    margin-bottom:0vw;
-    margin-right:-4px;
+    margin-bottom: 0vw;
+    margin-right: -4px;
 
-   }
+}
 
- .slide p{
-    padding-left:14%;
-    padding-right:14%;
-    
-   }
+.slide p {
+    padding-left: 14%;
+    padding-right: 14%;
 
-.slide h2{
+}
+
+.slide h2 {
     font-size: 2.5vw;
     margin: 0;
     padding: 0 1.2vw;
@@ -272,7 +277,7 @@ li.slide{
 /*slides colores especifico de cada una*/
 .slide:nth-child(1) {
     background-color: #CDFADB;
-    
+
 }
 
 .slide:nth-child(2) {
@@ -287,72 +292,76 @@ li.slide{
 .slide:nth-child(4) {
     background-color: #FCF4C4;
 }
+
 .slide:nth-child(5) {
     background-color: #FBECD9;
 }
+
 .slide:nth-child(6) {
     background-color: #e2d4ff;
 }
+
 /*ocultar barra de deslice de slider*/
 .slides-container {
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
 }
+
 /* WebKit */
-.slides-container::-webkit-scrollbar { 
+.slides-container::-webkit-scrollbar {
     width: 0;
     height: 0;
 }
 
-footer{
+footer {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     background-color: #555555;
     color: rgb(255, 255, 255);
+    padding: 2vw 2vw 0vw 2vw;
 }
 
-footer div{
+footer div {
     text-align: center;
     padding: 0 5rvw;
 }
 
 
-.hospital-hours{
+.hospital-hours {
     text-align: left;
     margin-left: 5rvw;
     width: 25rvw;
-    
+
 }
 
-
-.hospital-hours p{
+.hospital-hours p {
     line-height: 1;
 }
 
-footer h3{
+footer h3 {
     font-size: 1.4vw;
-    margin-top: 1rvw;
     font-style: bold;
-    
 }
 
-.hospital-hours h5{
+.hospital-hours h5 {
     font-size: small;
     font-weight: 50;
     margin-top: 1.5rvw;
     margin-bottom: 0.5Rvw;
 }
 
-.hospital-hours span{
+.hospital-hours span {
     font-size: small;
 
 }
-.mapa{
+
+.mapa {
     border-radius: 1vw;
-    
-    margin: 1vw 0;
 }
-.welcome-contactanos{
+
+.welcome-contactanos {
     display: inline-flex;
     justify-content: space-evenly;
     margin: 1vw 0;
@@ -360,10 +369,24 @@ footer h3{
     align-itvws: center;
 }
 
-.contact-logos{
+.contact-logos {
     height: 3vw;
     width: auto;
     border-radius: 1vw;
     margin: 0 1vw;
     box-shadow: 0 0 40px rgba(2, 2, 2, 0.1);
+}
+
+/* Mascotas table */
+#mascotas-table {
+    padding: 10vw;
+}
+/* Todas mascotas title */
+#todas-mascotas-title {
+    text-align: center;
+    font-family: 'TimesNewRoman', 'Times New Roman', Times, Baskerville, Georgia, serif;
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-top: 2%;
+    padding-bottom: 0%;
 }

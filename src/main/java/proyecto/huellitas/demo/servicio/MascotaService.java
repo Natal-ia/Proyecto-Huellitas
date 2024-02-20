@@ -1,8 +1,5 @@
 package proyecto.huellitas.demo.servicio;
 import java.util.Collection;
-
-import org.springframework.stereotype.Service;
-
 import proyecto.huellitas.demo.entidad.Mascota;
 
 

@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mostrar Todas Mascotas</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" th:href="@{css/style.css}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,33 +37,33 @@
 
 <body>
 
+    <section id="mascotas-table">
+        <h1>Lista de Mascotas</h1>
 
-    <h1>Lista de Mascotas</h1>
-
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Raza</th>
-                <th>Edad</th>
-                <th>Peso</th>
-                <th>Acción</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Iterar sobre la lista de mascotas y generar una fila en la tabla para cada una -->
-            <tr th:each="mascota : ${mascotas}">
-                <!-- Utilizar los atributos de la mascota -->
-                <td th:text="${mascota.nombre}"></td>
-                <td th:text="${mascota.raza}"></td>
-                <td th:text="${mascota.edad}"></td>
-                <td th:text="${mascota.peso}"></td>
-                <!-- El botón redirige a la página de detalle de la mascota  si le pongo find se daña-->
-                <td><a th:href="@{'/mascotas/detalle/{id}}"><button>Ver Detalle</button></a></td>
-            </tr>
-        </tbody>
-    </table>
-
+        <table class="table_table-striped">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Raza</th>
+                    <th>Edad</th>
+                    <th>Peso</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Iterar sobre la lista de mascotas y generar una fila en la tabla para cada una -->
+                <tr th:each="mascota : ${mascotas}">
+                    <!-- Utilizar los atributos de la mascota -->
+                    <td th:text="${mascota.nombre}"></td>
+                    <td th:text="${mascota.raza}"></td>
+                    <td th:text="${mascota.edad}"></td>
+                    <td th:text="${mascota.peso}"></td>
+                    <!-- El botón redirige a la página de detalle de la mascota  si le pongo find se daña-->
+                    <td><a th:href="@{find/${id}}"><button>Ver Detalle</button></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
 </body>
 
 </html>
