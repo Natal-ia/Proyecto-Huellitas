@@ -34,7 +34,7 @@ public class MascotaController {
         // http://localhost:8090/mascotas/find?id=1
         @GetMapping("/find")
         public String mostrarInfoMascotas2(Model model, @RequestParam("id") int identificacion){
-            model.addAttribute("estudiante", mascotaService.SearchById(identificacion));
+            model.addAttribute("mascota", mascotaService.SearchById(identificacion));
             return "mostrar_mascotas";
         }
 
