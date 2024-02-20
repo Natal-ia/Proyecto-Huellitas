@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mostrar Todas Mascotas</title>
-    <link rel="stylesheet" href="resources/static/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,8 +58,8 @@
                 <td th:text="${mascota.raza}"></td>
                 <td th:text="${mascota.edad}"></td>
                 <td th:text="${mascota.peso}"></td>
-                <!-- El botón redirige a la página de detalle de la mascota -->
-                <td><a th:href="@{'/detalle/' + ${mascota.id}}"><button>Ver Detalle</button></a></td>
+                <!-- El botón redirige a la página de detalle de la mascota  si le pongo find se daña-->
+                <td><a th:href="@{'/mascotas/detalle/{id}}"><button>Ver Detalle</button></a></td>
             </tr>
         </tbody>
     </table>
