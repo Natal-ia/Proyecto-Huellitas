@@ -1,6 +1,7 @@
 package proyecto.huellitas.demo.entidad;
 
 public class Mascota {
+    private int id;
     private String nombre;
     private String raza;
     private int edad;
@@ -9,7 +10,8 @@ public class Mascota {
     private String foto;
     private String tratamiento;
 
-    public Mascota(String nombre, String raza, int edad, double peso, String enfermedad, String foto, String tratamiento) {
+    public Mascota(int id, String nombre, String raza, int edad, double peso, String enfermedad, String foto, String tratamiento) {
+        this.id = id;
         this.nombre = nombre;
         this.raza = raza;
         this.edad = edad;
@@ -18,6 +20,15 @@ public class Mascota {
         this.foto = foto;
         this.tratamiento = tratamiento;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
 
     public String getNombre() {
         return nombre;
