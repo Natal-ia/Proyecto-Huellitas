@@ -377,19 +377,10 @@ footer h3 {
     box-shadow: 0 0 40px rgba(2, 2, 2, 0.1);
 }
 
-/* Mascotas table */
-#mascotas-table {
-    padding: 10vw;
-}
-/* Todas mascotas title */
-#todas-mascotas-title {
-    text-align: center;
-    font-family: 'TimesNewRoman', 'Times New Roman', Times, Baskerville, Georgia, serif;
-    padding-left: 0%;
-    padding-right: 0%;
-    padding-top: 2%;
-    padding-bottom: 0%;
-}
+
+
+
+   
 
 /* Mascotas table */
 #mascota-container{
@@ -427,3 +418,79 @@ footer h3 {
     background-color: #ffffff;
     align-self: center;
 }
+
+
+
+
+/*/*---------------------------------Todas MASCOTAS---------------------------------------*/
+/* Button */
+.table-striped a button{
+    background-color:#ff8080;
+    border-top-left-radius:40px;
+    border-top-right-radius:40px;
+    border-bottom-left-radius:40px;
+    border-bottom-right-radius:40px;
+    border-style:none;
+    padding-left:1.5em;
+    padding-right:1.5em;
+    box-shadow:none;
+    float:left;
+    display:inline;
+   }
+   
+   /* Button */
+   #mascotas-table .table-striped tbody tr td a button{
+    padding-top:2% !important;
+    padding-bottom:2% !important;
+   }
+   /* Button */
+    #todas-mascotas #mascotas-table .table-striped tbody tr td a button{
+    left:20% !important;
+   }
+   
+   /* Heading */
+#todas-mascotas-title{
+    text-align:center;
+    padding-top:2%;
+   }
+   
+   /* Mascotas table */
+   #mascotas-table{
+    padding-left:15%;
+    font-family: 'TimesNewRoman', 'Times New Roman', Times, Baskerville, Georgia, serif;
+
+    padding-right:15%;
+    padding-top:2%;
+    padding-bottom:0em;
+   }
+   
+   #todas-mascotas{
+    padding-top:6%;
+   }
+   
+   /* Navigation */
+header .navbar-full nav{
+    background-color:rgba(255,255,255,0);
+   }
+   
+   /* Header */
+   header{
+    background-color:#f82525;
+   }
+   
+   /* Navbar full */
+   header .navbar-full{
+    background-color:rgba(255,255,255,0);
+    transform:translatex(0px) translatey(0px);
+    border-bottom-style:solid;
+    border-bottom-width:0.1em !important;
+    border-bottom-color:rgba(0,0,0,0.50);
+    align-items:center;
+    justify-content:center;
+    float:none;
+    clear:none;
+    opacity:1;
+    flex-direction:row;
+    display:flex;
+   }
+   
