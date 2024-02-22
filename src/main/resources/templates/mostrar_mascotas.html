@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-
-
 <html lang="en">
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
@@ -13,8 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,12 +28,21 @@
 </head>
 
 <body>
+    <header class="navbar-specific">
+        <img class="logo" th:src="@{/img/logo.png}" alt="Logo huellitas felices">
+        <h2>Huellitas Felices</h2>
+        <nav class="navbar-options">
+            <div id="header_specific">
+               <!--- <img class="volver" th:src="@{/img/bichon.png}" alt="Volver"> -->
+            </div>
+        </nav>
+    </header>
+
     <title>Detalle de Mascota</title>
     </head>
 
     <body>
         <div id="mascota-container">
-            <h2>Detalle de Mascota</h2>
             <div id="detalles-mascota">
                 <img src="" alt="Foto de la mascota" th:src="${mascota.foto}">
                 <div id="informacionMascota">
@@ -48,11 +55,9 @@
                     <p><strong>Tratamiento:</strong> <span th:text="${mascota.tratamiento}"></span></p>
                 </div>
             </div>
-            <a href="javascript:history.back()"><button>Volver</button></a></td>
+            <a href="javascript:history.back()"><button id="button_back">Volver</button></a></td>
         </div>
 
     </body>
-
 </body>
-
 </html>
