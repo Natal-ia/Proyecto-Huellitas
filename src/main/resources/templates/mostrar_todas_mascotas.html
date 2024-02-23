@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mostrar Todas Mascotas</title>
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+      
+        <div class="navbar-full">
+            
+            <nav class="navbar-options">
+                <a href="#">Paciente</a>
+                <a href="#welcome">Cliente</a>
+        
+            </nav>
+            <h2>Huellitas Felices</h2>
+            <img class="logo" th:src="@{/img/logo.png}" alt="Logo huellitas felices">
+         
+        </div>
+      </header>
+
+<section id="todas-mascotas">
+
+    <h1 id="todas-mascotas-title">Lista de Mascotas</h1>
+    <div id="mascota-container">
+    <section id="mascotas-table">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Raza</th>
+          <th>Edad</th>
+          <th>Peso</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each="mascota : ${mascotas}">
+          <td th:text="${mascota.nombre}"></td>
+          <td th:text="${mascota.raza}"></td>
+          <td th:text="${mascota.edad}"></td>
+          <td th:text="${mascota.peso}"></td>
+          <td><a th:href="@{/mascotas/find(id=${mascota.id})}"><button>Ver Detalle</button></a></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>
+</section>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
