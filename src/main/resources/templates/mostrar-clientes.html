@@ -27,30 +27,27 @@
         </div>
       </header>
 
-<section id="todas-mascotas">
+<section id="todos-clientes">
 
-    <h1 id="todas-mascotas-title">Lista de Mascotas</h1>
-    <div id="mascota-container">
+    <h1 id="todos-clientes-title">Lista de Clientes</h1>
+    <div id="cliente-container">
 
-      <a th:href="@{/mascotas/add}"><button>Agregar Mascota</button></a>
+      <a th:href="@{/mascotas/add}"><button>Agregar Cliente</button></a>/*ARREGLAR*/
       
-    <section id="mascotas-table">
+    <section id="clientes-table">
     <table class="table table-striped">
       <thead>
         <tr>
           <th>Nombre</th>
-          <th>Raza</th>
-          <th>Edad</th>
-          <th>Peso</th>
+          <th>Número de cédula</th>
           <th>Acción</th>
         </tr>
       </thead>
       <tbody>
+        /*ARREGLAR*/
         <tr th:each="mascota : ${mascotas}">
           <td th:text="${mascota.nombre}"></td>
           <td th:text="${mascota.raza}"></td>
-          <td th:text="${mascota.edad}"></td>
-          <td th:text="${mascota.peso}"></td>
           <td><a th:href="@{/mascotas/find(id=${mascota.id})}"><button>Ver Detalle</button></a></td>
         </tr>
       </tbody>

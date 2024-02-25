@@ -4,11 +4,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import proyecto.huellitas.demo.entidad.Mascota;
 import proyecto.huellitas.demo.servicio.MascotaService;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
 
 @RequestMapping("/mascotas")
 @Controller
@@ -32,10 +37,45 @@ public class MascotaController {
     }
 
         // http://localhost:8090/mascotas/find?id=1
-        @GetMapping("/find")
-        public String mostrarInfoMascotas2(Model model, @RequestParam("id") int identificacion){
-            model.addAttribute("mascota", mascotaService.SearchById(identificacion));
-            return "mostrar_mascotas";
-        }
+    @GetMapping("/find")
+    public String mostrarInfoMascotas2(Model model, @RequestParam("id") int identificacion){
+        model.addAttribute("mascota", mascotaService.SearchById(identificacion));
+        return "mostrar_mascotas";
+    }
+    
+    @GetMapping("/add")
+    public String mostrarFormularioCrear(Model model) {
+        
+        Mascota mascota = new Mascota(0, "", "", 0, 0, "", "", "");
+        
+        model.addAttribute("mascota", mascota);
 
+        return "crear_mascota";
+    }
+
+    @PostMapping("/agregar")
+    public String agregarMascota(@ModelAttribute ("mascota") Mascota mascota){ 
+       mascotaService.Add(mascota);
+        return "redirect:/mascotas/all";
+    }
+
+    @GetMapping("/delete/{id}")
+    public String borrarMascota(@PathVariable("id") int identificacion){
+        mascotaService.DeleteById(identificacion);
+        return "redirect:/mascotas/all";
+    }
+    
+    @GetMapping("/update/{id}")
+    public String mostrarFormularioUpdate(@PathVariable("id") int identificacion, Model model){
+        model.addAttribute("mascota", mascotaService.SearchById(identificacion));
+        return "modificar_mascota";
+    }
+
+    @PostMapping("/update/{id}")
+    public String modificarMascota(@PathVariable("id") int identificacion, @ModelAttribute("mascota") Mascota mascota){
+        mascotaService.Update(mascota);
+        return "mostrar_mascotas";        
+    }
 }
+    
+

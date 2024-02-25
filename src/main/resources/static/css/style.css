@@ -385,6 +385,7 @@ footer h3 {
     border-radius: 1vw;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
+    margin-top: 8vw;
 }
 
 #detalles-mascota {
@@ -469,8 +470,6 @@ footer h3 {
 /* Mascotas table */
 #mascotas-table {
     padding-left: 15%;
-    font-family: 'TimesNewRoman', 'Times New Roman', Times, Baskerville, Georgia, serif;
-
     padding-right: 15%;
     padding-top: 2%;
     padding-bottom: 0em;

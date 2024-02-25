@@ -22,6 +22,24 @@ public class MascotaServiceImpl implements MascotaService {
     public Collection<Mascota> SearchAll() {
         return repo.findAll();
     }
+
+    @Override
+    public void DeleteById(int id) {
+
+        repo.deleteById(id);
+    }
+
+    @Override
+    public void Update(Mascota mascota) {
+        
+        repo.update(mascota);
+    }
+
+    @Override
+    public void Add(Mascota mascota) {
+        
+        repo.add(mascota);
+    }
     
 }
  

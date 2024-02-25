@@ -55,7 +55,9 @@
                     <p><strong>Tratamiento:</strong> <span th:text="${mascota.tratamiento}"></span></p>
                 </div>
             </div>
-            <a href="javascript:history.back()"><button id="button_back">Volver</button></a></td>
+            <a href="/mascotas/all"><button id="button_back">Volver</button></a></td>
+            <a th:href="@{/mascotas/update/{id}(id=${mascota.id})}"><button id="button_editar">Editar</button></a></td>
+            <a th:href="@{/mascotas/delete/{id}(id=${mascota.id})}"><button id="button_borrar">Eliminar</button></a></td>
         </div>
 
     </body>
