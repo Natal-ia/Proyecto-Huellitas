@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mostrar Todas Mascotas</title>
+  <title>Clientes</title>
   <link rel="stylesheet" th:href="@{/css/style.css}">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
@@ -18,7 +18,7 @@
             
             <nav class="navbar-options">
                 <a href="#">Paciente</a>
-                <a href="#welcome">Cliente</a>
+                <a href="#">Cliente</a>
         
             </nav>
             <h2>Huellitas Felices</h2>
@@ -32,7 +32,7 @@
     <h1 id="todos-clientes-title">Lista de Clientes</h1>
     <div id="cliente-container">
 
-      <a th:href="@{/mascotas/add}"><button>Agregar Cliente</button></a>/*ARREGLAR*/
+      <a th:href="@{/clientes/add}"><button>Agregar Cliente</button></a>/*ARREGLAR*/
       
     <section id="clientes-table">
     <table class="table table-striped">
@@ -45,10 +45,10 @@
       </thead>
       <tbody>
         /*ARREGLAR*/
-        <tr th:each="mascota : ${mascotas}">
-          <td th:text="${mascota.nombre}"></td>
-          <td th:text="${mascota.raza}"></td>
-          <td><a th:href="@{/mascotas/find(id=${mascota.id})}"><button>Ver Detalle</button></a></td>
+        <tr th:each="cliente : ${clientes}">
+          <td th:text="${cliente.nombre}"></td>
+          <td th:text="${cliente.id}"></td>
+          <td><a th:href="@{/clientes/find(id=${cliente.id})}"><button>Ver Detalle</button></a></td>
         </tr>
       </tbody>
     </table>

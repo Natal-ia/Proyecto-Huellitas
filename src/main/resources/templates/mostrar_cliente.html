@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Cliente</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="navbar-specific">
+        <img class="logo" th:src="@{/img/logo.png}" alt="Logo huellitas felices">
+        <h2>Huellitas Felices</h2>
+        <nav class="navbar-options">
+            <div id="header_specific">
+               <!--- <img class="volver" th:src="@{/img/bichon.png}" alt="Volver"> -->
+            </div>
+        </nav>
+    </header>
+
+    <title>Detalle de Cliente</title>
+    </head>
+
+    <body>
+        <div id="cliente-container">
+            <div id="detalles-cliente">
+                <div id="informacionCliente">
+                    <p><strong>ID:</strong> <span th:text="${cliente.id}"></span></p>
+                    <p><strong>Nombre:</strong> <span th:text="${cliente.nombre}"></span></p>
+                    <p><strong>Raza:</strong> <span th:text="${cliente.correo}"></span></p>
+                    <p><strong>Edad:</strong> <span th:text="${cliente.celular}"></span></p>
+                </div>
+            </div>
+            <a href="/clientes/all"><button id="button_back">Volver</button></a></td>
+            <a th:href="@{/clientes/update/{id}(id=${cliente.id})}"><button id="button_editar">Editar</button></a></td>
+            <a th:href="@{/clientes/delete/{id}(id=${cliente.id})}"><button id="button_borrar">Eliminar</button></a></td>
+        </div>
+
+    </body>
+</body>
+</html>

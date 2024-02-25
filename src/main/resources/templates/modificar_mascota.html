@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro Mascota</title>
+    <title>Editar Mascota</title>
     <link rel="stylesheet" th:href="@{/css/style.css}">
 
 </head>
 <body>
-    <h2>Formulario de Mascota</h2>
+    <h2>Editar Mascota</h2>
     <form th:object="${mascota}" th:action="@{/mascotas/update/{id}(id=${mascota.id})}" th:method="post">
         <div class="form-group">
             <label for="id">ID:</label><br>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Cliente</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+</head>
+<body>
+    <h2>Editar Cliente</h2>
+    <form th:object="${cliente}" th:action="@{/clientes/update/{id}(id=${cliente.id})}" th:method="post">
+        <div class="form-group">
+            <label for="id">ID:</label><br>
+            <input th:field="*{id}" type="number" id="id" name="id"><br>
+        </div>
+
+        <div class="form-group">
+            <label for="nombre">Nombre:</label><br>
+            <input th:field="*{nombre}" type="text" id="nombre" name="nombre"><br>
+        </div>
+
+        <div class="form-group">
+            <label for="correo">Correo:</label><br>
+            <input th:field="*{correo}" type="email" id="correo" name="correo"><br>
+        </div>
+       
+        <div class="form-group">
+            <label for="celular">Celular:</label><br>
+            <input th:field="*{celular}" type="number" id="celular" name="celular"><br>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </form>
+</body>
+</html>
