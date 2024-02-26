@@ -53,12 +53,12 @@ public class MascotaController {
         return "crear_mascota";
     }
 
-    @PostMapping("/agregar{masc }")
+    @PostMapping("/agregar")
     public String agregarMascota(@ModelAttribute("mascota") Mascota mascota){ 
        mascotaService.Add(mascota);
         return "redirect:/mascotas/all";
     }
-
+    
     @GetMapping("/delete")
     public String borrarMascota (@RequestParam("id") int identificacion){
         mascotaService.DeleteById(identificacion);
