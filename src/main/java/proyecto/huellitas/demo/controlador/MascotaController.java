@@ -53,20 +53,20 @@ public class MascotaController {
         return "crear_mascota";
     }
 
-    @PostMapping("/agregar")
-    public String agregarMascota(@ModelAttribute ("mascota") Mascota mascota){ 
+    @PostMapping("/agregar{masc }")
+    public String agregarMascota(@ModelAttribute("mascota") Mascota mascota){ 
        mascotaService.Add(mascota);
         return "redirect:/mascotas/all";
     }
 
-    @GetMapping("/delete/{id}")
-    public String borrarMascota(@PathVariable("id") int identificacion){
+    @GetMapping("/delete")
+    public String borrarMascota (@RequestParam("id") int identificacion){
         mascotaService.DeleteById(identificacion);
         return "redirect:/mascotas/all";
     }
     
-    @GetMapping("/update/{id}")
-    public String mostrarFormularioUpdate(@PathVariable("id") int identificacion, Model model){
+    @GetMapping("/update")
+    public String mostrarFormularioUpdate(Model model, @RequestParam("id") int identificacion){
         model.addAttribute("mascota", mascotaService.SearchById(identificacion));
         return "modificar_mascota";
     }

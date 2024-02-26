@@ -9,57 +9,48 @@
     <link rel="stylesheet" th:href="@{/css/style.css}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+    <html lang="en" xmlns:th="http://www.thymeleaf.org">
 </head>
+
 
 <body>
     <header class="navbar-specific">
-        <img class="logo" th:src="@{/img/logo.png}" alt="Logo huellitas felices">
-        <h2>Huellitas Felices</h2>
-        <nav class="navbar-options">
-            <div id="header_specific">
-               <!--- <img class="volver" th:src="@{/img/bichon.png}" alt="Volver"> -->
-            </div>
-        </nav>
-    </header>
-
-    <title>Detalle de Mascota</title>
-    </head>
-
-    <body>
-        <div id="mascota-container">
-            <div id="detalles-mascota">
-                <img src="" alt="Foto de la mascota" th:src="${mascota.foto}">
-                <div id="informacionMascota">
-                    <p><strong>ID:</strong> <span th:text="${mascota.id}"></span></p>
-                    <p><strong>Nombre:</strong> <span th:text="${mascota.nombre}"></span></p>
-                    <p><strong>Raza:</strong> <span th:text="${mascota.raza}"></span></p>
-                    <p><strong>Edad:</strong> <span th:text="${mascota.edad}"></span></p>
-                    <p><strong>Peso:</strong> <span th:text="${mascota.peso}"></span></p>
-                    <p><strong>Enfermedad:</strong> <span th:text="${mascota.enfermedad}"></span></p>
-                    <p><strong>Tratamiento:</strong> <span th:text="${mascota.tratamiento}"></span></p>
-                </div>
-            </div>
-            <a href="/mascotas/all"><button id="button_back">Volver</button></a></td>
-            <a th:href="@{/mascotas/update/{id}(id=${mascota.id})}"><button id="button_editar">Editar</button></a></td>
-            <a th:href="@{/mascotas/delete/{id}(id=${mascota.id})}"><button id="button_borrar">Eliminar</button></a></td>
+        <div>
+            <img class="logo" th:src="@{/img/logo.png}" alt="Logo huellitas felices">
+            <h2>Huellitas Felices</h2>
         </div>
 
-    </body>
+        <h3 id="header_title"> Informacion de la mascota</h3>
+
+        <a th:href="@{/mascotas/all}"><button id="button_back">Volver</button></a></td>
+        <!--- <img class="volver" th:src="@{/img/bichon.png}" alt="Volver"> -->
+
+    </header>
+
+    <section class="content-mascota-specific">
+        <title>Detalle de Mascota</title>
+        </head>
+        <div id="mascota-container">
+
+            <img src="" alt="Foto de la mascota" th:src="${mascota.foto}">
+            <div id="informacionMascota">
+                <!-- <p><strong>ID:</strong> <span th:text="${mascota.id}"></span></p> -->
+                <p><strong>Nombre:</strong> <span th:text="${mascota.nombre}"></span></p>
+                <p><strong>Raza:</strong> <span th:text="${mascota.raza}"></span></p>
+                <p><strong>Edad:</strong> <span th:text="${mascota.edad}"></span></p>
+                <p><strong>Peso:</strong> <span th:text="${mascota.peso}"></span></p>
+                <p><strong>Enfermedad:</strong> <span th:text="${mascota.enfermedad}"></span></p>
+                <!--<p><strong>Tratamiento:</strong> <span th:text="${mascota.tratamiento}"></span></p>-->
+            
+                <a th:href="@{/mascotas/update(id=${mascota.id})}"><button id="button_modificar" >Modificar</button></a></td>
+            </div>
+
+        </div>
+    </section>
 </body>
+
 </html>

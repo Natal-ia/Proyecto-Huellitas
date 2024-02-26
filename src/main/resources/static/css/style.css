@@ -19,6 +19,14 @@ body {
     margin: auto;
     margin-top: 2%;
     font-family: 'Poppins', sans-serif;
+    font-size: 1.3vw;
+}
+
+button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 1.2vw;
+
 }
 
 /*menu de navegación*/
@@ -379,16 +387,18 @@ footer h3 {
 
 
 /* Mascotas table */
-#mascota-container, #cliente-container {
+#mascota-container,
+#cliente-container {
     padding: 2vw;
     margin: 2vw;
     border-radius: 1vw;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
-    margin-top: 8vw;
+    margin-top: 3vw;
 }
 
-#detalles-mascota,  #detalles-cliente {
+#detalles-mascota,
+#detalles-cliente {
     display: inline-flex;
     justify-content: space-evenly;
     margin: 2vw 0;
@@ -409,7 +419,8 @@ footer h3 {
     align-self: center;
 }
 
-#informacionMascota, #informacionCliente{
+#informacionMascota,
+#informacionCliente {
     padding: 2vw;
     margin-left: 2vw;
     width: 30vw;
@@ -437,16 +448,19 @@ footer h3 {
 
 #button_back {
     background-color: #ff8080;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-    border-bottom-left-radius: 40px;
-    border-bottom-right-radius: 40px;
+    border-radius: 40px;
     border-style: none;
     padding: 1.3vw 2vw;
     margin-right: 8vw;
     box-shadow: none;
     float: right;
     display: inline;
+}
+#delete-button{
+    background-color: #ff4a4a;
+    color: white;
+    margin: 0 0.5vw;
+    
 }
 
 /* Button */
@@ -462,20 +476,23 @@ footer h3 {
 }
 
 /* Heading */
-#todas-mascotas-title, #todas-clientes-title {
+#todas-mascotas-title,
+#todas-clientes-title {
     text-align: center;
     padding-top: 2%;
 }
 
 /* Mascotas table */
-#mascotas-table, #clientes-table {
-    padding-left: 15%;
-    padding-right: 15%;
+#mascotas-table,
+#clientes-table {
+    padding-left: 5%;
+    padding-right: 5%;
     padding-top: 2%;
     padding-bottom: 0em;
 }
 
-#todas-mascotas, #todas-clientes {
+#todas-mascotas,
+#todas-clientes {
     padding-left: 10%;
     padding-right: 10%;
     padding-top: 6%;
@@ -488,7 +505,8 @@ header .navbar-full nav {
 
 /* Header */
 header {
-    background-color: #f82525;
+    background-color: white;
+
 }
 
 /* Navbar full */
@@ -507,124 +525,155 @@ header .navbar-full {
     display: flex;
 }
 
-/*/*---------------------------------Todas MASCOTAS---------------------------------------*/
+/*/*---------------------------------MASCOTA---------------------------------------*/
 /* Button */
-.navbar-specific{
+.navbar-specific {
     top: 0;
     position: fixed;
-    background-color: #ffffff;
     width: 100%;
     display: flex;
+    justify-content: space-between;
     z-index: 9999;
-    padding-left: 0.5vw;
+    align-items: center;
+    border-bottom: 1px solid;
 }
 
 .navbar-specific h2 {
     font-family: 'Amatic SC', sans-serif;
     font-size: 1.6vw;
+    width: 50%;
+    text-wrap: wrap;
 }
 
-/*------------------------------------------Registros---------------------------------------------------*/
-
-.background-registro {
-   background-image: url("../img/registro-cliente.jpg");
-   background-repeat: no-repeat;
-   background-size: cover;
-   background-position: center;
-   background-attachment: fixed;
-   width: 100%;;
-
+.navbar-specific div {
+    display: inline-flex;
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 1.6vw;
+    margin-left: 2vw;
 }
 
-.form-general-group {
-    text-align: center;
-    background-color: #b4b4b493;
-    border-radius: 1vw;
-    margin: 0 27vw;
-    margin-top: 8vw;
-    padding: 2vw; 
-    padding-top: 1vw;
-    backdrop-filter: blur(0.1vw);
+.navbar-specific #button_back {
+    position: right;
+    background-color: #FFCF96;
+    margin: 0vw 2vw;
+    margin-right: 4vw;
+    padding: 1.5vw 3vw;
+    align-self: center;
 }
 
-.form-general-group h2 {
-    font-size: 2vw;
-    margin-bottom: 1vw;
+#button_back:hover {
+    background-color: #ffa074;
+    color: black;
 }
 
-.form-group {
-    padding: 1vw;
-}
-
-.form-group input {
-    border-radius: 1vw;
-    border-style: none;
-    padding: 0.5vw;
-    background-color: #A1A1A1;
-}
-
-.form-general-group button {
-    position: relative;
-    left: 15vw;
-    border-radius: 1vw;
-    background-color: #ff8080;
-    border-style: none;
-    padding: 0.5vw 1vw;
+.navbar-specific #header_title {
+    align-self: end;
     color: white;
-    font-size: large;
+    background-color: #ff8080;
+    border-radius: 40px;
+    padding: 0.5vw 2vw;
+    margin-right: 2vw;
+}
+
+.content-mascota-specific {
+    margin-top: 9vw;
+    width: 100%;
+}
+
+.content-mascota-specific #mascota-container {
+    display: flex;
+    padding: 2vw;
+    margin: 2vw;
+    background-color: #ffffff;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.0);
+}
+
+#informacionMascota {
+    padding: 1.5vw 23vw;
+    margin-left: 12vw;
+    width: 30vw;
+    border-radius: 1vw;
+    background-color: white;
+    align-self: left;
+    border-radius: 1vw;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
 
 }
-    
-.background-registro.mascota{
-    background-image: url("../img/registro-mascota.jpg");
+
+#mascota-container img {
+    float: left;
+    position: absolute;
+    width: 25vw;
+    height: 25vw;
+    margin-left: 3vw;
+    object-fit: cover;
+
+}
+
+#button_modificar {
+    background-color: #FFCF96;
+    color: rgb(91, 91, 91);
+    border-radius: 40px;
+    border-style: none;
+    padding: 0.5vw 5vw;
+    margin-right: -20vw;
+    box-shadow: none;
+    float: right;
+    display: inline;
+}
+
+#button_modificar:hover {
+    background-color: #ffa074;
+    color: black;
 }
 
 
 
 /*/*------------------------------------------Login---------------------------------------------------*/
 /* Login box */
-#login-box{
-    overflow:visible;
-    height:61% !important;
-    width:100%;
-    max-width:100%;
-    max-height:100%;
-    transform:translatex(0px) translatey(0px);
-    display:block;
+#login-box {
+    overflow: visible;
+    height: 61% !important;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    transform: translatex(0px) translatey(0px);
+    display: block;
     background-attachment: fixed;
     position: relative;
     width: 100%;
     height: 100%;
     min-height: 100%;
-    
-   }
-   
-   /* Login container */
-   #login-box .login-container{
-    backdrop-filter:blur(10px) contrast(0.8);
-    border-width:0px;
-    border-top-left-radius:5%;
-    border-top-right-radius:5%;
-    border-bottom-left-radius:5%;
-    border-bottom-right-radius:5%;
-    padding-top:5vw;
-    padding-bottom:5vw;
-   }
-   /* Label */
-#login-box form label{
-    color:#ffffff;
-   }
 
-   
-   #login-back {
+}
+
+/* Login container */
+#login-box .login-container {
+    backdrop-filter: blur(10px) contrast(0.8);
+    border-width: 0px;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+}
+
+/* Label */
+#login-box form label {
+    color: #ffffff;
+}
+
+
+#login-back {
     background-image: url("@{/img/loginBack.png}");
     background-image: url(" + @{/img/loginBack.png} + ");
     background-size: cover;
     background-position: center;
-  }
+}
 
-  /* Contenedor del formulario */
-  .login-container {
+/* Contenedor del formulario */
+.login-container {
     width: 20vw;
     margin: 20vw auto;
     padding: 5vw;
@@ -634,28 +683,30 @@ header .navbar-full {
 
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  .login-box {
+}
+
+.login-box {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  /* Login */
-  #login-box .login-container form .form-group .btn-login {
-    width: 105% !important;
-  }
+}
 
-  /* Login box */
-  #login-box {
+/* Login */
+#login-box .login-container form .form-group .btn-login {
+    width: 105% !important;
+}
+
+/* Login box */
+#login-box {
     text-align: left;
     display: flex;
     flex-direction: row;
     justify-content: center;
     transform: translatex(0px) translatey(0px);
-  }
+}
 
-  /* Login container */
-  #login-box .login-container {
+/* Login container */
+#login-box .login-container {
     position: relative;
     top: 5vw;
 
@@ -663,42 +714,42 @@ header .navbar-full {
     margin-left: 10vw;
     margin-right: 10vw;
     margin-bottom: 19vw;
-  }
+}
 
-  /* Título */
-  .login-container h2 {
+/* Título */
+.login-container h2 {
     text-align: center;
     margin-top: 0;
     margin-bottom: 20px;
     font-size: 24px;
     font-weight: bold;
     color: #333;
-  }
+}
 
-  /* Formulario */
-  .login-container form {
+/* Formulario */
+.login-container form {
     margin-bottom: 10px;
-  }
+}
 
-  /* Etiquetas */
-  .login-container form label {
+/* Etiquetas */
+.login-container form label {
     display: block;
     margin-bottom: 5px;
     font-size: 16px;
     color: #666;
-  }
+}
 
-  /* Campos de texto */
-  .login-container form input[type="text"] {
+/* Campos de texto */
+.login-container form input[type="text"] {
     width: 100%;
     border-radius: 4px;
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
     color: #fff;
     font-size: 16px;
-  }
+}
 
-  /* Botón de inicio de sesión */
-  .login-container form button.btn-login {
+/* Botón de inicio de sesión */
+.login-container form button.btn-login {
     width: 100%;
     padding: 10px 20px;
     margin-top: 10px;
@@ -709,16 +760,14 @@ header .navbar-full {
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-  }
+}
 
-  /* Enlace a "¿Olvidaste tu contraseña?" */
-  .login-container form a {
+/* Enlace a "¿Olvidaste tu contraseña?" */
+.login-container form a {
     display: block;
     text-align: right;
     margin-top: 10px;
     font-size: 14px;
     color: #666;
     text-decoration: none;
-  }
-   
-   
+}
