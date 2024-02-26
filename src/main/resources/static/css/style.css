@@ -578,3 +578,147 @@ header .navbar-full {
 .background-registro.mascota{
     background-image: url("../img/registro-mascota.jpg");
 }
+
+
+
+/*/*------------------------------------------Login---------------------------------------------------*/
+/* Login box */
+#login-box{
+    overflow:visible;
+    height:61% !important;
+    width:100%;
+    max-width:100%;
+    max-height:100%;
+    transform:translatex(0px) translatey(0px);
+    display:block;
+    background-attachment: fixed;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    
+   }
+   
+   /* Login container */
+   #login-box .login-container{
+    backdrop-filter:blur(10px) contrast(0.8);
+    border-width:0px;
+    border-top-left-radius:5%;
+    border-top-right-radius:5%;
+    border-bottom-left-radius:5%;
+    border-bottom-right-radius:5%;
+    padding-top:5vw;
+    padding-bottom:5vw;
+   }
+   /* Label */
+#login-box form label{
+    color:#ffffff;
+   }
+
+   
+   #login-back {
+    background-image: url("@{/img/loginBack.png}");
+    background-image: url(" + @{/img/loginBack.png} + ");
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Contenedor del formulario */
+  .login-container {
+    width: 20vw;
+    margin: 20vw auto;
+    padding: 5vw;
+    border: 1px solid #ddd;
+    /*center */
+    align: center;
+
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .login-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* Login */
+  #login-box .login-container form .form-group .btn-login {
+    width: 105% !important;
+  }
+
+  /* Login box */
+  #login-box {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    transform: translatex(0px) translatey(0px);
+  }
+
+  /* Login container */
+  #login-box .login-container {
+    position: relative;
+    top: 5vw;
+
+    margin-top: 2%;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-bottom: 19vw;
+  }
+
+  /* Título */
+  .login-container h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  /* Formulario */
+  .login-container form {
+    margin-bottom: 10px;
+  }
+
+  /* Etiquetas */
+  .login-container form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #666;
+  }
+
+  /* Campos de texto */
+  .login-container form input[type="text"] {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+    color: #fff;
+    font-size: 16px;
+  }
+
+  /* Botón de inicio de sesión */
+  .login-container form button.btn-login {
+    width: 100%;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: 1px solid #ff8080;
+    border-radius: 4px;
+    background-color: #ff8080;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  /* Enlace a "¿Olvidaste tu contraseña?" */
+  .login-container form a {
+    display: block;
+    text-align: right;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+    text-decoration: none;
+  }
+   
+   
