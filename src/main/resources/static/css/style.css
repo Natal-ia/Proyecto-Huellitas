@@ -24,9 +24,8 @@ body {
 
 button {
     font-family: 'Poppins', sans-serif;
-    font-weight: bold;
+  
     font-size: 1.2vw;
-
 }
 
 /*menu de navegación*/
@@ -63,6 +62,7 @@ button {
     padding: 1.5vw 2vw;
     border-radius: 0.5vw;
     font-weight: bold;
+
 }
 
 .btn-login {
@@ -447,7 +447,7 @@ footer h3 {
 }
 
 #button_back {
-    background-color: #ff8080;
+    background-color: #FFCF96;
     border-radius: 40px;
     border-style: none;
     padding: 1.3vw 2vw;
@@ -498,6 +498,10 @@ footer h3 {
     padding-top: 6%;
 }
 
+.buttons_nav{
+    background-color: white;
+}
+
 /* Navigation */
 header .navbar-full nav {
     background-color: rgba(255, 255, 255, 0);
@@ -526,7 +530,7 @@ header .navbar-full {
 }
 
 /*/*---------------------------------MASCOTA---------------------------------------*/
-/* Button */
+/* Navbar */
 .navbar-specific {
     top: 0;
     position: fixed;
@@ -553,12 +557,13 @@ header .navbar-full {
 }
 
 .navbar-specific #button_back {
-    position: right;
     background-color: #FFCF96;
     margin: 0vw 2vw;
     margin-right: 4vw;
     padding: 1.5vw 3vw;
     align-self: center;
+    font-style: bold;
+
 }
 
 #button_back:hover {
@@ -615,6 +620,7 @@ header .navbar-full {
     color: rgb(91, 91, 91);
     border-radius: 40px;
     border-style: none;
+    font-style: bold;
     padding: 0.5vw 5vw;
     margin-right: -20vw;
     box-shadow: none;
@@ -770,4 +776,49 @@ header .navbar-full {
     font-size: 14px;
     color: #666;
     text-decoration: none;
+}
+
+/*------------------------------------------Error---------------------------------------------------*/
+
+#error-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#error-content{
+    background-color: #ff8080;
+    margin: 5vw;
+    border-radius: 1vw;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    width: fit-content;
+    height: fit-content;
+    padding: 2vw;
+}
+
+#error-content h1{
+    font-size: 11vw;
+    font-weight: bold;
+    margin: 0;
+}
+#error-content h2{
+    font-size: 4vw;
+    font-weight: bold;
+}
+
+#error-content button{
+    font-weight: bold;
+    align-self: center;
+    padding: 1vw 2vw;
+    margin: 1vw;
+    background-color: #ffffff;
+    border-radius: 1vw;
+    border-style: none;
+    color: #ff8080;
+}
+
+#error-content button:hover{
+    background-color: #ffa074;
+    color: black;
 }

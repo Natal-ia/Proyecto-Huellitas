@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import proyecto.huellitas.demo.entidad.Mascota;
 import proyecto.huellitas.demo.servicio.MascotaService;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+
 
 
 @RequestMapping("/mascotas")
@@ -21,6 +21,8 @@ public class MascotaController {
     
     @Autowired
     MascotaService mascotaService;
+
+    
 
     @GetMapping("/all")
     public String mostrarMascotas(Model model){
@@ -39,8 +41,14 @@ public class MascotaController {
         // http://localhost:8090/mascotas/find?id=1
     @GetMapping("/find")
     public String mostrarInfoMascotas2(Model model, @RequestParam("id") int identificacion){
-        model.addAttribute("mascota", mascotaService.SearchById(identificacion));
-        return "mostrar_mascotas";
+        Mascota mascota = mascotaService.SearchById(identificacion);
+        if (mascota!=null) {
+            model.addAttribute("mascota", mascota);
+            return "mostrar_mascotas";
+    
+        }else{
+            return "pagina_error";
+        }
     }
     
     @GetMapping("/add")
@@ -78,4 +86,3 @@ public class MascotaController {
     }
 }
     
-
