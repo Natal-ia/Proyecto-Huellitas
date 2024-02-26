@@ -379,7 +379,7 @@ footer h3 {
 
 
 /* Mascotas table */
-#mascota-container {
+#mascota-container, #cliente-container {
     padding: 2vw;
     margin: 2vw;
     border-radius: 1vw;
@@ -388,7 +388,7 @@ footer h3 {
     margin-top: 8vw;
 }
 
-#detalles-mascota {
+#detalles-mascota,  #detalles-cliente {
     display: inline-flex;
     justify-content: space-evenly;
     margin: 2vw 0;
@@ -409,7 +409,7 @@ footer h3 {
     align-self: center;
 }
 
-#informacionMascota {
+#informacionMascota, #informacionCliente{
     padding: 2vw;
     margin-left: 2vw;
     width: 30vw;
@@ -462,20 +462,22 @@ footer h3 {
 }
 
 /* Heading */
-#todas-mascotas-title {
+#todas-mascotas-title, #todas-clientes-title {
     text-align: center;
     padding-top: 2%;
 }
 
 /* Mascotas table */
-#mascotas-table {
+#mascotas-table, #clientes-table {
     padding-left: 15%;
     padding-right: 15%;
     padding-top: 2%;
     padding-bottom: 0em;
 }
 
-#todas-mascotas {
+#todas-mascotas, #todas-clientes {
+    padding-left: 10%;
+    padding-right: 10%;
     padding-top: 6%;
 }
 
@@ -522,3 +524,57 @@ header .navbar-full {
     font-size: 1.6vw;
 }
 
+/*------------------------------------------Registros---------------------------------------------------*/
+
+.background-registro {
+   background-image: url("../img/registro-cliente.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
+   width: 100%;;
+
+}
+
+.form-general-group {
+    text-align: center;
+    background-color: #b4b4b493;
+    border-radius: 1vw;
+    margin: 0 27vw;
+    margin-top: 8vw;
+    padding: 2vw; 
+    padding-top: 1vw;
+    backdrop-filter: blur(0.1vw);
+}
+
+.form-general-group h2 {
+    font-size: 2vw;
+    margin-bottom: 1vw;
+}
+
+.form-group {
+    padding: 1vw;
+}
+
+.form-group input {
+    border-radius: 1vw;
+    border-style: none;
+    padding: 0.5vw;
+    background-color: #A1A1A1;
+}
+
+.form-general-group button {
+    position: relative;
+    left: 15vw;
+    border-radius: 1vw;
+    background-color: #ff8080;
+    border-style: none;
+    padding: 0.5vw 1vw;
+    color: white;
+    font-size: large;
+
+}
+    
+.background-registro.mascota{
+    background-image: url("../img/registro-mascota.jpg");
+}
