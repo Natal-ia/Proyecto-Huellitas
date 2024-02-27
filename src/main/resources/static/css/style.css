@@ -702,10 +702,14 @@ header .navbar-full {
 
 
 #login-back {
+    
     background-image: url("@{/img/loginBack.png}");
     background-image: url(" + @{/img/loginBack.png} + ");
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
+    
 }
 
 /* Contenedor del formulario */
