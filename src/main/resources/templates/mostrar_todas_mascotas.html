@@ -17,16 +17,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
 </head>
 
+
 <body>
   
-  <header class="navbar-specific">
+  <header  id ="header-todasMascotas" class="navbar-specific">
     <div>
         <img class="logo" th:src="@{/img/logo.png}" alt="Logo huellitas felices">
         <h2>Huellitas Felices</h2>
     </div>
 
-    <a th:href="@{/mascotas/all}"><button class="buttons_nav">Mascotas</button></a>
-    <a th:href="@{clientes/all}"><button class="buttons_nav">Clientes</button></a>
+    <a th:href="@{/mascotas/all}"><button class="navbar-options">Mascotas</button></a>
+    <a th:href="@{/clientes/all}"><button class="navbar-options">Clientes</button></a>
 
     <a th:href="@{/mascotas/all}"><button id="button_back">Volver</button></a>
     <!--- <img class="volver" th:src="@{/img/bichon.png}" alt="Volver"> -->

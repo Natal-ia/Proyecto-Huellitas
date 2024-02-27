@@ -512,6 +512,18 @@ header {
     background-color: white;
 
 }
+#header-todasMascotas{
+    justify-content:space-around !important;
+    float:none;
+    flex-wrap:nowrap;
+    overflow:hidden;
+    border-bottom-color:rgba(30,30,30,0.34) !important;
+    border-bottom-width:0.135vw !important;
+    margin-left:9%;
+    margin-right:9%;
+    width:80% !important;
+    
+}
 
 /* Navbar full */
 header .navbar-full {
