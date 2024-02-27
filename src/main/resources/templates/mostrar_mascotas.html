@@ -45,10 +45,8 @@
                 <p><strong>Peso:</strong> <span th:text="${mascota.peso}"></span></p>
                 <p><strong>Enfermedad:</strong> <span th:text="${mascota.enfermedad}"></span></p>
                 <!--<p><strong>Tratamiento:</strong> <span th:text="${mascota.tratamiento}"></span></p>-->
-            
-                <a th:href="@{/mascotas/update(id=${mascota.id})}"><button id="button_modificar" >Modificar</button></a></td>
+                <a th:href="@{/mascotas/update/{id}(id=${mascota.id})}"><button id="button_modificar">Modificar</button></a>
             </div>
-
         </div>
     </section>
 </body>

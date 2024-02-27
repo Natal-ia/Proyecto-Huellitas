@@ -14,7 +14,6 @@
 
         <h2>Registro de Mascota</h2>
         <form th:object="${mascota}" th:action="@{/mascotas/agregar}" th:method="post">
-    
             <div class="form-group">
                 <label for="id">ID:</label><br>
                 <input th:field="*{id}" type="number" id="id" name="id"><br>

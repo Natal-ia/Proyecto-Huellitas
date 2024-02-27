@@ -326,7 +326,7 @@ li.slide {
 footer {
     display: flex;
     justify-content: space-between;
-    background-color: #555555;
+    background-color: #807465;
     color: rgb(255, 255, 255);
     padding: 2vw 2vw 0vw 2vw;
 }
@@ -822,3 +822,59 @@ header .navbar-full {
     background-color: #ffa074;
     color: black;
 }
+
+/*------------------------------------------Registros---------------------------------------------------*/
+
+.background-registro {
+    background-image: url("../img/registro-cliente.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;;
+     background-color: #ffffff;
+ }
+ 
+ .form-general-group {
+     text-align: center;
+     background-color: #b4b4b493;
+     border-radius: 1vw;
+     margin: 0 27vw;
+     margin-top: 8vw;
+     padding: 2vw; 
+     padding-top: 1vw;
+     backdrop-filter: blur(0.1vw);
+ }
+ 
+ .form-general-group h2 {
+     font-size: 2vw;
+     margin-bottom: 1vw;
+ }
+ 
+ .form-group {
+     padding: 1vw;
+ }
+ 
+ .form-group input {
+     border-radius: 1vw;
+     border-style: none;
+     padding: 0.5vw;
+     background-color: #A1A1A1;
+ }
+ 
+ .form-general-group button {
+     position: relative;
+     left: 15vw;
+     border-radius: 1vw;
+     background-color: #ff8080;
+     border-style: none;
+     padding: 0.5vw 1vw;
+     color: white;
+     font-size: large;
+ 
+ }
+     
+ .background-registro.mascota{
+     background-image: url("../img/registro-mascota.jpg");
+ }
+ 
