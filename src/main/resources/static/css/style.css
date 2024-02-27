@@ -432,7 +432,7 @@ footer h3 {
 
 /*/*---------------------------------Todas MASCOTAS---------------------------------------*/
 /* Button */
-.table-striped a button {
+.table-striped a button, .add-btn {
     background-color: #ff8080;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
@@ -875,6 +875,7 @@ header .navbar-full {
  }
  
  .form-general-group button {
+     margin-top: 1vw;
      position: relative;
      left: 15vw;
      border-radius: 1vw;
