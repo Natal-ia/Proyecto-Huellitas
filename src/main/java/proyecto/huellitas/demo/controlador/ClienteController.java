@@ -49,6 +49,7 @@ public class ClienteController {
         if (cliente != null) {
             List<Mascota> mascotasCliente = clienteService.obtenerMascotasDeCliente(identificacion);
             model.addAttribute("cliente", cliente);
+            
             model.addAttribute("mascotas", mascotasCliente);
             return "mostrar_cliente";
         } else {
