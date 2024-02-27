@@ -59,7 +59,7 @@
           <td th:text="${mascota.peso}"></td>
           <td>
             <a th:href="@{/mascotas/find(id=${mascota.id})}"><button>Ver Detalle</button></a>
-            <a th:href="@{/mascotas/delete(id=${mascota.id})}"><button id="delete-button">Eliminar</button></a>
+            <a th:href="@{/mascotas/delete/{id}(id=${mascota.id})}"><button id="delete-button">Eliminar</button></a>
           </td>
         </tr>
       </tbody>

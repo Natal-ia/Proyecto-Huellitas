@@ -76,14 +76,6 @@ public class ClienteController {
         clienteService.Update(cliente);
         return "mostrar_cliente";        
     }
-    @GetMapping("/login")
-    public String login(Model model){
-        model.addAttribute("clientes", clienteService.SearchAll());
-        return "login";
-    }
-    
-
-    
 }
     
 
