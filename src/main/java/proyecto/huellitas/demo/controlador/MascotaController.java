@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import proyecto.huellitas.demo.entidad.Mascota;
 import proyecto.huellitas.demo.servicio.MascotaService;
+import proyecto.huellitas.demo.entidad.Cliente;
+import proyecto.huellitas.demo.servicio.ClienteService;
+
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -22,6 +25,8 @@ public class MascotaController {
     
     @Autowired
     MascotaService mascotaService;
+    @Autowired
+    ClienteService clienteService;
 
     @GetMapping("/all")
     public String mostrarMascotas(Model model){

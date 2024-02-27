@@ -14,4 +14,6 @@ public interface MascotaService {
     public void Update(Mascota mascota);
 
     public void Add(Mascota mascota);
+
+  
 }

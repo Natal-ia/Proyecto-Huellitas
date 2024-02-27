@@ -12,7 +12,7 @@ public class ClienteRepository{
     private Map<Integer, Cliente> data = new HashMap<>(); // Changed to LinkedHashMap
 
     public ClienteRepository() {
-        data.put(1, new Cliente(1,"Daniel", "daniel@gmail.com", "123456789"));
+        data.put(1, new Cliente(1,"Daniel", "daniel@gmail.com", "123456789", List.of(1,2,3,4,5,6)));
         data.put(2, new Cliente(2,"Natalia", "nata@gmail.com ", "123456789"));
         data.put(3, new Cliente(3,"María Andrea", "maria@gmail.com", "123456789"));
         data.put(4, new Cliente(4,"Jesús", "jesus@gmail.com","123456789"));
