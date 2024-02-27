@@ -430,7 +430,7 @@ footer h3 {
 }
 
 
-/*/*---------------------------------Todas MASCOTAS---------------------------------------*/
+/*/*---------------------------------Todas MASCOTAS/clientes---------------------------------------*/
 /* Button */
 .table-striped a button, .add-btn {
     background-color: #ff8080;
@@ -444,6 +444,23 @@ footer h3 {
     box-shadow: none;
     float: left;
     display: inline;
+}
+
+.add-btn{
+    margin-bottom: 2vw;
+}
+
+#button_borrar{
+    background-color: #ff4a4a;
+    border-radius: 40px;
+    border-style: none;
+    padding: 0 1vw;
+}
+#button_editar{
+    background-color: #FFCF96;
+    border-radius: 40px;
+    border-style: none;
+    padding: 0 1vw;
 }
 
 #button_back {
@@ -647,6 +664,7 @@ header .navbar-full {
 
 
 
+
 /*/*------------------------------------------Login---------------------------------------------------*/
 /* Login box */
 #login-box {
@@ -698,7 +716,6 @@ header .navbar-full {
     border: 1px solid #ddd;
     /*center */
     align: center;
-
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
