@@ -7,15 +7,7 @@
     <link rel="stylesheet" th:href="@{/css/style.css}" />
 </head>
 <body id="login-back" th:style="@{'background-image: url(' + @{/img/loginBack.png} + '); '}">
-<header class="navbar-specific">
-    <img class="logo" th:src="@{/img/logo.png}" alt="Logo huellitas felices" />
-    <h2>Huellitas Felices</h2>
-    <nav class="navbar-options">
-        <div id="header_specific">
-            <!--- <img class="volver" th:src="@{/img/bichon.png}" alt="Volver"> -->
-        </div>
-    </nav>
-</header>
+
 <section id="login-box">
     <div class="login-container">
         <h2>Login</h2>
@@ -30,7 +22,6 @@
             </div>
         </form>
         
-        <p>Don't have an account? <a th:href="@{/register}">Register here</a></p>
     </div>
 </section>
 
