@@ -9,6 +9,9 @@ public class Cliente {
     private String celular;
     List<Mascota> mascotas;
 
+    public Cliente() {    
+    }
+
     public Cliente(int id, String nombre, String correo, String celular){
         this.id = id;
         this.nombre = nombre;
