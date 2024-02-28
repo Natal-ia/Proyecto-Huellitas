@@ -46,15 +46,10 @@ public class ClienteController {
     @GetMapping("/find/{id}")
     public String mostrarInfoClienteConMascotas(Model model, @PathVariable("id") int identificacion) {
         Cliente cliente = clienteService.SearchById(identificacion);
-        if (cliente != null) {
-            List<Mascota> mascotasCliente = clienteService.obtenerMascotasDeCliente(identificacion);
-            model.addAttribute("cliente", cliente);
-            
-            model.addAttribute("mascotas", mascotasCliente);
-            return "mostrar_cliente";
-        } else {
-            return "pagina_error";
-        }
+        model.addAttribute("cliente", cliente);
+        return "mostrar_cliente";
+
+     
     }
 
     // http://localhost:8090/mascotas/find?id=1

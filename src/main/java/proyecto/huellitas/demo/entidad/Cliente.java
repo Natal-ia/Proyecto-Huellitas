@@ -7,7 +7,7 @@ public class Cliente {
     private String nombre;
     private String correo;
     private String celular;
-    List<Integer> mascotas;
+    List<Mascota> mascotas;
 
     public Cliente(int id, String nombre, String correo, String celular){
         this.id = id;
@@ -16,7 +16,7 @@ public class Cliente {
         this.celular = celular;
         
     } 
-    public Cliente(int id, String nombre, String correo, String celular, List<Integer> mascotas){
+    public Cliente(int id, String nombre, String correo, String celular, List<Mascota> mascotas){
         this.id = id;
         this.nombre = nombre;
         this.correo = correo;
@@ -56,11 +56,11 @@ public class Cliente {
         this.celular = celular;
     }
 
-    public List<Integer> getMascotas() {
+    public List<Mascota> getMascotas() {
         return mascotas;
     }
 
-    public void setMascotas(List<Integer> mascotas) {
+    public void setMascotas(List<Mascota> mascotas) {
         this.mascotas = mascotas;
     }
 

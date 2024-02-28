@@ -12,6 +12,7 @@ public class MascotaServiceImpl implements MascotaService {
 
     @Autowired
     MascotaRepository repo;
+    
 
     @Override
     public Mascota SearchById(int id) {

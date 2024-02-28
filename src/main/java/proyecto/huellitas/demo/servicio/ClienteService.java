@@ -16,6 +16,7 @@ public interface ClienteService {
     public void Update(Cliente cliente);
 
     public void Add(Cliente cliente);
+
+    public void addMascotas( int id, Mascota mascota);
     
-    public List<Mascota> obtenerMascotasDeCliente(int idCliente);
 }

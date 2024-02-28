@@ -39,15 +39,16 @@
     </div>
     <h2>Mascotas del Cliente</h2>
             <ul th:if="${cliente.mascotas != null}">
-                <li th:each="mascota.id : ${cliente.mascotas}">
+                <li th:each="mascota : ${cliente.mascotas}">
                     <!-- Obtener información de cada mascota por su ID -->
-                    <div th:with="mascota=${mascotaService.SearchById(mascotaId)}">
                         <p>Nombre: <span th:text="${mascota.nombre}"></span></p>
                         <p>Raza: <span th:text="${mascota.raza}"></span></p>
                         <p>Edad: <span th:text="${mascota.edad}"></span></p>
                         <p>Peso: <span th:text="${mascota.peso}"></span></p>
                         <p>Enfermedad: <span th:text="${mascota.enfermedad}"></span></p>
                         <!-- Agrega más detalles de mascotas si es necesario -->
+                        <a th:href="@{/mascotas/update/{id}(id=${mascota.id})}"><button id="button_modificar">Modificar</button></a>
+
                     </div>
                 </li>
             </ul>
