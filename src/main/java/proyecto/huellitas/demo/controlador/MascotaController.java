@@ -36,7 +36,7 @@ public class MascotaController {
 
     // http://localhost:8090/mascotas/find/1
     @GetMapping("/find/{id}")
-    public String mostrarInfoMascotas(Model model, @PathVariable("id") int identificacion){
+    public String mostrarInfoMascotas(Model model, @PathVariable("id") Long identificacion){
         Mascota mascota = mascotaService.SearchById(identificacion);
         if (mascota!=null) {
             model.addAttribute("mascota", mascota);
@@ -50,7 +50,7 @@ public class MascotaController {
 
         // http://localhost:8090/mascotas/find?id=1
     @GetMapping("/find")
-    public String mostrarInfoMascotas2(Model model, @RequestParam("id") int identificacion){
+    public String mostrarInfoMascotas2(Model model, @RequestParam("id") Long identificacion){
         Mascota mascota = mascotaService.SearchById(identificacion);
         if (mascota!=null) {
             model.addAttribute("mascota", mascota);
@@ -64,7 +64,7 @@ public class MascotaController {
     @GetMapping("/add")
     public String mostrarFormularioCrear(Model model) {
         
-        Mascota mascota = new Mascota(0, "", "", 0, 0, "", "", "");
+        Mascota mascota = new Mascota( "", "", 0, 0, "", "", "");
         
         model.addAttribute("mascota", mascota);
 
@@ -78,19 +78,19 @@ public class MascotaController {
     }
 
     @GetMapping("/delete/{id}")
-    public String borrarMascota(@PathVariable("id") int identificacion){
+    public String borrarMascota(@PathVariable("id") Long identificacion){
         mascotaService.DeleteById(identificacion);
         return "redirect:/mascotas/all";
     }
     
     @GetMapping("/update/{id}")
-    public String mostrarFormularioUpdate(@PathVariable("id") int identificacion, Model model){
+    public String mostrarFormularioUpdate(@PathVariable("id") Long identificacion, Model model){
         model.addAttribute("mascota", mascotaService.SearchById(identificacion));
         return "modificar_mascota";
     }
 
     @PostMapping("/update/{id}")
-    public String modificarMascota(@PathVariable("id") int identificacion, @ModelAttribute("mascota") Mascota mascota){
+    public String modificarMascota(@PathVariable("id") Long identificacion, @ModelAttribute("mascota") Mascota mascota){
         mascotaService.Update(mascota);
         return "mostrar_mascotas";        
     }

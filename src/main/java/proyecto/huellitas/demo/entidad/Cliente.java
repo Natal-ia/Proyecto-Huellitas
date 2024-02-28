@@ -1,37 +1,57 @@
 package proyecto.huellitas.demo.entidad;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import jakarta.annotation.Generated;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+@Entity
 public class Cliente {
-    private int id;
     private String nombre;
     private String correo;
     private String celular;
-    List<Mascota> mascotas;
+
+
+    @Id
+    @GeneratedValue
+    private Long id;
+
+    @OneToMany(mappedBy = "cliente")
+    private List<Mascota> mascotas = new ArrayList<>();
 
     public Cliente() {    
     }
 
-    public Cliente(int id, String nombre, String correo, String celular){
+    public Cliente(Long id, String nombre, String correo, String celular){
         this.id = id;
         this.nombre = nombre;
         this.correo = correo;
         this.celular = celular;
         
     } 
-    public Cliente(int id, String nombre, String correo, String celular, List<Mascota> mascotas){
+    public Cliente(Long id, String nombre, String correo, String celular, List<Mascota> mascotas){
         this.id = id;
         this.nombre = nombre;
         this.correo = correo;
         this.celular = celular;
         this.mascotas = mascotas;
     }
+    public Cliente( String nombre, String correo, String celular, List<Mascota> mascotas){
+        this.nombre = nombre;
+        this.correo = correo;
+        this.celular = celular;
+        this.mascotas = mascotas;
+    }
+
     
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -66,6 +86,10 @@ public class Cliente {
     public void setMascotas(List<Mascota> mascotas) {
         this.mascotas = mascotas;
     }
+
+
+
+
 
 }
 

@@ -1,7 +1,13 @@
 package proyecto.huellitas.demo.entidad;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+
+@Entity
+
 public class Mascota {
-    private int id;
     private String nombre;
     private String raza;
     private int edad;
@@ -9,8 +15,17 @@ public class Mascota {
     private String enfermedad;
     private String foto;
     private String tratamiento;
+    @Id
+    @GeneratedValue
+    private Long id;
 
-    public Mascota(int id, String nombre, String raza, int edad, double peso, String enfermedad, String foto, String tratamiento) {
+    @ManyToOne
+    private Cliente cliente;
+
+
+
+
+    public Mascota(Long id, String nombre, String raza, int edad, double peso, String enfermedad, String foto, String tratamiento) {
         this.id = id;
         this.nombre = nombre;
         this.raza = raza;
@@ -20,12 +35,25 @@ public class Mascota {
         this.foto = foto;
         this.tratamiento = tratamiento;
     }
+    public Mascota( String nombre, String raza, int edad, double peso, String enfermedad, String foto, String tratamiento) {
+        
+        this.nombre = nombre;
+        this.raza = raza;
+        this.edad = edad;
+        this.peso = peso;
+        this.enfermedad = enfermedad;
+        this.foto = foto;
+        this.tratamiento = tratamiento;
+    }
+    public Mascota() {
+    }
+    
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -84,5 +112,13 @@ public class Mascota {
 
     public void setTratamiento(String tratamiento) {
         this.tratamiento = tratamiento;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 }

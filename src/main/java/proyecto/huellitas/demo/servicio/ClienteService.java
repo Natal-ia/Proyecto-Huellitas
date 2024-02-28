@@ -7,16 +7,16 @@ import java.util.List;
 
 public interface ClienteService {
 
-    public Cliente SearchById(int id);
+    public Cliente SearchById(Long id);
 
     public Collection<Cliente> SearchAll();
 
-    public void DeleteById(int id);
+    public void DeleteById(Long id);
 
     public void Update(Cliente cliente);
 
     public void Add(Cliente cliente);
 
-    public void addMascotas( int id, Mascota mascota);
+    public void addMascotas( Long id, Mascota mascota);
     
 }
