@@ -12,13 +12,13 @@
 
     <div class="form-general-group">
 
-        <h2>Registro de Mascota</h2>
+        <h2>Registro de Mascota</h2>   
         <form th:object="${mascota}" th:action="@{/mascotas/agregar}" th:method="post">
-            <div class="form-group">
+          <!--  <div class="form-group">
                 <label for="id">ID:</label><br>
                 <input th:field="*{id}" type="number" id="id" name="id"><br>
             </div>
-
+-->
             <div class="form-group">
                 <label for="nombre">Nombre:</label><br>
                 <input th:field="*{nombre}" type="text" id="nombre" name="nombre"><br>
@@ -55,7 +55,7 @@
             </div>
 
             <button type="submit" class="btn btn-primary">Registrar</button>
-        </form>
+        </form>  -->
     </div>
 </body>
 </html>

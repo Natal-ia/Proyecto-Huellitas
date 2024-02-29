@@ -14,6 +14,7 @@ import proyecto.huellitas.demo.entidad.Mascota;
 import proyecto.huellitas.demo.servicio.MascotaService;
 import proyecto.huellitas.demo.entidad.Cliente;
 import proyecto.huellitas.demo.servicio.ClienteService;
+import proyecto.huellitas.demo.repositorio.ClienteRepository;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -27,6 +28,10 @@ public class MascotaController {
     MascotaService mascotaService;
     @Autowired
     ClienteService clienteService;
+
+    @Autowired
+    ClienteRepository clienteRepository;
+
 
     @GetMapping("/all")
     public String mostrarMascotas(Model model){
@@ -76,7 +81,8 @@ public class MascotaController {
        mascotaService.Add(mascota);
         return "redirect:/mascotas/all";
     }
-
+    
+    
     @GetMapping("/delete/{id}")
     public String borrarMascota(@PathVariable("id") Long identificacion){
         mascotaService.DeleteById(identificacion);

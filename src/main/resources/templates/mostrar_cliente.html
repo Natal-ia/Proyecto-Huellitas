@@ -26,11 +26,9 @@
         <a th:href="@{/clientes/all}"><button id="button_back">Volver</button></a></td>
 
     </header>
-
     <div id="cliente-container">
         <div id="detalles-cliente">
             <div id="informacionCliente">
-                <p><strong>ID:</strong> <span th:text="${cliente.id}"></span></p>
                 <p><strong>Nombre:</strong> <span th:text="${cliente.nombre}"></span></p>
                 <p><strong>Correo:</strong> <span th:text="${cliente.correo}"></span></p>
                 <p><strong>Celular:</strong> <span th:text="${cliente.celular}"></span></p>
@@ -39,33 +37,27 @@
         <a th:href="@{/clientes/update/{id}(id=${cliente.id})}"><button id="button_editar">Editar</button></a></td>
         <a th:href="@{/clientes/delete/{id}(id=${cliente.id})}"><button id="button_borrar">Eliminar</button></a></td>
     </div>
-    <h2>Mascotas del Cliente</h2>
-            <ul th:if="${cliente.mascotas != null}">
-                <li th:each="mascota : ${cliente.mascotas}">
-                    <!-- Obtener información de cada mascota por su ID -->
-                        <p>Nombre: <span th:text="${mascota.nombre}"></span></p>
-                        <p>Raza: <span th:text="${mascota.raza}"></span></p>
-                        <p>Edad: <span th:text="${mascota.edad}"></span></p>
-                        <p>Peso: <span th:text="${mascota.peso}"></span></p>
-                        <p>Enfermedad: <span th:text="${mascota.enfermedad}"></span></p>
-                        <!-- Agrega más detalles de mascotas si es necesario -->
-                        <a th:href="@{/mascotas/update/{id}(id=${mascota.id})}"><button id="button_modificar">Modificar</button></a>
 
-                    </div>
-                </li>
-            </ul>
-            </div>
-            <h2>Mascotas del Cliente</h2>
-           
-           <!-- <ul th:if="${cliente.mascotas != null}">-->
-            
-            <!-- </ul>-->
-             
-         
-        </div>
-        <a href="/clientes/all"><button id="button_back">Volver</button></a></td>
-        <a th:href="@{/clientes/update/{id}(id=${cliente.id})}"><button id="button_editar">Editar</button></a></td>
-        <a th:href="@{/clientes/delete/{id}(id=${cliente.id})}"><button id="button_borrar">Eliminar</button></a></td>
-    </div>
+    <h1 id="todas-mascotas-title">Lista de Mascotas</h1>
+
+    <section id="mascotas-table" class="clientes-specific">
+        <table class="table table-striped mascotas-clientes">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                </tr>
+            </thead>
+            <tbody id="informacionMascota" th:if="${cliente.mascotas != null}">
+                <tr th:each="mascota : ${cliente.mascotas}">
+                    <td th:text="${mascota.nombre}"></td>
+                    <td id="casilla-mod">
+                        <a th:href="@{/mascotas/find(id=${mascota.id})}"><button>Ver Detalle</button></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
 </body>
+
 </html>

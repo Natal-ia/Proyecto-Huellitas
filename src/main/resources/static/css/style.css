@@ -13,6 +13,40 @@ lima pastel     #CDFADB
 * {
     scroll-behavior: smooth;
     scroll-margin-top: 7vw;
+    
+}
+/*------------------------------------------Boton general---------------------------------------------------*/
+#button-huellitas {
+    border-radius: 0.5vw;
+    box-shadow: none;
+    padding: 0 0,5vw;
+    float: right;
+    margin-left: 1vw;
+    border: none;
+}
+
+#button-huellitas * {
+    padding: 0;
+    margin: 0;
+    margin: 0.4vw;
+    border: none;
+    background-color: transparent;
+    align-self: auto;
+    float: left;
+    text-align: left;
+    font-weight: bold;
+}
+
+#button-huellitas button {
+    display: inline-flex;
+    align-items: center;
+}
+
+
+#button-huellitas:hover {
+    background-color: #ffa074;
+    color: black;
+    border: none;
 }
 
 body {
@@ -24,7 +58,7 @@ body {
 
 button {
     font-family: 'Poppins', sans-serif;
-  
+
     font-size: 1.2vw;
 }
 
@@ -62,7 +96,6 @@ button {
     padding: 1.5vw 2vw;
     border-radius: 0.5vw;
     font-weight: bold;
-
 }
 
 .btn-login {
@@ -147,6 +180,7 @@ button {
     margin-top: 2.5vw;
     width: 30vw;
     height: 25vw;
+    object-fit: cover;
 }
 
 .our-services {
@@ -179,6 +213,7 @@ button {
     height: auto;
     border-radius: 1vw;
     margin: 2vw;
+    
 }
 
 .slider-wrapper {
@@ -187,7 +222,7 @@ button {
     height: auto;
     border-radius: 1vw;
     margin: 2vw auto;
-    margin-right: 2rvw;
+    margin-right: 2vw;
     position: relative;
     overflow: hidden;
 
@@ -333,47 +368,47 @@ footer {
 
 footer div {
     text-align: center;
-    padding: 0 5rvw;
+    padding: 0 5vw;
 }
 
 
 .hospital-hours {
     text-align: left;
-    margin-left: 5rvw;
-    width: 25rvw;
-
+    width: auto;
 }
 
 .hospital-hours p {
-    line-height: 1;
+    line-height: 1.3;
+    
 }
 
 footer h3 {
-    font-size: 1.4vw;
+    font-size: 1.8vw;
+    margin-top: 0;
     font-style: bold;
 }
 
 .hospital-hours h5 {
     font-size: small;
     font-weight: 50;
-    margin-top: 1.5rvw;
-    margin-bottom: 0.5Rvw;
+    margin-top: 1.5vw;
+    margin-bottom: 0.5vw;
 }
 
 .hospital-hours span {
     font-size: small;
-
 }
 
 .mapa {
     border-radius: 1vw;
+    margin-bottom: 1vw;
 }
 
 .welcome-contactanos {
     display: inline-flex;
     justify-content: space-evenly;
     margin: 1vw 0;
-    margin-top: 2rvw;
+    margin-top: 2vw;
     align-itvws: center;
 }
 
@@ -417,6 +452,7 @@ footer h3 {
     height: 25vw;
     overflow: hidden;
     align-self: center;
+    object-fit: cover;
 }
 
 #informacionMascota,
@@ -432,12 +468,10 @@ footer h3 {
 
 /*/*---------------------------------Todas MASCOTAS/clientes---------------------------------------*/
 /* Button */
-.table-striped a button, .add-btn {
+.table-striped a button,
+.add-btn {
     background-color: #ff8080;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-    border-bottom-left-radius: 40px;
-    border-bottom-right-radius: 40px;
+    border-radius: 40px;
     border-style: none;
     padding-left: 1.5vw;
     padding-right: 1.5vw;
@@ -446,17 +480,18 @@ footer h3 {
     display: inline;
 }
 
-.add-btn{
+.add-btn {
     margin-bottom: 2vw;
 }
 
-#button_borrar{
+#button_borrar {
     background-color: #ff4a4a;
     border-radius: 40px;
     border-style: none;
     padding: 0 1vw;
 }
-#button_editar{
+
+#button_editar {
     background-color: #FFCF96;
     border-radius: 40px;
     border-style: none;
@@ -473,11 +508,12 @@ footer h3 {
     float: right;
     display: inline;
 }
-#delete-button{
+
+#delete-button {
     background-color: #ff4a4a;
     color: white;
     margin: 0 0.5vw;
-    
+
 }
 
 /* Button */
@@ -486,9 +522,12 @@ footer h3 {
     padding-bottom: 2% !important;
 
 }
+#todas-mascotas{
+    margin-top: 2vw;
+}
 
 /* Button */
-#todas-mascotas #mascotas-table .table-striped tbody tr td a button {
+#todas-mascotas #mascotas-table .table-striped tbody tr td a button {   
     left: 20% !important;
 }
 
@@ -515,7 +554,7 @@ footer h3 {
     padding-top: 6%;
 }
 
-.buttons_nav{
+.buttons_nav {
     background-color: white;
 }
 
@@ -529,17 +568,18 @@ header {
     background-color: white;
 
 }
-#header-todasMascotas{
-    justify-content:space-around !important;
-    float:none;
-    flex-wrap:nowrap;
-    overflow:hidden;
-    border-bottom-color:rgba(30,30,30,0.34) !important;
-    border-bottom-width:0.135vw !important;
-    margin-left:9%;
-    margin-right:9%;
-    width:80% !important;
-    
+
+#header-todasMascotas {
+    justify-content: space-around !important;
+    float: none;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    border-bottom-color: rgba(30, 30, 30, 0.34) !important;
+    border-bottom-width: 0.135vw !important;
+    margin-left: 9%;
+    margin-right: 9%;
+    width: 80% !important;
+
 }
 
 /* Navbar full */
@@ -557,6 +597,40 @@ header .navbar-full {
     flex-direction: row;
     display: flex;
 }
+
+.clientes-specific{
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+    margin-bottom: 8vw;
+}
+.mascotas-clientes{
+    background-color: #FFCF96;
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none;
+
+}
+
+.mascotas-clientes a{
+    position: right;
+}
+
+.casilla-mod{
+    display: inline-flex;
+    align-items: right;
+    justify-content: right;
+    background-color: #FFCF96;
+ 
+}
+
+.mascotas-clientes button{
+    position: right;
+}
+
+
 
 /*/*---------------------------------MASCOTA---------------------------------------*/
 /* Navbar */
@@ -702,14 +776,14 @@ header .navbar-full {
 
 
 #login-back {
-    
+
     background-image: url("@{/img/loginBack.png}");
     background-image: url(" + @{/img/loginBack.png} + ");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    
+
 }
 
 /* Contenedor del formulario */
@@ -813,13 +887,13 @@ header .navbar-full {
 
 /*------------------------------------------Error---------------------------------------------------*/
 
-#error-body{
+#error-body {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#error-content{
+#error-content {
     background-color: #ff8080;
     margin: 5vw;
     border-radius: 1vw;
@@ -830,17 +904,18 @@ header .navbar-full {
     padding: 2vw;
 }
 
-#error-content h1{
+#error-content h1 {
     font-size: 11vw;
     font-weight: bold;
     margin: 0;
 }
-#error-content h2{
+
+#error-content h2 {
     font-size: 4vw;
     font-weight: bold;
 }
 
-#error-content button{
+#error-content button {
     font-weight: bold;
     align-self: center;
     padding: 1vw 2vw;
@@ -851,7 +926,7 @@ header .navbar-full {
     color: #ff8080;
 }
 
-#error-content button:hover{
+#error-content button:hover {
     background-color: #ffa074;
     color: black;
 }
@@ -864,51 +939,52 @@ header .navbar-full {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    width: 100%;;
-     background-color: #ffffff;
- }
- 
- .form-general-group {
-     text-align: center;
-     background-color: #b4b4b493;
-     border-radius: 1vw;
-     margin: 0 27vw;
-     margin-top: 8vw;
-     padding: 2vw; 
-     padding-top: 1vw;
-     backdrop-filter: blur(0.1vw);
- }
- 
- .form-general-group h2 {
-     font-size: 2vw;
-     margin-bottom: 1vw;
- }
- 
- .form-group {
-     padding: 1vw;
- }
- 
- .form-group input {
-     border-radius: 1vw;
-     border-style: none;
-     padding: 0.5vw;
-     background-color: #A1A1A1;
- }
- 
- .form-general-group button {
-     margin-top: 1vw;
-     position: relative;
-     left: 15vw;
-     border-radius: 1vw;
-     background-color: #ff8080;
-     border-style: none;
-     padding: 0.5vw 1vw;
-     color: white;
-     font-size: large;
- 
- }
-     
- .background-registro.mascota{
-     background-image: url("../img/registro-mascota.jpg");
- }
- 
+    width: 100%;
+    ;
+    background-color: #ffffff;
+}
+
+.form-general-group {
+    text-align: center;
+    background-color: #b4b4b493;
+    border-radius: 1vw;
+    margin: 0 27vw;
+    margin-top: 8vw;
+    padding: 2vw;
+    padding-top: 1vw;
+    backdrop-filter: blur(0.1vw);
+}
+
+.form-general-group h2 {
+    font-size: 2vw;
+    margin-bottom: 1vw;
+}
+
+.form-group {
+    padding: 1vw;
+}
+
+.form-group input {
+    border-radius: 1vw;
+    border-style: none;
+    padding: 0.5vw;
+    background-color: #A1A1A1;
+}
+
+.form-general-group button {
+    margin-top: 1vw;
+    position: relative;
+    left: 15vw;
+    border-radius: 1vw;
+    background-color: #ff8080;
+    border-style: none;
+    padding: 0.5vw 1vw;
+    color: white;
+    font-size: large;
+
+}
+
+.background-registro.mascota {
+    background-image: url("../img/registro-mascota.jpg");
+}
+

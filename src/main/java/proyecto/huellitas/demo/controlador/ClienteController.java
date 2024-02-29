@@ -32,6 +32,8 @@ public class ClienteController {
         return "mostrar_clientes";
     }
 
+    
+
    
     // http://localhost:8090/mascotas/find/1
    /* 
@@ -91,7 +93,6 @@ public class ClienteController {
     public String modificarCliente(@PathVariable("id") int identificacion, @ModelAttribute("cliente") Cliente cliente) {
         clienteService.Update(cliente);
         return "mostrar_cliente";
-
     }
 
     @GetMapping("/login")

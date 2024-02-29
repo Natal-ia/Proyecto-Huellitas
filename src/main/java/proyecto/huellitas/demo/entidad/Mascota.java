@@ -15,6 +15,7 @@ public class Mascota {
     private String enfermedad;
     private String foto;
     private String tratamiento;
+    
     @Id
     @GeneratedValue
     private Long id;
