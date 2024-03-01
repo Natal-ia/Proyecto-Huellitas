@@ -35,9 +35,12 @@
         </head>
         <div id="mascota-container">
 
-            <img src="" alt="Foto de la mascota" th:src="${mascota.foto}">
+            <!-- Check if the mascota.foto is null or empty, if so, set it to a default image URL -->
+            <img src="" alt="Foto de la mascota" th:src="${mascota.foto == null or mascota.foto == '' ? '/img/bichon.png' : mascota.foto}">
+
             <div id="informacionMascota">
                 <!-- <p><strong>ID:</strong> <span th:text="${mascota.id}"></span></p> -->
+                
                 <p><strong>Nombre:</strong> <span th:text="${mascota.nombre}"></span></p>
                 <p><strong>Raza:</strong> <span th:text="${mascota.raza}"></span></p>
                 <p><strong>Edad:</strong> <span th:text="${mascota.edad}"></span></p>

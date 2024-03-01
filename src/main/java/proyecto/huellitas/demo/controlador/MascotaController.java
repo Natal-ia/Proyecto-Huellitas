@@ -77,10 +77,18 @@ public class MascotaController {
     }
 
     @PostMapping("/agregar")
-    public String agregarMascota(@ModelAttribute ("mascota") Mascota mascota){ 
-       mascotaService.Add(mascota);
-        return "redirect:/mascotas/all";
+public String agregarMascota(@ModelAttribute("mascota") Mascota mascota) { 
+    
+    Cliente asociar = clienteRepository.findById(mascota.getId()).orElse(null);
+    if (asociar != null) {
+        mascota.setCliente(asociar);
+        mascota.setId(null);
+        mascotaService.Add(mascota);
+    } else {
+        // Handle the case when the associated client is not found
     }
+    return "redirect:/mascotas/all";
+}
     
     
     @GetMapping("/delete/{id}")
@@ -91,6 +99,8 @@ public class MascotaController {
     
     @GetMapping("/update/{id}")
     public String mostrarFormularioUpdate(@PathVariable("id") Long identificacion, Model model){
+        System.out.println("id: " + identificacion);
+        
         model.addAttribute("mascota", mascotaService.SearchById(identificacion));
         return "modificar_mascota";
     }

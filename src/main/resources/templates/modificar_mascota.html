@@ -14,7 +14,10 @@
     <div class="form-general-group">
         <h2>Editar Mascota</h2>
         <form th:object="${mascota}" th:action="@{/mascotas/update/{id}(id=${mascota.id})}" th:method="post">
-          
+
+            <!-- Hidden input field for cliente ID -->
+            <input type="hidden" th:field="*{cliente.id}" id="clienteId" name="clienteId" />
+            
             <div class="form-group">
                 <label for="nombre">Nombre:</label><br>
                 <input th:field="*{nombre}" type="text" id="nombre" name="nombre"><br>

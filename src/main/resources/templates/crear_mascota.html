@@ -14,11 +14,11 @@
 
         <h2>Registro de Mascota</h2>   
         <form th:object="${mascota}" th:action="@{/mascotas/agregar}" th:method="post">
-          <!--  <div class="form-group">
-                <label for="id">ID:</label><br>
+            <div class="form-group">
+                <label for="id">Cedula del dueño:</label><br>
                 <input th:field="*{id}" type="number" id="id" name="id"><br>
             </div>
--->
+            
             <div class="form-group">
                 <label for="nombre">Nombre:</label><br>
                 <input th:field="*{nombre}" type="text" id="nombre" name="nombre"><br>
@@ -46,7 +46,7 @@
 
             <div class="form-group">
                 <label for="foto">Foto:</label><br>
-                <input th:field="*{foto}" type="text" id="foto" name="foto"><br>
+                <input th:field="*{foto}" type="url" id="foto" name="foto"><br>
             </div>
 
             <div class="form-group">
@@ -55,7 +55,7 @@
             </div>
 
             <button type="submit" class="btn btn-primary">Registrar</button>
-        </form>  -->
+        </form>  
     </div>
 </body>
 </html>

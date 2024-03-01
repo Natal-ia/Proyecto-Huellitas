@@ -86,6 +86,7 @@ public class Cliente {
     public void setMascotas(List<Mascota> mascotas) {
         this.mascotas = mascotas;
     }
+    
 
 
 

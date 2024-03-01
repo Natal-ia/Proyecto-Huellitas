@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import jakarta.transaction.Transactional;
 import proyecto.huellitas.demo.entidad.Cliente;
 import proyecto.huellitas.demo.entidad.Mascota;
 import proyecto.huellitas.demo.repositorio.MascotaRepository;
@@ -19,6 +20,9 @@ public class ClienteServiceImpl implements ClienteService {
     
     @Autowired
     MascotaService mascotaService;
+
+    @Autowired
+    MascotaRepository mascotaRepository;
 
     @Override
     public Cliente SearchById(Long id) {
@@ -57,6 +61,29 @@ public class ClienteServiceImpl implements ClienteService {
         repo.save(cliente);
     }
 
+    @Override
+    public  Collection<Mascota> getAllMascotas( Long id){
+        Cliente cliente = repo.findById(id).get();
+        return cliente.getMascotas();
+    }
 
+    @Override
+    @Transactional
+    public void deleteAllMascotas(Long id) {   
+        Cliente cliente = repo.findById(id).orElse(null);
+        if (cliente != null) {
+            // Delete all Mascotas associated with the Cliente
+            cliente.getMascotas().clear();
+            // Save the Cliente to remove the associations
+            repo.save(cliente);
+            
+            // Now delete all Mascotas associated with the Cliente from the database
+            mascotaRepository.deleteByCliente(cliente);
+        } else {
+            // Handle the case when the Cliente with the given ID does not exist
+        }
+    }
+
+    
 
 }
