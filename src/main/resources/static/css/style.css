@@ -45,7 +45,7 @@ lima pastel     #CDFADB
 #button-huellitas h2, .navbar-full h2{
     font-family: 'Amatic SC', sans-serif;
 }
-}
+
 
 #button-huellitas button:hover {
     cursor: pointer;
@@ -107,12 +107,19 @@ button {
     background-color: rgb(244, 244, 244);
 }
 
+.btn-login:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
 /*cambio de color al pasar el mouse*/
 .navbar-options a:hover {
     cursor: pointer;
     text-decoration: none;
     background-color: #ffa074;
     color: rgb(249, 242, 233);
+    
 }
 
 
@@ -205,7 +212,7 @@ button {
 .service {
     display: inline-flex;
     justify-content: space-evenly;
-    align-itvws: left;
+    align-items: left;
     margin: 2vw 0;
     padding: 1vw;
     margin-top: 0vw;
@@ -368,8 +375,8 @@ li.slide {
 footer {
     display: flex;
     justify-content: space-between;
-    background-color: #807465;
-    color: rgb(255, 255, 255);
+    background-image: linear-gradient(180deg, #fe9292, #fdb0b0);
+    color: black;
     padding: 2vw 2vw 0vw 2vw;
 }
 
@@ -389,6 +396,76 @@ footer div {
     
 }
 
+footer ul {
+    display: flex;
+    margin: 3.5vw 0;
+  }
+  
+footer  ul li {
+    list-style: none;
+  }
+  
+footer  ul li a {
+    width: 4.1vw;
+    height: 4.1vw;
+    background-color: #fff;
+    text-align: center;
+    line-height: 4.1vw;
+    font-size: 4.1vw;
+    margin: 0 0.5vw;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 0.15vw solid #fff;
+    z-index: 1;
+  }
+  
+footer  ul li a .icon {
+    font-size: 3.2vw;
+    position: relative;
+    color: #262626;
+    transition: .5s;
+    z-index: 3;
+  }
+  
+footer  ul li a:hover .icon {
+    color: #fff;
+    transform: rotateY(360deg);
+  }
+  
+footer  ul li a:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f00;
+    transition: .5s;
+    z-index: 2;
+  }
+  
+footer  ul li a:hover:before {
+    top: 0;
+  }
+  
+footer  ul li:nth-child(1) a:before{
+    background: #3b5999;
+  }
+  
+footer  ul li:nth-child(2) a:before{
+    background: #55acee;
+  }
+  
+footer  ul li:nth-child(3) a:before {
+    background-color: #fe0b81;
+  }
+  
+footer ul li:nth-child(4) a:before {
+    background: #dd4b39;
+  }
+
 footer h3 {
     font-size: 1.8vw;
     margin-top: 0;
@@ -398,7 +475,7 @@ footer h3 {
 .hospital-hours h5 {
     font-size: small;
     font-weight: 50;
-    margin-top: 1.5vw;
+    margin-top: 5.5vw;
     margin-bottom: 0.5vw;
 }
 
@@ -473,7 +550,11 @@ footer h3 {
     align-self: center;
 }
 
-
+#cliente-container-vista{
+    width: 50%;
+    margin: 9vw 0 0 30vw;
+    padding: 0;
+}
 /*/*---------------------------------Todas MASCOTAS/clientes---------------------------------------*/
 /* Button */
 .table-striped a button {
@@ -526,12 +607,13 @@ footer h3 {
     text-align: center;
     display: inline-flex;
     justify-content: space-evenly;  
-    transition: 0.4s;
+    transition: 0.3s;
 }
 
 #mascota-container-todas:hover{
     cursor: pointer;
     box-shadow: 0 0 40px #ffa0747b;
+    
 }
 
 #mascota-container-todas .img-mascota-todas{
@@ -552,8 +634,9 @@ footer h3 {
     margin-top: 2vw;
 }
 
-.mascota-actions .delete-button{
-    background-color: #ff4a4a;
+#mascota-container-todas .mascota-actions{
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -601,7 +684,7 @@ footer h3 {
 /* Mascotas table */
 #mascotas-table,
 #clientes-table {
-    padding-left: 5%;
+    padding-left: 9%;
     padding-right: 5%;
     padding-top: 2%;
     padding-bottom: 0em;
@@ -645,7 +728,7 @@ header {
 
 /* Navbar full */
 header .navbar-full {
-    background-color: rgb(255, 255, 255);
+    background-color: #FFCF96;
     transform: translatex(0px) translatey(0px);
     border-bottom-style: solid;
     border-bottom-width: 0.1em !important;

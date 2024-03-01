@@ -26,14 +26,14 @@
         <a th:href="@{/clientes/all}"><button id="button_back">Volver</button></a></td>
 
     </header>
-    <div id="cliente-container">
-        <div id="detalles-cliente">
+    <div id="cliente-container-vista">
+    
             <div id="informacionCliente">
-                <p><strong>Nombre:</strong> <span th:text="${cliente.nombre}"></span></p>
+                <h2 th:text="${cliente.nombre}"></h2>
                 <p><strong>Correo:</strong> <span th:text="${cliente.correo}"></span></p>
                 <p><strong>Celular:</strong> <span th:text="${cliente.celular}"></span></p>
             </div>
-        </div>
+        
         <a th:href="@{/clientes/update/{id}(id=${cliente.id})}"><button id="button_editar">Editar</button></a></td>
         <a th:href="@{/clientes/delete/{id}(id=${cliente.id})}"><button id="button_borrar">Eliminar</button></a></td>
     </div>
