@@ -2,34 +2,18 @@
 <html lang="en">
 
 <head>
+    <title>Landing Page</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
-    <title>Landing Page</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
     <html lang="en" xmlns:th="http://www.thymeleaf.org">
-
-
-
-
     <link href="style.css" rel="stylesheet" type="text/css"/>
     
 <body>
@@ -41,9 +25,9 @@
             <a href="#welcome">Sobre nosotros</a>
             <a href="#services">Servicios</a>
             <a href="#contact">Contacto</a>
-            <a href="/mascotas/all">Mascotas</a> <!-- Ajusta la URL según la configuración de tu aplicación -->
+            <a href="/mascotas/all">Mascotas</a> 
 
-            <a class="btn-login" href="#">Iniciar sesión</a>
+            <a class="btn-login" href="/clientes/login">Iniciar sesión</a>
         </nav>
     </div>
 
@@ -175,7 +159,36 @@
 
 
 -->
-    <script src="static/jav.js"></script>
+    <script>
+        // Obtener referencias
+const slidesContainer = document.getElementById("slides-container");
+const slides = document.querySelectorAll(".slide");
+const prevButton = document.getElementById("slide-arrow-prev");
+const nextButton = document.getElementById("slide-arrow-next");
+let currentSlideIndex = 0; // Variable para mantener el índice de la diapositiva actual
+
+// Evento de clic para el botón de siguiente
+nextButton.addEventListener("click", () => {
+    const slideWidth = slides[0].clientWidth; // Usamos el ancho del primer slide para la consistencia
+    currentSlideIndex++; // Incrementamos el índice de la diapositiva actual
+    if (currentSlideIndex >= slides.length) {
+        // Si el índice de la diapositiva actual excede la cantidad de diapositivas
+        currentSlideIndex = 0; // Volvemos al primer slide
+    }
+    slidesContainer.scrollLeft = currentSlideIndex * slideWidth; // Movemos el contenedor de slides
+});
+
+// Evento de clic para el botón de anterior (no es necesario cambiar)
+prevButton.addEventListener("click", () => {
+    const slideWidth = slides[0].clientWidth;
+    currentSlideIndex--;
+    if (currentSlideIndex < 0) {
+        currentSlideIndex = slides.length - 1; // Si estamos en el primer slide, vamos al último
+    }
+    slidesContainer.scrollLeft = currentSlideIndex * slideWidth;
+});
+
+    </script>
 
 </body>
 

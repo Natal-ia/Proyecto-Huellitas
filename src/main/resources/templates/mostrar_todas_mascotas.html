@@ -9,52 +9,68 @@
   <title>Mostrar Todas Mascotas</title>
   <link rel="stylesheet" th:href="@{/css/style.css}">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <header>
-      
-        <div class="navbar-full">
-            
-            <nav class="navbar-options">
-                <a href="#">Paciente</a>
-                <a href="#welcome">Cliente</a>
-        
-            </nav>
-            <h2>Huellitas Felices</h2>
-            <img class="logo" th:src="@{/img/logo.png}" alt="Logo huellitas felices">
-         
-        </div>
-      </header>
 
-<section id="todas-mascotas">
+<body>
+
+  <header>
+
+    <div class="navbar-full">
+
+      <a id="button-huellitas" th:href="@{/}"><button>
+          <img class="logo" th:src="@{/img/logo.png}" alt="Logo huellitas felices">
+          <h2>Huellitas Felices</h2>
+        </button>
+      </a>
+      <nav class="navbar-options">
+        <a href="#">Paciente</a>
+        <a href="/clientes/all">Cliente</a>
+      </nav>
+      <a><button id="button_back" onclick="history.back()">Volver</button></a></td>
+    </div>
+  </header>
+
+  <section id="todas-mascotas">
 
     <h1 id="todas-mascotas-title">Lista de Mascotas</h1>
     <div id="mascota-container">
-    <section id="mascotas-table">
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>Nombre</th>
-          <th>Raza</th>
-          <th>Edad</th>
-          <th>Peso</th>
-          <th>Acción</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr th:each="mascota : ${mascotas}">
-          <td th:text="${mascota.nombre}"></td>
-          <td th:text="${mascota.raza}"></td>
-          <td th:text="${mascota.edad}"></td>
-          <td th:text="${mascota.peso}"></td>
-          <td><a th:href="@{/mascotas/find(id=${mascota.id})}"><button>Ver Detalle</button></a></td>
-        </tr>
-      </tbody>
-    </table>
+
+      <a th:href="@{/mascotas/add}"><button class="add-btn">Agregar Mascota</button></a>
+
+      <section id="mascotas-table">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Raza</th>
+              <th>Edad</th>
+              <th>Peso</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr th:each="mascota : ${mascotas}">
+              <td th:text="${mascota.nombre}"></td>
+              <td th:text="${mascota.raza}"></td>
+              <td th:text="${mascota.edad}"></td>
+              <td th:text="${mascota.peso}"></td>
+              <td>
+                <a th:href="@{/mascotas/find(id=${mascota.id})}"><button>Ver Detalle</button></a>
+                <a th:href="@{/mascotas/delete/{id}(id=${mascota.id})}"><button id="delete-button">Eliminar</button></a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
   </section>
-</div>
-</section>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
