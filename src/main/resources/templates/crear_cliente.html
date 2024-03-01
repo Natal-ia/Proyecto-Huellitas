@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro Cliente</title>
     <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
 
 </head>
 <body class="background-registro">
 
     <div class="form-general-group">
+        
         <h2>Registro De Cliente</h2>
         <form th:object="${cliente}" th:action="@{/clientes/agregar}" th:method="post">
             <div class="form-group">

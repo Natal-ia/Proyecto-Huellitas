@@ -13,7 +13,6 @@ lima pastel     #CDFADB
 * {
     scroll-behavior: smooth;
     scroll-margin-top: 7vw;
-    
 }
 /*------------------------------------------Boton general---------------------------------------------------*/
 #button-huellitas {
@@ -40,12 +39,16 @@ lima pastel     #CDFADB
 #button-huellitas button {
     display: inline-flex;
     align-items: center;
+    
 }
 
+#button-huellitas h2, .navbar-full h2{
+    font-family: 'Amatic SC', sans-serif;
+}
+}
 
-#button-huellitas:hover {
-    background-color: #ffa074;
-    color: black;
+#button-huellitas button:hover {
+    cursor: pointer;
     border: none;
 }
 
@@ -77,7 +80,6 @@ button {
 }
 
 .navbar-full h2 {
-    font-family: 'Amatic SC', sans-serif;
     font-size: 1.6vw;
 }
 
@@ -86,6 +88,7 @@ button {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+   
 }
 
 /*opciones de navegación*/
@@ -96,6 +99,8 @@ button {
     padding: 1.5vw 2vw;
     border-radius: 0.5vw;
     font-weight: bold;
+    transition: 0.4s;
+    font-family: poppins;
 }
 
 .btn-login {
@@ -104,6 +109,8 @@ button {
 
 /*cambio de color al pasar el mouse*/
 .navbar-options a:hover {
+    cursor: pointer;
+    text-decoration: none;
     background-color: #ffa074;
     color: rgb(249, 242, 233);
 }
@@ -409,7 +416,7 @@ footer h3 {
     justify-content: space-evenly;
     margin: 1vw 0;
     margin-top: 2vw;
-    align-itvws: center;
+    align-items: center;
 }
 
 .contact-logos {
@@ -430,6 +437,7 @@ footer h3 {
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
     margin-top: 3vw;
+   
 }
 
 #detalles-mascota,
@@ -468,35 +476,87 @@ footer h3 {
 
 /*/*---------------------------------Todas MASCOTAS/clientes---------------------------------------*/
 /* Button */
-.table-striped a button,
-.add-btn {
-    background-color: #ff8080;
+.table-striped a button {
     border-radius: 40px;
-    border-style: none;
+    border-color: #ff8080;
+    color: #ff8080;
     padding-left: 1.5vw;
     padding-right: 1.5vw;
     box-shadow: none;
     float: left;
     display: inline;
+    transition: 0.4s;
 }
 
+.table-striped a button:hover{
+    background-color: #ff8080;
+    color: white;
+    cursor: pointer;
+}
 .add-btn {
-    margin-bottom: 2vw;
+    margin-top: 2vw;
+    border-color: #ff8080;
+    border-radius: 1vw;
+    color: #ff8080;
+    background-color: white;
+    padding: 1vw;
+    transition: 0.4s;
 }
 
-#button_borrar {
+.add-btn:hover {
+    background-color: #ff8080;
+    color: white;
+    cursor: pointer;
+}
+
+.mascota-info{
+    display: inline-flex;
+    justify-content: space-evenly;
+}
+
+
+#mascota-container-todas{
+    padding: 2vw;
+    margin: 0 1vw;
+    width: 30vw;
+    border-radius: 1vw;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    margin-top: 3.5vw;
+    text-align: center;
+    display: inline-flex;
+    justify-content: space-evenly;  
+    transition: 0.4s;
+}
+
+#mascota-container-todas:hover{
+    cursor: pointer;
+    box-shadow: 0 0 40px #ffa0747b;
+}
+
+#mascota-container-todas .img-mascota-todas{
+    border-radius: 500px;
+    width: 10vw;
+    height: 10vw;
+    align-self: center;
+    object-fit: cover;
+    
+}
+
+
+
+#mascota-container-todas .mascota-actions button{
+    border-radius: 40px;
+    border-style: none;
+    padding: 0 1vw;
+    margin-top: 2vw;
+}
+
+.mascota-actions .delete-button{
     background-color: #ff4a4a;
-    border-radius: 40px;
-    border-style: none;
-    padding: 0 1vw;
 }
 
-#button_editar {
-    background-color: #FFCF96;
-    border-radius: 40px;
-    border-style: none;
-    padding: 0 1vw;
-}
+
 
 #button_back {
     background-color: #FFCF96;
@@ -552,6 +612,7 @@ footer h3 {
     padding-left: 10%;
     padding-right: 10%;
     padding-top: 6%;
+    
 }
 
 .buttons_nav {
@@ -666,12 +727,15 @@ header .navbar-full {
     padding: 1.5vw 3vw;
     align-self: center;
     font-style: bold;
+    transition: 0.4s;
 
 }
 
 #button_back:hover {
     background-color: #ffa074;
+    cursor: pointer;
     color: black;
+    transition: 0.4s;
 }
 
 .navbar-specific #header_title {
@@ -718,6 +782,7 @@ header .navbar-full {
 
 }
 
+
 #button_modificar {
     background-color: #FFCF96;
     color: rgb(91, 91, 91);
@@ -729,10 +794,12 @@ header .navbar-full {
     box-shadow: none;
     float: right;
     display: inline;
+    transition: 0.4s;
 }
 
 #button_modificar:hover {
     background-color: #ffa074;
+    cursor: pointer;
     color: black;
 }
 
@@ -759,7 +826,8 @@ header .navbar-full {
 
 /* Login container */
 #login-box .login-container {
-    backdrop-filter: blur(10px) contrast(0.8);
+    backdrop-filter: blur(8px) contrast(0.8);
+  
     border-width: 0px;
     border-top-left-radius: 5%;
     border-top-right-radius: 5%;
@@ -924,11 +992,13 @@ header .navbar-full {
     border-radius: 1vw;
     border-style: none;
     color: #ff8080;
+    transition: 0.4s;
 }
 
 #error-content button:hover {
     background-color: #ffa074;
     color: black;
+    cursor: pointer;
 }
 
 /*------------------------------------------Registros---------------------------------------------------*/
@@ -940,16 +1010,15 @@ header .navbar-full {
     background-position: center;
     background-attachment: fixed;
     width: 100%;
-    ;
     background-color: #ffffff;
 }
 
 .form-general-group {
     text-align: center;
-    background-color: #b4b4b493;
+    background-color: #ffd09691;
     border-radius: 1vw;
     margin: 0 27vw;
-    margin-top: 8vw;
+    margin-top: 5vw;
     padding: 2vw;
     padding-top: 1vw;
     backdrop-filter: blur(0.1vw);
@@ -958,6 +1027,8 @@ header .navbar-full {
 .form-general-group h2 {
     font-size: 2vw;
     margin-bottom: 1vw;
+   
+    
 }
 
 .form-group {
@@ -967,8 +1038,9 @@ header .navbar-full {
 .form-group input {
     border-radius: 1vw;
     border-style: none;
-    padding: 0.5vw;
-    background-color: #A1A1A1;
+    padding: 1vw;
+    background-color: #ffa074cb;
+    font-family: 'Poppins', sans-serif;
 }
 
 .form-general-group button {
@@ -981,7 +1053,12 @@ header .navbar-full {
     padding: 0.5vw 1vw;
     color: white;
     font-size: large;
+    transition: 0.4s;
 
+}
+
+.form-general-group button:hover {
+    cursor: pointer;
 }
 
 .background-registro.mascota {

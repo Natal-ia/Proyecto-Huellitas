@@ -40,41 +40,31 @@
   <section id="todas-mascotas">
 
     <h1 id="todas-mascotas-title">Lista de Mascotas</h1>
-    <div id="mascota-container">
 
-      <a th:href="@{/mascotas/add}"><button class="add-btn">Agregar Mascota</button></a>
-
-      <section id="mascotas-table">
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th>Nombre</th>
-              <th>Raza</th>
-              <th>Edad</th>
-              <th>Peso</th>
-              <th>Acción</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr th:each="mascota : ${mascotas}">
-              <td th:text="${mascota.nombre}"></td>
-              <td th:text="${mascota.raza}"></td>
-              <td th:text="${mascota.edad}"></td>
-              <td th:text="${mascota.peso}"></td>
-              <td>
-                <a th:href="@{/mascotas/find(id=${mascota.id})}"><button>Ver Detalle</button></a>
-                <a th:href="@{/mascotas/delete/{id}(id=${mascota.id})}"><button id="delete-button">Eliminar</button></a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-    </div>
-  </section>
+    <a th:href="@{/mascotas/add}"><button class="add-btn">Agregar Mascota</button></a>
+    <br>
+  
+        <div id="mascota-container-todas" th:each="mascota : ${mascotas}">
+          <div class="mascota-info">
+            <img class = "img-mascota-todas" src="" alt="Foto de la mascota" th:src="${mascota.foto == null or mascota.foto == '' ? '/img/bichon.png' : mascota.foto}">
+            <div class="datos">
+              <h2 th:text="${mascota.nombre}"></h2>
+              <p><strong>Raza:</strong> <span th:text="${mascota.raza}"></span></p>
+              <p><strong>Edad:</strong> <span th:text="${mascota.edad}"></span></p>
+            </div>
+          </div>
+          <div class="mascota-actions">
+            <a th:href="@{/mascotas/find(id=${mascota.id})}"><button>Ver Detalle</button></a>
+            <i class="fa-solid fa-trash" style="color: #eb0000;"></i>
+            <a th:href="@{/mascotas/delete/{id}(id=${mascota.id})}"><button class="delete-button">Eliminar</button></a>
+          </div>
+        </div>
+  
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
+  <script src="https://kit.fontawesome.com/0fca6b0410.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
