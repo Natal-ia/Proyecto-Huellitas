@@ -46,14 +46,13 @@
         <tr>
           <th>Nombre</th>
           <th>Número de cédula</th>
-          <th>Acción</th>
         </tr>
       </thead>
       <tbody>
         <tr th:each="cliente : ${clientes}">
           <td th:text="${cliente.nombre}"></td>
           <td th:text="${cliente.id}"></td>
-          <td><a th:href="@{/clientes/find(id=${cliente.id})}"><button>Ver Detalle</button></a></td>
+          <td id="casilla-detalle"><a th:href="@{/clientes/find(id=${cliente.id})}"><button class="add-btn btn-detalle">Ver Detalle</button></a></td>
         </tr>
       </tbody>
     </table>

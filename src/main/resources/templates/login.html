@@ -13,7 +13,7 @@
 <section id="login-box">
     <div class="login-container">
         <h2>Login</h2>
-        <form id="loginForm" th:action="@{/clientes/find}" method="get">
+        <form id="loginForm" method="get">
             <div class="form-group">
                 <label for="Cedula">Cedula</label>
                 <input type="text" id="Cedula" name="id" required />
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     document.getElementById("loginForm").addEventListener("submit", function(event) {
         event.preventDefault();
         var cedula = document.getElementById("Cedula").value;
-        var url = "/clientes/find?id=" + cedula;  
+        var url = "/clientes/loginCliente?id=" + cedula;  
         this.action = url;
         this.submit();
     });

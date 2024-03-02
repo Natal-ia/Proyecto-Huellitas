@@ -107,11 +107,6 @@ button {
     background-color: rgb(244, 244, 244);
 }
 
-.btn-login:hover {
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
-}
 
 /*cambio de color al pasar el mouse*/
 .navbar-options a:hover {
@@ -122,6 +117,15 @@ button {
     
 }
 
+.navbar-options .btn-login:hover {
+    background-color: #ff7474;
+}
+
+.btn-login:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
 
 .logo {
     width: auto;
@@ -228,6 +232,8 @@ button {
     border-radius: 1vw;
     margin: 2vw;
     
+    object-fit: cover;
+    
 }
 
 .slider-wrapper {
@@ -333,7 +339,7 @@ li.slide {
 
 /*slides colores especifico de cada una*/
 .slide:nth-child(1) {
-    background-color: #CDFADB;
+    background-color: #b6fab8;
 
 }
 
@@ -347,11 +353,11 @@ li.slide {
 }
 
 .slide:nth-child(4) {
-    background-color: #FCF4C4;
+    background-color: #fef3b4;
 }
 
 .slide:nth-child(5) {
-    background-color: #FBECD9;
+    background-color: #fee1bb;
 }
 
 .slide:nth-child(6) {
@@ -550,44 +556,76 @@ footer h3 {
     align-self: center;
 }
 
+#container-vista{
+    display:inline-flex;
+    justify-content:left;
+}
 #cliente-container-vista{
     width: 50%;
-    margin: 9vw 0 0 30vw;
+    margin: 9vw 0 0 15vw;
     padding: 0;
+}
+
+.mascota_cliente{
+    border-radius: 500px;
+    width: 8vw;
+    height: 8vw;
+    align-self: center;
+    object-fit: cover;
+}
+
+#todas-mascotas-title{
+    margin: 0;
+}
+
+.info-vista{
+    padding: 1.5vw 1vw;
+    width: 18vw;
+    height: 6vw;
+    border-radius: 1vw;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    margin-top: 3vw;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.lista-mascotas-vista{
+    display: flex;
+    flex-direction: column;
 }
 /*/*---------------------------------Todas MASCOTAS/clientes---------------------------------------*/
 /* Button */
-.table-striped a button {
-    border-radius: 40px;
-    border-color: #ff8080;
-    color: #ff8080;
-    padding-left: 1.5vw;
-    padding-right: 1.5vw;
-    box-shadow: none;
-    float: left;
-    display: inline;
-    transition: 0.4s;
-}
 
-.table-striped a button:hover{
-    background-color: #ff8080;
-    color: white;
-    cursor: pointer;
-}
 .add-btn {
-    margin-top: 2vw;
-    border-color: #ff8080;
+    position: relative;
+    left: 1vw;
+    transition: all .5s ease;
+    color: #ff7474;
+    border: 0.2vw solid #ff7474;
+    text-align: center;
+    line-height: 1;
+    background-color: rgba(255, 255, 255, 0.353);
+    font-size: 1.2vw;
+    padding: 0.8vw;
+    outline: none;
     border-radius: 1vw;
-    color: #ff8080;
-    background-color: white;
-    padding: 1vw;
-    transition: 0.4s;
 }
 
 .add-btn:hover {
-    background-color: #ff8080;
     color: white;
-    cursor: pointer;
+    background-color: #ff7474;
+}
+.btn-detalle{
+    border-width: 0.15vw;
+    padding: 0.6vw;
+    font-size: 1vw;
+    position: unset;
+    color: #ffa074;
+    border-color:  #ffa074;
+}
+.btn-detalle:hover{
+    background-color: #ffa074;
 }
 
 .mascota-info{
@@ -622,6 +660,7 @@ footer h3 {
     height: 10vw;
     align-self: center;
     object-fit: cover;
+    margin-right: 1vw;
     
 }
 
@@ -637,6 +676,7 @@ footer h3 {
 #mascota-container-todas .mascota-actions{
     display: flex;
     flex-direction: column;
+    width: 10vw;
 }
 
 
@@ -659,20 +699,13 @@ footer h3 {
 
 }
 
-/* Button */
-#mascotas-table .table-striped tbody tr td a button {
-    padding-top: 2% !important;
-    padding-bottom: 2% !important;
 
-}
+
 #todas-mascotas{
     margin-top: 2vw;
 }
 
-/* Button */
-#todas-mascotas #mascotas-table .table-striped tbody tr td a button {   
-    left: 20% !important;
-}
+
 
 /* Heading */
 #todas-mascotas-title,
@@ -682,12 +715,60 @@ footer h3 {
 }
 
 /* Mascotas table */
-#mascotas-table,
-#clientes-table {
+#mascotas-table {
     padding-left: 9%;
     padding-right: 5%;
     padding-top: 2%;
     padding-bottom: 0em;
+}
+
+.delete-btn:hover {
+    background-color: #ff000016;
+    
+}
+
+#clientes-table table{
+max-width: 70%;
+text-align: center;
+}
+
+#clientes-table tr th{
+    background-color: #ff7474;
+    color: white;
+    border-radius: 2vw;
+    border-style: none;
+    margin-right: 2vw;
+}
+#clientes-table{
+    padding-left: 20vw;
+}
+#clientes-table td{
+    padding: 0;
+    padding-top: 0.6vw;
+    background-color: rgb(255, 141, 71);
+    color: white;
+    border-radius: 2vw;
+    border-style: none;
+    
+}
+.table-striped {
+    border-radius: 2vw;
+    border-collapse: separate;
+    border-spacing: 1vw;
+   
+}
+
+#clientes-table td{
+    width: 10vw;
+    background-color: #ffa074;
+    color: white;
+    border-radius: 2vw;
+    border-style: none;
+    
+}
+
+#clientes-table #casilla-detalle{
+    background-color: white;
 }
 
 #todas-mascotas,
@@ -1126,25 +1207,30 @@ header .navbar-full {
     font-family: 'Poppins', sans-serif;
 }
 
+
 .form-general-group button {
-    margin-top: 1vw;
     position: relative;
     left: 15vw;
+    transition: all .5s ease;
+    color: #ee6060;
+    border: 3px solid #ff7474;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    font-size: 1.2vw;
+    background-color: rgba(255, 255, 255, 0.199);
+    font-weight: bolder;
+    padding: 0.8vw;
+    outline: none;
     border-radius: 1vw;
-    background-color: #ff8080;
-    border-style: none;
-    padding: 0.5vw 1vw;
-    color: white;
-    font-size: large;
-    transition: 0.4s;
-
 }
-
 .form-general-group button:hover {
-    cursor: pointer;
+    color: white;
+    background-color: #ff7474;
 }
 
 .background-registro.mascota {
     background-image: url("../img/registro-mascota.jpg");
 }
+
 

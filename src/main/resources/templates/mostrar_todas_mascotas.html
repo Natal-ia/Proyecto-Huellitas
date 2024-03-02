@@ -41,8 +41,6 @@
 
     <h1 id="todas-mascotas-title">Lista de Mascotas</h1>
 
-    
-  
     <section id="mascotas-table">
       <a th:href="@{/mascotas/add}"><button class="add-btn">Agregar Mascota</button></a>
       <br>
@@ -57,9 +55,9 @@
           </div>
           <div class="mascota-actions">
             <a th:href="@{/mascotas/find(id=${mascota.id})}"><button>Ver Detalle</button></a>
-            <a th:href="@{/mascotas/delete/{id}(id=${mascota.id})}" style="color: #eb0000; font-size: 2.5vw;">
-              <i class="fa-solid fa-trash" style="color: #eb0000;"></i>
-            </a>
+            <a th:href="@{/mascotas/delete/{id}(id=${mascota.id})}"  style="color: #eb0000; font-size: 1.8vw; margin-top: 0.8vw;">
+              <i class="delete-btn fa-solid fa-trash" style="color: #eb0000;"></i>
+          </a>
           </div>
         </div>
     </section>

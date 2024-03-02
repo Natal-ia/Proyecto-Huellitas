@@ -51,7 +51,7 @@
                 <tr th:each="mascota : ${cliente.mascotas}">
                     <td th:text="${mascota.nombre}"></td>
                     <td id="casilla-mod">
-                        <a th:href="@{/mascotas/find(id=${mascota.id})}"><button>Ver Detalle</button></a>
+                        <a th:href="@{/mascotas/find(id=${mascota.id})}"><button class="add-btn btn-detalle">Ver Detalle</button></a>
                     </td>
                 </tr>
             </tbody>

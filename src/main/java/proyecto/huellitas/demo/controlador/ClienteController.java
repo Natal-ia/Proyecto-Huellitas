@@ -56,13 +56,25 @@ public class ClienteController {
      
     }
 
+    @GetMapping("/loginCliente")
+    public String mostrarInfoClienteLogin(Model model, @RequestParam("id") Long identificacion) {
+        Cliente cliente = clienteService.SearchById(identificacion);
+        model.addAttribute("cliente", cliente);
+       
+        if(cliente != null){
+            return "mostrar_cliente_vista";
+        }
+        else{
+            return "login";
+        }
+    }
     // http://localhost:8090/mascotas/find?id=1
     @GetMapping("/find")
     public String mostrarInfoClientes2(Model model, @RequestParam("id") Long identificacion) {
         model.addAttribute("cliente", clienteService.SearchById(identificacion));
         return "mostrar_cliente";
     }
-
+        
     @GetMapping("/add")
     public String mostrarFormularioCrear(Model model) {
 
