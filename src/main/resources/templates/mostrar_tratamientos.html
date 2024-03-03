@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Mascotas</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+    <html lang="en" xmlns:th="http://www.thymeleaf.org">
+</head>
+
+
+<body>
+    <header class="navbar-specific">
+        <a id="button-huellitas" th:href="@{/}"><button>
+            <img class="logo" th:src="@{/img/logo.png}" alt="Logo huellitas felices">
+            <h2>Huellitas Felices</h2></button>
+          </a>
+        <h3 id="header_title"> Informacion del tratamiento</h3>
+
+        <a th:href="@{/tratamientos/all}"><button id="button_back">Volver</button></a></td>
+        <!--- <img class="volver" th:src="@{/img/bichon.png}" alt="Volver"> -->
+
+    </header>
+
+    <section class="content-mascota-specific">
+        <title>Detalle de Tratamiento</title>
+        </head>
+        <div id="mascota-container">
+
+            <!-- Check if the mascota.foto is null or empty, if so, set it to a default image URL -->
+
+            <div id="informacionMascota">
+                <!-- <p><strong>ID:</strong> <span th:text="${mascota.id}"></span></p> -->
+                
+                <h2><strong th:text="${tratamiento.mascota.nombre}"></h2> 
+                <h2><strong>Id de mascota:   <strong th:text="${tratamiento.mascota.id}"></h2> 
+
+                <p><strong>Droga Aplicada:</strong> <span th:text="${tratamiento.droga}"></span></p>
+                <p><strong>Descripción:</strong> <span th:text="${tratamiento.descripcion}"></span></p>
+                <p><strong>Fecha de Inicio:</strong> <span th:text="${tratamiento.fechaInicio}"></span></p>
+                <p><strong>Fecha de Fin:</strong> <span th:text="${tratamiento.fechaFin}"></span></p>
+                <p><strong>Veterinario:</strong> <span th:text="${tratamiento.veterinario}"></span></p>
+                <p><strong>Enfermedad:</strong> <span th:text="${tratamiento.mascota.enfermedad}"></span></p>
+                <!--<p><strong>Tratamiento:</strong> <span th:text="${mascota.tratamiento}"></span></p>-->
+                <a th:href="@{/tratamientos/update/{id}(id=${tratamiento.id})}"><button id="button_modificar">Modificar</button></a>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

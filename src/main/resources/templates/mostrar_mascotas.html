@@ -51,6 +51,27 @@
             </div>
         </div>
     </section>
+    <section id="mascotas-table" class="clientes-specific">
+        <table class="table table-striped mascotas-clientes">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                </tr>
+            </thead>
+            <tbody id="informacionMascota" th:if="${mascota.tratamientos != null}">
+                <tr th:each="tratamiento : ${mascota.tratamientos}">
+                    <td th:text="${tratamiento.droga}"></td>
+                    <td th:text="${tratamiento.descripcion}"></td>
+                    <td th:text="${tratamiento.veterinario}"></td>
+                    <td th:text="${tratamiento.fechaInicio}"></td>
+                    <td th:text="${tratamiento.fechaFin}"></td>
+                    <td id="casilla-mod">
+                        <a th:href="@{/tratamientos/find(id=${tratamiento.id})}"><button class="add-btn btn-detalle">Ver Detalle</button></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
 </body>
 
 </html>

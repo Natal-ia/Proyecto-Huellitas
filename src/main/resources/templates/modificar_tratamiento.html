@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Mascota</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="background-registro mascota">
+
+    <div class="form-general-group">
+        <h2>Editar Tratamiento</h2>
+        <form th:object="${tratamiento}" th:action="@{/tratamientos/update/{id}(id=${tratamiento.id})}" th:method="post">
+
+            <!-- Hidden input field for cliente ID -->
+            <input type="hidden" th:field="*{mascota.id}" id="mascotaId" name="mascotaId" />
+            
+            <div class="form-group">
+                <label for="id">Id de Mascota:</label><br>
+                <input th:field="*{id}" type="number" id="id" name="id"><br>
+            </div>
+            
+            
+            <div class="form-group">
+                <label for="droga">Droga:</label><br>
+                <input th:field="*{droga}" type="text" id="droga" name="droga"><br>
+            </div>
+
+            <div class="form-group">
+                <label for="descripcion">Descripcion:</label><br>
+                <input th:field="*{descripcion}" type="text" id="descripcion" name="descripcion"><br>
+            </div>
+
+            <div class="form-group">
+                <label for="fechaInicio">Fecha de Inicio de tratamiento:</label><br>
+                <input th:field="*{fechaInicio}" type="text" id="fechaInicio" name="fechaInicio"><br>
+            </div>
+
+            <div class="form-group">
+                <label for="fechaFin">Fecha de Fin de Tratamiento:</label><br>
+                <input th:field="*{fechaFin}" type="text"  id="fechaFin" name="fechaFin"><br>
+            </div>
+
+            <div class="form-group">
+                <label for="veterinario">Veterinario:</label><br>
+                <input th:field="*{veterinario}" type="text" id="veterinario" name="veterinario"><br>
+            </div>
+
+
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </form>
+    </div>
+</body>
+
+</html>
