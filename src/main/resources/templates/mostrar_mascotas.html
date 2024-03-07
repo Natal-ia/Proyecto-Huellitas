@@ -43,7 +43,11 @@
             </div>
         </div>
     </section>
+    <a th:href="@{/tratamientos/add}"><button class="add-btn btn-detalle">Agregar Tratamiento</button></a>
+
+    
     <section id="mascotas-table" class="clientes-specific">
+
         <table class="mascotas-tratamientos">
             <thead>
                 <tr>
@@ -55,7 +59,9 @@
                     <th></th>
                 </tr>
             </thead>
+
             <tbody id="informacionMascota" th:if="${mascota.tratamientos != null}">
+                
                 <tr th:each="tratamiento : ${mascota.tratamientos}">
                     <td th:text="${tratamiento.droga}"></td>
                     <td th:text="${tratamiento.descripcion}"></td>

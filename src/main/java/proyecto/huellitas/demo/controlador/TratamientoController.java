@@ -69,6 +69,21 @@ public class TratamientoController {
 
         return "crear_tratamiento";
     }
+    
+    @GetMapping("/add/{id}")	
+    public String mostrarFormularioCrearTratamientoBackDetalle(Model model, @PathVariable("id") Long identificacion) {
+        
+
+        Tratamiento tratamiento = new Tratamiento("", "", "", "", "",null);
+
+        model.addAttribute("tratamiento", tratamiento);
+
+        return "crear_tratamiento";
+    }
+
+
+
+
 
     @PostMapping("/agregar")
     public String agregarTratamiento(@ModelAttribute("tratamiento") Tratamiento tratamiento) {
@@ -83,6 +98,9 @@ public class TratamientoController {
         }
         return "redirect:/tratamientos/all";
     }
+
+    
+
     @GetMapping("/delete/{id}")
     public String borrarTratamiento(@PathVariable("id") Long identificacion){
         tratamientoService.DeleteById(identificacion);

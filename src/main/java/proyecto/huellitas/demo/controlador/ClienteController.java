@@ -104,10 +104,11 @@ public class ClienteController {
         return "modificar_cliente";
     }
 
+
     @PostMapping("/update/{id}")
     public String modificarCliente(@PathVariable("id") int identificacion, @ModelAttribute("cliente") Cliente cliente) {
         clienteService.Update(cliente);
-        return "mostrar_cliente";
+        return "redirect:/clientes/find/" + identificacion;
     }
 
     @GetMapping("/login")
