@@ -44,10 +44,15 @@
         </div>
     </section>
     <section id="mascotas-table" class="clientes-specific">
-        <table class="table table-striped mascotas-clientes">
+        <table class="mascotas-tratamientos">
             <thead>
                 <tr>
-                    <th>Nombre</th>
+                    <th>Nombre</th>  
+                    <th>Descripción</th> 
+                    <th>Veterinario</th> 
+                    <th>Fecha Inicio</th> 
+                    <th>Fecha Fin</th> 
+                    <th></th>
                 </tr>
             </thead>
             <tbody id="informacionMascota" th:if="${mascota.tratamientos != null}">
