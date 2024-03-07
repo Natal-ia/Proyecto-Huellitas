@@ -93,7 +93,6 @@ public class ClienteController {
 
     @GetMapping("/delete/{id}")
     public String borrarCliente(@PathVariable("id") Long identificacion) {
-        mascotaService.deleteAllMascotas(identificacion);
         clienteService.DeleteById(identificacion);
 
         return "redirect:/clientes/all";

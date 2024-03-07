@@ -36,11 +36,13 @@ lima pastel     #CDFADB
     text-align: left;
     font-weight: bold;
 }
+#button-huellitas:checked{
+    border: none;
+}
 
 #button-huellitas button {
     display: inline-flex;
     align-items: center;
-
 }
 
 #button-huellitas h2,
@@ -979,12 +981,11 @@ header .navbar-full {
 .mascotas-tratamientos {
     margin: 0 6vw 0 0vw;
     padding: 1.5vw;
-    border-radius: 1vw;
     width: 100%;
     border-collapse: collapse;
     align-self: left;
-    border-radius: 5vw;
-    
+    border: #ff8080 0.3vw solid;
+    border-radius: 40px;
 }
 
 .mascotas-tratamientos td {
@@ -1217,7 +1218,7 @@ header .navbar-full {
     background-color: #ffd09691;
     border-radius: 1vw;
     margin: 0 27vw;
-    margin-top: 5vw;
+    margin-top: 3vw;
     padding: 2vw;
     padding-top: 1vw;
     backdrop-filter: blur(0.1vw);
@@ -1226,8 +1227,6 @@ header .navbar-full {
 .form-general-group h2 {
     font-size: 2vw;
     margin-bottom: 1vw;
-
-
 }
 
 .form-group {
@@ -1238,7 +1237,7 @@ header .navbar-full {
     border-radius: 1vw;
     border-style: none;
     padding: 1vw;
-    background-color: #ffa074cb;
+    background-color: rgba(255, 255, 255, 0.651);
     font-family: 'Poppins', sans-serif;
 }
 
