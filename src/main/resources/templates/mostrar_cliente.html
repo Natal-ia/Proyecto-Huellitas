@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
@@ -60,4 +60,65 @@
 
 </body>
 
+</html>-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Cliente</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="navbar-specific">
+        <div>
+            <img class="logo" th:src="@{/img/logo.png}" alt="Logo huellitas felices">
+            <h2>Huellitas Felices</h2>
+        </div>
+
+        <h3 id="header_title"> Informacion del cliente</h3>
+
+    </header>
+
+    <div id="container-vista">
+        <div id="cliente-container-vista">
+        
+                <div id="informacionCliente">
+                    <h2 th:text="${cliente.nombre}"></h2>
+                    <p><strong>Correo:</strong> <span th:text="${cliente.correo}"></span></p>
+                    <p><strong>Celular:</strong> <span th:text="${cliente.celular}"></span></p>
+                    <a th:href="@{/clientes/update/{id}(id=${cliente.id})}"><button class="add-btn btn-detalle">Editar</button></a></td>
+                    <a th:href="@{/clientes/delete/{id}(id=${cliente.id})}">
+                        <i class="delete-btn fa-solid fa-trash" style="color: #eb0000;"></i>
+                    </a></td>
+
+                </div>     
+        </div>
+
+        <section id="todas-mascotas">
+            <h1 id="todas-mascotas-title-vista">Mascotas</h1>
+            <section id="mascotas-table" class="clientes-specific  lista-mascotas-vista">
+                <a style="text-decoration: none; color: black;" th:href="@{/mascotas/find(id=${mascota.id})}"
+                <div th:each="mascota : ${cliente.mascotas}" class="mascota-info info-vista">
+                    <img class = "mascota_cliente" src="" alt="Foto de la mascota" th:src="${mascota.foto == null or mascota.foto == '' ? '/img/bichon.png' : mascota.foto}">
+                    <h2 th:text="${mascota.nombre}"></h2>
+                </a>
+            </section>
+        </section>
+    </div>
+
+    <script src="https://kit.fontawesome.com/0fca6b0410.js" crossorigin="anonymous"></script>
+
+</body>
+
 </html>
+
+
