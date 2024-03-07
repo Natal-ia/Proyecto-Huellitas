@@ -26,27 +26,19 @@
         <h3 id="header_title"> Informacion de la mascota</h3>
 
         <a th:href="@{/mascotas/all}"><button id="button_back">Volver</button></a></td>
-        <!--- <img class="volver" th:src="@{/img/bichon.png}" alt="Volver"> -->
-
     </header>
 
     <section class="content-mascota-specific">
         <title>Detalle de Mascota</title>
         </head>
         <div id="mascota-container">
-
-            <!-- Check if the mascota.foto is null or empty, if so, set it to a default image URL -->
             <img src="" alt="Foto de la mascota" th:src="${mascota.foto == null or mascota.foto == '' ? '/img/bichon.png' : mascota.foto}">
-
             <div id="informacionMascota">
-                <!-- <p><strong>ID:</strong> <span th:text="${mascota.id}"></span></p> -->
-                
                 <h2><strong th:text="${mascota.nombre}"></h2> 
                 <p><strong>Raza:</strong> <span th:text="${mascota.raza}"></span></p>
                 <p><strong>Edad:</strong> <span th:text="${mascota.edad}"></span></p>
                 <p><strong>Peso:</strong> <span th:text="${mascota.peso}"></span></p>
                 <p><strong>Enfermedad:</strong> <span th:text="${mascota.enfermedad}"></span></p>
-                <!--<p><strong>Tratamiento:</strong> <span th:text="${mascota.tratamiento}"></span></p>-->
                 <a th:href="@{/mascotas/update/{id}(id=${mascota.id})}"><button id="button_modificar">Modificar</button></a>
             </div>
         </div>
