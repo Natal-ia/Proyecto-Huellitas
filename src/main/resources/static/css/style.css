@@ -524,7 +524,10 @@ footer h3 {
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
     margin-top: 3vw;
+}
 
+#cliente-container .add-btn {
+    margin-left: 10vw;
 }
 
 #detalles-mascota,
@@ -866,7 +869,11 @@ header .navbar-full {
     position: right;
 }
 
-
+#todos-clientes{
+    margin: 2vw 0 0 11vw;
+    width: 70%;
+    align-self: center;
+}
 
 /*/*---------------------------------MASCOTA---------------------------------------*/
 /* Navbar */
@@ -978,22 +985,22 @@ header .navbar-full {
     color: black;
 }
 
-.mascotas-tratamientos {
+.tabla-general {
     margin: 0 6vw 0 0vw;
     padding: 1.5vw;
     width: 100%;
     border-collapse: collapse;
-    align-self: left;
+    
     border: #ff8080 0.3vw solid;
     border-radius: 40px;
 }
 
-.mascotas-tratamientos td {
+.tabla-general td {
     padding: 0.5vw;
     border: #ff8080 0.2vw solid;
 }
 
-.mascotas-tratamientos th {
+.tabla-general th {
     background-color: #ff8080;
     color: white;
     text-align: left;
