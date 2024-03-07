@@ -985,11 +985,10 @@ header .navbar-full {
 }
 
 .tabla-general {
-    margin: 0 6vwvw 0 0vw;
+    margin: 0 6vw 0 0vw;
     padding: 1.5vw;
     width: 100%;
     border-collapse: collapse;
-    
     border: #ff8080 0.3vw solid;
     border-radius: 40px;
 }
