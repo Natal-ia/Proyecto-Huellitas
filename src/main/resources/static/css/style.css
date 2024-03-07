@@ -948,10 +948,9 @@ header .navbar-full {
     width: 30vw;
     border-radius: 1vw;
     background-color: white;
-    align-self: left;
+    align-self: left;   
     border-radius: 1vw;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
-
 }
 
 #mascota-container img {
@@ -986,7 +985,7 @@ header .navbar-full {
 }
 
 .tabla-general {
-    margin: 0 6vw 0 0vw;
+    margin: 0 6vwvw 0 0vw;
     padding: 1.5vw;
     width: 100%;
     border-collapse: collapse;
