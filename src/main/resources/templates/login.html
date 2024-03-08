@@ -24,6 +24,7 @@
             </div>
         </form>
         
+        <div id="errorMessage" style="display: none; color: red;">Please enter a valid ID.</div>
     </div>
 </section>
 
@@ -32,12 +33,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
     document.getElementById("loginForm").addEventListener("submit", function(event) {
         event.preventDefault();
         var cedula = document.getElementById("Cedula").value;
-        var url = "/clientes/loginCliente?id=" + cedula;  
-        this.action = url;
-        this.submit();
+        
+        if (cedula.trim() === "") {
+            document.getElementById("errorMessage").style.display = "block";
+        } else {
+            var url = "/clientes/loginCliente?id=" + cedula;  
+            this.action = url;
+            this.submit();
+        }
     });
 });
-
 </script>
 </body>
 </html>

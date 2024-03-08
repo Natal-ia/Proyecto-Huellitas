@@ -116,7 +116,7 @@ public class TratamientoController {
     @PostMapping("/update/{id}")
     public String modificarTratamiento(@PathVariable("id") Long identificacion, @ModelAttribute("tratamiento") Tratamiento tratamiento){
         tratamientoService.Update(tratamiento);
-        return "mostrar_tratamiento";        
+        return "redirect:/tratamientos/find/" + identificacion;        
     }
 }
 

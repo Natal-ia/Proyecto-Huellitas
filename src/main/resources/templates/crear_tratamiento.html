@@ -18,33 +18,33 @@
         <form th:object="${tratamiento}" th:action="@{/tratamientos/agregar}" th:method="post">
             <div class="form-group">
                 <label for="id">Id de Mascota:</label><br>
-                <input th:field="*{id}" type="number" id="id" name="id"><br>
+                <input th:field="*{id}" type="number" id="id" name="id" required><br>
             </div>
             
             
             <div class="form-group">
                 <label for="droga">Droga:</label><br>
-                <input th:field="*{droga}" type="text" id="droga" name="droga"><br>
+                <input th:field="*{droga}" type="text" id="droga" name="droga" required><br>
             </div>
 
             <div class="form-group">
                 <label for="descripcion">Descripcion:</label><br>
-                <input th:field="*{descripcion}" type="text" id="descripcion" name="descripcion"><br>
+                <input th:field="*{descripcion}" type="text" id="descripcion" name="descripcion" required><br>
             </div>
 
             <div class="form-group">
                 <label for="fechaInicio">Fecha de Inicio de tratamiento:</label><br>
-                <input th:field="*{fechaInicio}" type="text" id="fechaInicio" name="fechaInicio"><br>
+                <input th:field="*{fechaInicio}" type="text" id="fechaInicio" name="fechaInicio" required><br>
             </div>
 
             <div class="form-group">
                 <label for="fechaFin">Fecha de Fin de Tratamiento:</label><br>
-                <input th:field="*{fechaFin}" type="text"  id="fechaFin" name="fechaFin"><br>
+                <input th:field="*{fechaFin}" type="text"  id="fechaFin" name="fechaFin" required><br>
             </div>
 
             <div class="form-group">
                 <label for="veterinario">Veterinario:</label><br>
-                <input th:field="*{veterinario}" type="text" id="veterinario" name="veterinario"><br>
+                <input th:field="*{veterinario}" type="text" id="veterinario" name="veterinario" required><br>
             </div>
 
     
