@@ -29,7 +29,7 @@
                 <a th:href="@{/mascotas/all}">Mascotas</a>
                 <a href="#">Cliente</a>
             </nav>
-            <a><button id="button_back"  onclick="history.back()">Volver</button></a></td>
+            <a href="javascript:history.back()"><button id="button_back">Volver</button></a>
          
         </div>
       </header>
@@ -40,20 +40,20 @@
 
       <a th:href="@{/clientes/add}"><button class="add-btn">Agregar Cliente</button></a>
       
-    <section id="clientes-table">
-    <table class="table table-striped">
+    <section id="todos-clientes">
+    <table class="tabla-general">
       <thead>
         <tr>
           <th>Nombre</th>
           <th>Número de cédula</th>
-          <th>Acción</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
         <tr th:each="cliente : ${clientes}">
           <td th:text="${cliente.nombre}"></td>
           <td th:text="${cliente.id}"></td>
-          <td><a th:href="@{/clientes/find(id=${cliente.id})}"><button>Ver Detalle</button></a></td>
+          <td id="casilla-detalle"><a th:href="@{/clientes/find(id=${cliente.id})}"><button class="add-btn btn-detalle">Ver Detalle</button></a></td>
         </tr>
       </tbody>
     </table>

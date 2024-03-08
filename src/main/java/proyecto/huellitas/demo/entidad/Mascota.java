@@ -1,9 +1,14 @@
 package proyecto.huellitas.demo.entidad;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 
@@ -14,8 +19,7 @@ public class Mascota {
     private double peso;
     private String enfermedad;
     private String foto;
-    private String tratamiento;
-    
+
     @Id
     @GeneratedValue
     private Long id;
@@ -23,10 +27,23 @@ public class Mascota {
     @ManyToOne
     private Cliente cliente;
 
+    @OneToMany(mappedBy = "mascota", cascade = CascadeType.ALL)
+    private List<Tratamiento> tratamientos = new ArrayList<>();
 
+    public Mascota(String nombre, String raza, int edad, double peso, String enfermedad, String foto, Cliente cliente,
+            List<Tratamiento> tratamientos) {
+        this.nombre = nombre;
+        this.raza = raza;
+        this.edad = edad;
+        this.peso = peso;
+        this.enfermedad = enfermedad;
+        this.foto = foto;
+        this.cliente = cliente;
+        this.tratamientos = tratamientos;
+    }
 
-
-    public Mascota(Long id, String nombre, String raza, int edad, double peso, String enfermedad, String foto, String tratamiento) {
+    public Mascota(Long id, String nombre, String raza, int edad, double peso, String enfermedad, String foto,
+            Cliente cliente, List<Tratamiento> tratamientos) {
         this.id = id;
         this.nombre = nombre;
         this.raza = raza;
@@ -34,21 +51,12 @@ public class Mascota {
         this.peso = peso;
         this.enfermedad = enfermedad;
         this.foto = foto;
-        this.tratamiento = tratamiento;
+        this.cliente = cliente;
+        this.tratamientos = tratamientos;
     }
-    public Mascota( String nombre, String raza, int edad, double peso, String enfermedad, String foto, String tratamiento) {
-        
-        this.nombre = nombre;
-        this.raza = raza;
-        this.edad = edad;
-        this.peso = peso;
-        this.enfermedad = enfermedad;
-        this.foto = foto;
-        this.tratamiento = tratamiento;
-    }
+
     public Mascota() {
     }
-    
 
     public Long getId() {
         return id;
@@ -57,7 +65,6 @@ public class Mascota {
     public void setId(Long id) {
         this.id = id;
     }
-
 
     public String getNombre() {
         return nombre;
@@ -107,19 +114,19 @@ public class Mascota {
         this.foto = foto;
     }
 
-    public String getTratamiento() {
-        return tratamiento;
-    }
-
-    public void setTratamiento(String tratamiento) {
-        this.tratamiento = tratamiento;
-    }
-
     public Cliente getCliente() {
         return cliente;
     }
 
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
+    }
+
+    public List<Tratamiento> getTratamientos() {
+        return tratamientos;
+    }
+
+    public void setTratamientos(List<Tratamiento> tratamientos) {
+        this.tratamientos = tratamientos;
     }
 }

@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
     <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+
 </head>
 <body id="login-back" th:style="@{'background-image: url(' + @{/img/loginBack.png} + '); '}">
 
 <section id="login-box">
     <div class="login-container">
         <h2>Login</h2>
-        <form id="loginForm" th:action="@{/clientes/find}" method="get">
+        <form id="loginForm" method="get">
             <div class="form-group">
                 <label for="Cedula">Cedula</label>
                 <input type="text" id="Cedula" name="id" required />
@@ -22,6 +24,7 @@
             </div>
         </form>
         
+        <div id="errorMessage" style="display: none; color: red;">Please enter a valid ID.</div>
     </div>
 </section>
 
@@ -30,12 +33,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
     document.getElementById("loginForm").addEventListener("submit", function(event) {
         event.preventDefault();
         var cedula = document.getElementById("Cedula").value;
-        var url = "/clientes/find?id=" + cedula;  
-        this.action = url;
-        this.submit();
+        
+        if (cedula.trim() === "") {
+            document.getElementById("errorMessage").style.display = "block";
+        } else {
+            var url = "/clientes/loginCliente?id=" + cedula;  
+            this.action = url;
+            this.submit();
+        }
     });
 });
-
 </script>
 </body>
 </html>

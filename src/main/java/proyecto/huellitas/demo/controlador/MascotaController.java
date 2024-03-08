@@ -69,7 +69,7 @@ public class MascotaController {
     @GetMapping("/add")
     public String mostrarFormularioCrear(Model model) {
         
-        Mascota mascota = new Mascota( "", "", 0, 0, "", "", "");
+        Mascota mascota = new Mascota( "", "", 0, 0, "", "",null, null);
         
         model.addAttribute("mascota", mascota);
 
@@ -103,12 +103,14 @@ public String agregarMascota(@ModelAttribute("mascota") Mascota mascota) {
         
         model.addAttribute("mascota", mascotaService.SearchById(identificacion));
         return "modificar_mascota";
+        
     }
 
     @PostMapping("/update/{id}")
     public String modificarMascota(@PathVariable("id") Long identificacion, @ModelAttribute("mascota") Mascota mascota){
         mascotaService.Update(mascota);
-        return "mostrar_mascotas";        
+        //return "mostrar_mascotas";  
+        return "redirect:/mascotas/find/" + identificacion;      
     }
 }
     

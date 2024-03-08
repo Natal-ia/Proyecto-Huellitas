@@ -56,13 +56,25 @@ public class ClienteController {
      
     }
 
+    @GetMapping("/loginCliente")
+    public String mostrarInfoClienteLogin(Model model, @RequestParam("id") Long identificacion) {
+        Cliente cliente = clienteService.SearchById(identificacion);
+        model.addAttribute("cliente", cliente);
+       
+        if(cliente != null){
+            return "mostrar_cliente_vista";
+        }
+        else{
+            return "login";
+        }
+    }
     // http://localhost:8090/mascotas/find?id=1
     @GetMapping("/find")
     public String mostrarInfoClientes2(Model model, @RequestParam("id") Long identificacion) {
         model.addAttribute("cliente", clienteService.SearchById(identificacion));
         return "mostrar_cliente";
     }
-
+        
     @GetMapping("/add")
     public String mostrarFormularioCrear(Model model) {
 
@@ -81,7 +93,6 @@ public class ClienteController {
 
     @GetMapping("/delete/{id}")
     public String borrarCliente(@PathVariable("id") Long identificacion) {
-        mascotaService.deleteAllMascotas(identificacion);
         clienteService.DeleteById(identificacion);
 
         return "redirect:/clientes/all";
@@ -93,10 +104,11 @@ public class ClienteController {
         return "modificar_cliente";
     }
 
+
     @PostMapping("/update/{id}")
     public String modificarCliente(@PathVariable("id") int identificacion, @ModelAttribute("cliente") Cliente cliente) {
         clienteService.Update(cliente);
-        return "mostrar_cliente";
+        return "redirect:/clientes/find/" + identificacion;
     }
 
     @GetMapping("/login")

@@ -26,7 +26,7 @@ public class ClienteServiceImpl implements ClienteService {
 
     @Override
     public Cliente SearchById(Long id) {
-        return repo.findById(id).get();
+        return repo.findById(id).orElse(null);
     }
 
     @Override
@@ -67,22 +67,7 @@ public class ClienteServiceImpl implements ClienteService {
         return cliente.getMascotas();
     }
 
-    @Override
-    @Transactional
-    public void deleteAllMascotas(Long id) {   
-        Cliente cliente = repo.findById(id).orElse(null);
-        if (cliente != null) {
-            // Delete all Mascotas associated with the Cliente
-            cliente.getMascotas().clear();
-            // Save the Cliente to remove the associations
-            repo.save(cliente);
-            
-            // Now delete all Mascotas associated with the Cliente from the database
-            mascotaRepository.deleteByCliente(cliente);
-        } else {
-            // Handle the case when the Cliente with the given ID does not exist
-        }
-    }
+   
 
     
 
