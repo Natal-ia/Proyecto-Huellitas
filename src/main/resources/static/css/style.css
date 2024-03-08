@@ -554,7 +554,7 @@ footer h3 {
 }
 
 #informacionMascota,
-#informacionCliente {
+#informacionCliente{
     padding: 2vw;
     margin-left: 2vw;
     width: 30vw;
@@ -596,6 +596,10 @@ footer h3 {
     margin-top: 3vw;
     text-align: center;
     transition: 0.3s;
+}
+.info-vista:hover {
+
+    box-shadow: 0 0 1.5rem #f28d5ee8;
 }
 
 .lista-mascotas-vista {
@@ -659,10 +663,9 @@ footer h3 {
     transition: 0.3s;
 }
 
-#mascota-container-todas:hover {
+#mascota-container-todas:hover{
     cursor: pointer;
-    box-shadow: 0 0 40px #ffa0747b;
-
+    box-shadow: 0 0 1.5rem #f28d5ee8;
 }
 
 #mascota-container-todas .img-mascota-todas {
@@ -942,15 +945,19 @@ header .navbar-full {
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.0);
 }
 
-#informacionMascota {
+#informacionMascota,
+ #informacion-tratamiento{
     padding: 1.5vw 23vw;
     margin-left: 12vw;
-    width: 30vw;
-    border-radius: 1vw;
-    background-color: white;
+
     align-self: left;   
     border-radius: 1vw;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+#informacion-tratamiento{
+    padding: 1.5vw 10vw;
+    margin-left: 28vw;
 }
 
 #mascota-container img {
@@ -964,7 +971,8 @@ header .navbar-full {
 }
 
 
-#button_modificar {
+#button_modificar,
+#button_modificar_tratamiento{
     background-color: #FFCF96;
     color: rgb(91, 91, 91);
     border-radius: 40px;
@@ -978,10 +986,16 @@ header .navbar-full {
     transition: 0.4s;
 }
 
-#button_modificar:hover {
+#button_modificar:hover,
+#button_modificar_tratamiento:hover {
     background-color: #ffa074;
     cursor: pointer;
     color: black;
+}
+
+#button_modificar_tratamiento{
+
+    margin: 1vw;
 }
 
 .tabla-general {
@@ -1005,10 +1019,7 @@ header .navbar-full {
     padding: 0.5vw;
     border: #ff8080 0.2vw solid;
 }
-#mascotas-table * {
-    box-shadow: none;
-   
-}
+
 
 
 /*/*------------------------------------------Login---------------------------------------------------*/
@@ -1271,4 +1282,8 @@ header .navbar-full {
 
 .background-registro.mascota {
     background-image: url("../img/registro-mascota.jpg");
+}
+
+.background-registro.tratamiento {
+    background-image: url("../img/registro-tratamiento.jpg");
 }
