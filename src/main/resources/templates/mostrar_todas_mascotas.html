@@ -56,7 +56,9 @@
           </div>
           <div class="mascota-actions">
             <!-- Botones para ver el detalle de la mascota y eliminarla -->
-            <a th:href="@{/mascotas/find(id=${mascota.id})}"><button>Ver Detalle</button></a>
+            <a th:href="@{/mascotas/find(id=${mascota.id})}">
+              <i class="more-info fa-solid fa-circle-info" style="color: #ff7474; font-size: 1.8vw; margin-top: 2vw;"></i>
+            </a>
             <a th:href="@{/mascotas/delete/{id}(id=${mascota.id})}"  style="color: #eb0000; font-size: 1.8vw; margin-top: 0.8vw;">
               <i class="delete-btn fa-solid fa-trash" style="color: #eb0000;"></i>
           </a>

@@ -741,6 +741,10 @@ footer h3 {
 
 }
 
+.more-info:hover {
+    background-color: #ffa0740f;
+}
+
 #clientes-table table {
     max-width: 70%;
     text-align: center;
