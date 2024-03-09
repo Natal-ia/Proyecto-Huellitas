@@ -385,7 +385,7 @@ li.slide {
 footer {
     display: flex;
     justify-content: space-between;
-    background-image: linear-gradient(180deg, #fe9292, #fdb0b0);
+    background-image: linear-gradient(180deg, #fca5a5, #fdb0b0);
     color: black;
     padding: 2vw 2vw 0vw 2vw;
 }
@@ -570,7 +570,7 @@ footer h3 {
 
 #cliente-container-vista {
     width: 50%;
-    margin: 9vw 0 0 15vw;
+    margin: 9vw 0 0 20vw;
     padding: 0;
 }
 
@@ -945,19 +945,24 @@ header .navbar-full {
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.0);
 }
 
+#informacionCliente{
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    width: 20vw;
+}
 #informacionMascota,
  #informacion-tratamiento{
     padding: 1.5vw 23vw;
     margin-left: 12vw;
-
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
     align-self: left;   
     border-radius: 1vw;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+
 }
 
 #informacion-tratamiento{
+    width: 20vw;
     padding: 1.5vw 10vw;
-    margin-left: 28vw;
+    margin-left: 24.5vw;
 }
 
 #mascota-container img {
@@ -1020,7 +1025,9 @@ header .navbar-full {
     border: #ff8080 0.2vw solid;
 }
 
-
+.btn-trat{
+    margin-left: 8.8vw;
+}
 
 /*/*------------------------------------------Login---------------------------------------------------*/
 /* Login box */

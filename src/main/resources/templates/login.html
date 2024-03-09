@@ -1,48 +1,64 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
+    <!-- Hojas de estilo -->
     <link rel="stylesheet" th:href="@{/css/style.css}" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
 
 </head>
+
 <body id="login-back" th:style="@{'background-image: url(' + @{/img/loginBack.png} + '); '}">
+    <!-- Sección del cuadro de login -->
+    <section id="login-box">
+        <div class="login-container">
+            <h2>Login</h2>
+            <!-- Formulario de login -->
+            <form id="loginForm" method="get">
+                <div class="form-group">
+                    <label for="Cedula">Cedula</label>
+                    <input type="text" id="Cedula" name="id" required />
+                </div>
 
-<section id="login-box">
-    <div class="login-container">
-        <h2>Login</h2>
-        <form id="loginForm" method="get">
-            <div class="form-group">
-                <label for="Cedula">Cedula</label>
-                <input type="text" id="Cedula" name="id" required />
-            </div>
-        
-            <div class="form-group">
-                <button type="submit" class="btn-login">Login</button>
-            </div>
-        </form>
-        
-        <div id="errorMessage" style="display: none; color: red;">Please enter a valid ID.</div>
-    </div>
-</section>
+                <div class="form-group">
 
-<script>
-document.addEventListener("DOMContentLoaded", function(event) {
-    document.getElementById("loginForm").addEventListener("submit", function(event) {
-        event.preventDefault();
-        var cedula = document.getElementById("Cedula").value;
-        
-        if (cedula.trim() === "") {
-            document.getElementById("errorMessage").style.display = "block";
-        } else {
-            var url = "/clientes/loginCliente?id=" + cedula;  
-            this.action = url;
-            this.submit();
-        }
-    });
-});
-</script>
+                    <button type="submit" class="btn-login">Login</button>
+                </div>
+            </form>
+
+            <!-- Área de visualización de mensajes de error -->
+            <div id="errorMessage" style="display: none; color: red;">Por favor, introduce un ID válido.</div>
+        </div>
+    </section>
+
+    <script>
+        // Cuando el contenido del DOM está cargado
+        document.addEventListener("DOMContentLoaded", function (event) {
+            // Añadiendo un event listener al formulario de login
+            document.getElementById("loginForm").addEventListener("submit", function (event) {
+                // Prevenir la sumisión predeterminada del formulario
+                event.preventDefault();
+                // Obtener el valor de la Cedula del campo de entrada
+                var cedula = document.getElementById("Cedula").value;
+
+                // Comprobar si la Cedula está vacía
+                if (cedula.trim() === "") {
+                    document.getElementById("errorMessage").style.display = "block";
+                } else {
+                    // Construir la URL para el login
+                    var url = "/clientes/loginCliente?id=" + cedula;
+                    // Establecer la acción del formulario a la URL construida
+                    this.action = url;
+                    // Enviar el formulario
+                    this.submit();
+                }
+            });
+        });
+    </script>
 </body>
+
 </html>

@@ -22,8 +22,8 @@
 
   <header>
 
+    <!-- Barra de navegación -->
     <div class="navbar-full">
-
       <a id="button-huellitas" th:href="@{/}"><button>
           <img class="logo" th:src="@{/img/logo.png}" alt="Logo huellitas felices">
           <h2>Huellitas Felices</h2>
@@ -33,7 +33,7 @@
         <a href="#">Mascotas</a>
         <a href="/clientes/all">Cliente</a>
       </nav>
-      <a href="javascript:history.back()"><button id="button_back">Volver</button></a>
+     <!-- <a href="javascript:history.back()"><button id="button_back">Volver</button></a>  -->
     </div>
   </header>
 
@@ -45,6 +45,7 @@
       <a th:href="@{/mascotas/add}"><button class="add-btn">Agregar Mascota</button></a>
       <br>
         <div id="mascota-container-todas" th:each="mascota : ${mascotas}">
+                  <!-- Celdas de la tabla con los datos de las mascotas recorridos -->
           <div class="mascota-info">
             <img class = "img-mascota-todas" src="" alt="Foto de la mascota" th:src="${mascota.foto == null or mascota.foto == '' ? '/img/bichon.png' : mascota.foto}">
             <div class="datos">
@@ -54,6 +55,7 @@
             </div>
           </div>
           <div class="mascota-actions">
+            <!-- Botones para ver el detalle de la mascota y eliminarla -->
             <a th:href="@{/mascotas/find(id=${mascota.id})}"><button>Ver Detalle</button></a>
             <a th:href="@{/mascotas/delete/{id}(id=${mascota.id})}"  style="color: #eb0000; font-size: 1.8vw; margin-top: 0.8vw;">
               <i class="delete-btn fa-solid fa-trash" style="color: #eb0000;"></i>

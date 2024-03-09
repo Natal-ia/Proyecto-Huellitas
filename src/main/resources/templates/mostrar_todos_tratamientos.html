@@ -21,7 +21,7 @@
 <body>
 
   <header>
-
+        <!-- Celdas de la tabla con los datos de los clientes recorridos -->
     <div class="navbar-full">
 
       <a id="button-huellitas" th:href="@{/}"><button>
@@ -42,36 +42,31 @@
     <h1 id="todas-mascotas-title">Lista de tratamientos</h1>
 
     <section id="mascotas-table">
+      <!--boton para agregar un nuevo tratamiento-->
       <a th:href="@{/tratamientos/add}"><button class="add-btn">Agregar Tratamiento</button></a>
       <br>
         <div id="mascota-container-todas" th:each="tratamiento : ${tratamientos}">
+          <!-- Celdas de la tabla con los datos de los tratamientos recorridos -->
           <div class="mascota-info">
             <div class="datos">
               <h2 th:text="${tratamiento.mascota.nombre}"></h2>
               <h2 th:text="${tratamiento.mascota.id}"></h2>
+              <!--información del tratamiento-->
                 <p><strong>Droga:</strong> <span th:text="${tratamiento.droga}"></span></p>
               <p><strong>Descripción:</strong> <span th:text="${tratamiento.descripcion}"></span></p>
               <p><strong>Fecha de Inicio:</strong> <span th:text="${tratamiento.fechaInicio}"></span></p>
               <p><strong>Fecha de Fin:</strong> <span th:text="${tratamiento.fechaFin}"></span></p>
               <p><strong>veterinario:</strong> <span th:text="${tratamiento.veterinario}"></span></p>
-       
-
-
-
-
             </div>
           </div>
           <div class="mascota-actions">
                   <a th:href="@{/mascotas/find(id=${tratamiento.mascota.id})}"><button>Ver Detalle Mascota</button></a>
                   <a th:href="@{/tratamientos/find(id=${tratamiento.id})}"><button>Ver Detalle Tratamiento</button></a>
 
-           
-                  
+            <!-- Botones para ver el detalle de la mascota y eliminar el tratamiento-->     
             <a th:href="@{/tratamientos/delete/{id}(id=${tratamiento.id})}"  style="color: #eb0000; font-size: 1.8vw; margin-top: 0.8vw;">
               <i class="delete-btn fa-solid fa-trash" style="color: #eb0000;"></i>
           </a>
-
-
       
           </div>
         </div>

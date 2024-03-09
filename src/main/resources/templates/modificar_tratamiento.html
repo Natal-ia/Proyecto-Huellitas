@@ -14,9 +14,9 @@
 
     <div class="form-general-group">
         <h2>Editar Tratamiento</h2>
+        <!-- formulario para modificar un tratamiento trayendo toda su información-->
         <form th:object="${tratamiento}" th:action="@{/tratamientos/update/{id}(id=${tratamiento.id})}" th:method="post">
-
-            <!-- Hidden input field for cliente ID -->
+            <!-- Hidden input field para la mascota ID -->
             <input type="hidden" th:field="*{mascota.id}" id="mascotaId" name="mascotaId" />
             
             <div class="form-group">
