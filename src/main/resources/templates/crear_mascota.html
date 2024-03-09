@@ -14,7 +14,9 @@
 
     <div class="form-general-group">
 
-        <h2>Registro de Mascota</h2>   
+        <h2>Registro de Mascota</h2>  
+        
+        <!-- formulario para registrar una nueva mascota -->
         <form th:object="${mascota}" th:action="@{/mascotas/agregar}" th:method="post">
             <div class="form-group">
                 <label for="id">Cedula del dueño:</label><br>
