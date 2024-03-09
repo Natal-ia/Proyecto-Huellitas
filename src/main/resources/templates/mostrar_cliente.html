@@ -32,8 +32,8 @@
     <div id="container-vista">
         <div id="cliente-container-vista">
         
-                <div id="informacionCliente">
-                    <h2 th:text="${cliente.nombre}"></h2>
+                <div style="text-align: center;" id="informacionCliente">
+                    <h2 class="nombre-cliente" th:text="${cliente.nombre}"></h2>
                     <p><strong>Correo:</strong> <span th:text="${cliente.correo}"></span></p>
                     <p><strong>Celular:</strong> <span th:text="${cliente.celular}"></span></p>
                     <a th:href="@{/clientes/update/{id}(id=${cliente.id})}"><button class="add-btn btn-detalle">Editar</button></a></td>
@@ -46,8 +46,7 @@
 
         <!-- Tarjetón de las mascotas del cliente-->
         <section id="todas-mascotas">
-            <h1 id="todas-mascotas-title-vista">Mascotas</h1>
-            <section id="mascotas-table" class="clientes-specific  lista-mascotas-vista">
+            <section id="mascotas-table-vista" class="clientes-specific  lista-mascotas-vista">
                 <a style="text-decoration: none; color: black;" th:href="@{/mascotas/find(id=${mascota.id})}"
                 <div th:each="mascota : ${cliente.mascotas}" class="mascota-info info-vista">
                     <img class = "mascota_cliente" src="" alt="Foto de la mascota" th:src="${mascota.foto == null or mascota.foto == '' ? '/img/bichon.png' : mascota.foto}">
