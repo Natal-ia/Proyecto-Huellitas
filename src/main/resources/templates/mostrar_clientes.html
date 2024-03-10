@@ -46,6 +46,7 @@
         <tr>
           <th>Nombre</th>
           <th>Número de cédula</th>
+          <th>Cedula</th>
           <th></th>
         </tr>
       </thead>
@@ -53,6 +54,7 @@
         <tr th:each="cliente : ${clientes}">
           <td th:text="${cliente.nombre}"></td>
           <td th:text="${cliente.id}"></td>
+          <td th:text="${cliente.cedula}"></td>
           <td id="casilla-detalle"><a th:href="@{/clientes/find(id=${cliente.id})}"><button class="add-btn btn-detalle">Ver Detalle</button></a></td>
         </tr>
       </tbody>

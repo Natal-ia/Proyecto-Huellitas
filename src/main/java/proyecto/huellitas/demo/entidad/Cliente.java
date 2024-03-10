@@ -11,6 +11,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 @Entity
 public class Cliente {
+    private String cedula;
     private String nombre;
     private String correo;
     private String celular;
@@ -26,21 +27,24 @@ public class Cliente {
     public Cliente() {    
     }
 
-    public Cliente(Long id, String nombre, String correo, String celular){
+    public Cliente(Long id, String cedula,String nombre, String correo, String celular){
         this.id = id;
+        this.cedula = cedula;
         this.nombre = nombre;
         this.correo = correo;
         this.celular = celular;
         
     } 
-    public Cliente(Long id, String nombre, String correo, String celular, List<Mascota> mascotas){
+    public Cliente(Long id, String cedula,String nombre, String correo, String celular, List<Mascota> mascotas){
         this.id = id;
+        this.cedula = cedula;
         this.nombre = nombre;
         this.correo = correo;
         this.celular = celular;
         this.mascotas = mascotas;
     }
-    public Cliente( String nombre, String correo, String celular, List<Mascota> mascotas){
+    public Cliente( String nombre, String cedula,String correo, String celular, List<Mascota> mascotas){
+        this.cedula = cedula;
         this.nombre = nombre;
         this.correo = correo;
         this.celular = celular;
@@ -86,6 +90,14 @@ public class Cliente {
 
     public void setMascotas(List<Mascota> mascotas) {
         this.mascotas = mascotas;
+    }
+
+    public String getCedula() {
+        return cedula;
+    }
+
+    public void setCedula(String cedula) {
+        this.cedula = cedula;
     }
     
 
