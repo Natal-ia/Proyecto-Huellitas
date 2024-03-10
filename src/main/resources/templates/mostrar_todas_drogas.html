@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clientes</title>
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+      
+        <div class="navbar-full">
+          <a id="button-huellitas" th:href="@{/}"><button>
+            <img class="logo" th:src="@{/img/logo.png}" alt="Logo huellitas felices">
+            <h2>Huellitas Felices</h2></button>
+          </a>
+            <nav class="navbar-options">
+                <a th:href="@{/mascotas/all}">Mascotas</a>
+                <a href="#">Drogas</a>
+            </nav>
+            <a href="javascript:history.back()"><button id="button_back">Volver</button></a>
+         
+        </div>
+      </header>
+ 
+<section id="todas-mascotas">
+  <h1 id="todas-mascotas-title">Lista de Drogas</h1>
+    <div id="cliente-container">
+
+      <a th:href="@{/drogas/add}"><button class="add-btn">Agregar Droga</button></a>
+      
+    <section id="todos-clientes">
+    <table class="tabla-general">
+      <thead>
+        <tr>
+            <th>ID</th>
+          <th>Nombre</th>
+          <th>Unidades Disponibles</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each="droga : ${drogas}">
+            <td th:text="${droga.id}"></td>
+            <td th:text="${droga.nombre}"></td>
+            <td th:text="${droga.unidadesDisponibles}"></td>
+          
+          <td id="casilla-detalle"><a th:href="@{/drogas/find(id=${droga.id})}"><button class="add-btn btn-detalle">Ver Detalle</button></a></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>
+</section>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
