@@ -62,15 +62,17 @@
             <tbody id="informacionMascota" th:if="${mascota.tratamientos != null}">
                 
                 <tr th:each="tratamiento : ${mascota.tratamientos}">
-                    <td th:text="${tratamiento.droga}"></td>
+                    <td th:text="${tratamiento.droga.nombre}"></td>
                     <td th:text="${tratamiento.descripcion}"></td>
-                    <td th:text="${tratamiento.veterinario}"></td>
+                    <td th:if="${tratamiento.veterinario != null}" th:text="${tratamiento.veterinario.nombre}"></td>
+                    <td th:unless="${tratamiento.veterinario != null}">N/A</td>
                     <td th:text="${tratamiento.fechaInicio}"></td>
                     <td th:text="${tratamiento.fechaFin}"></td>
                     <td id="casilla-mod">
                         <a th:href="@{/tratamientos/find(id=${tratamiento.id})}"><button class="add-btn btn-detalle">Ver Detalle</button></a>
                     </td>
                 </tr>
+                
             </tbody>
         </table>
     </section>

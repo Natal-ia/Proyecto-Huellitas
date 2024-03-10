@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Cliente</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="background-registro">
+
+    <div class="form-general-group">
+    <h2>Editar Veterinario</h2>
+    <form th:object="${veterinario}" th:action="@{/veterinarios/update/{id}(id=${veterinario.id})}" th:method="post">
+
+
+        <div class="form-group">
+            <label for="cedula">CÉDULA</label><br>
+            <input th:field="*{cedula}" type="number" id="cedula" name="cedula"required><br>
+        </div>
+
+        <div class="form-group">
+            <label for="nombre">NOMBRE</label><br>
+            <input th:field="*{nombre}" type="text" id="nombre" name="nombre"required><br>
+        </div>
+
+        <div class="form-group">
+            <label for="especialidad">Especialidad</label><br>
+            <input th:field="*{especialidad}" type="text" id="especialidad" name="especialidad"required><br>
+        </div>
+
+        <div class="form-group">
+            <label for="numAtenciones">Numero de Atenciones</label><br>
+            <input th:field="*{numAtenciones}" type="number" id="numAtenciones" name="numAtenciones"required><br>
+        </div>
+        
+        <div class="form-group">
+            <label for="foto">Foto:</label><br>
+            <input th:field="*{foto}" type="url" id="foto" name="foto"><br>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </form>
+    </div>
+</body>
+
+</html>

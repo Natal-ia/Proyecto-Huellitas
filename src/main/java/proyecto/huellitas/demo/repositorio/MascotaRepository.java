@@ -10,5 +10,6 @@ import proyecto.huellitas.demo.entidad.Cliente;
 
 @Repository
 public interface MascotaRepository extends JpaRepository<Mascota, Long>{
+    
 
 } 

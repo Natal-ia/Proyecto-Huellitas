@@ -1,8 +1,13 @@
 
 package proyecto.huellitas.demo.entidad;
+import java.util.ArrayList;
+import java.util.List;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 
 @Entity 
 public class Droga {
@@ -16,8 +21,9 @@ public class Droga {
     private Double precioVenta;
     private int unidadesDisponibles;
     private int unidadesVendidas;
-
- 
+    
+@OneToMany(mappedBy = "droga")
+ private List<Tratamiento> tratamientos = new ArrayList<>();
 
 
 
