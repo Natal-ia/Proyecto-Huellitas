@@ -59,7 +59,7 @@
                 <p><strong>Veterinario:</strong> <span th:text="${tratamiento.veterinario?.nombre}"></span></p>
                 <p><strong>Enfermedad:</strong> <span th:text="${tratamiento.mascota?.enfermedad}"></span></p>
                 <!--<p><strong>Tratamiento:</strong> <span th:text="${mascota.tratamiento}"></span></p>-->
-                <a th:href="@{/tratamientos/update/{id}(id=${tratamiento.id})}"><button id="button_modificar">Modificar</button></a>
+                <a th:href="@{/tratamientos/update/{id}(id=${tratamiento.id})}"><button id="button_modificar_tratamiento">Modificar</button></a>
             </div>
         </div>
     </section>
