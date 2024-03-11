@@ -83,315 +83,112 @@ public class DatabeseInit implements ApplicationRunner {
         mascotaRepository.save(new Mascota("Bonito", "Beagle", 11, 18, "ninguna",
                 "https://i.pinimg.com/originals/1a/99/1c/1a991cd8128e376a350b1c76bfb4f12d.jpg", null,
                 null));
-        mascotaRepository.save(new Mascota("Luna", "Golden Retriever", 3, 30, "ninguna", null, null, null));
-        mascotaRepository.save(new Mascota("Toby", "Poodle", 6, 15, "ninguna", null, null, null));
-        mascotaRepository.save(new Mascota("Max", "German Shepherd", 4, 28, "ninguna", null, null, null));
-        mascotaRepository.save(new Mascota("Buddy", "Boxer", 7, 22, "ninguna", null, null, null));
-        mascotaRepository.save(new Mascota("Lucy", "Shih Tzu", 5, 10, "ninguna", null, null, null));
-        mascotaRepository.save(new Mascota("Bailey", "Dachshund", 8, 12, "ninguna", null, null, null));
-        mascotaRepository.save(new Mascota("Rocky", "Rottweiler", 2, 32, "ninguna", null, null, null));
-        mascotaRepository.save(new Mascota("Molly", "Siberian Husky", 4, 35, "ninguna", null, null, null));
-        mascotaRepository.save(new Mascota("Daisy", "Bulldog", 6, 20, "ninguna", null, null, null));
-        mascotaRepository.save(new Mascota("Bailey", "Shiba Inu", 5, 17, "ninguna", null, null, null));
-        mascotaRepository.save(new Mascota("Lola", "Pomeranian", 3, 8, "ninguna", null, null, null));
-        mascotaRepository.save(new Mascota("Bella", "French Bulldog", 2, 16, "ninguna", null, null, null));
-        mascotaRepository.save(new Mascota("Cooper", "Chihuahua", 1, 5, "ninguna", null, null, null));
-        mascotaRepository.save(new Mascota("Bentley", "Pug", 3, 10, "ninguna", null, null, null));
-        mascotaRepository.save(new Mascota("Sophie", "Maltese", 4, 7, "ninguna", null, null, null));
-        mascotaRepository.save(new Mascota("Charlie", "Cocker Spaniel", 2, 14, "ninguna", null, null, null));
+        mascotaRepository.save(new Mascota("Luna", "Golden Retriever", 3, 30, "ninguna", "https://cdn.pixabay.com/photo/2017/09/25/13/14/dog-2785077_1280.jpg", null, null));
+        mascotaRepository.save(new Mascota("Toby", "Poodle", 6, 15, "ninguna", "https://cdn.pixabay.com/photo/2019/02/06/15/18/puppy-3979350_1280.jpg", null, null));
+        mascotaRepository.save(new Mascota("Max", "Daschund", 4, 28, "ninguna", "https://cdn.pixabay.com/photo/2016/07/15/15/55/dachshund-1519374_1280.jpg", null, null));
+        mascotaRepository.save(new Mascota("Buddy", "Pomeranian", 7, 22, "ninguna", "https://cdn.pixabay.com/photo/2018/08/20/14/08/dog-3619020_1280.jpg", null, null));
+        mascotaRepository.save(new Mascota("Lucy", "Husky", 5, 10, "ninguna", "https://cdn.pixabay.com/photo/2019/05/21/05/07/animal-4218265_1280.jpg", null, null));
+        mascotaRepository.save(new Mascota("Bailey", "Bulldog", 8, 12, "ninguna", "https://cdn.pixabay.com/photo/2020/07/20/06/42/english-bulldog-5422018_1280.jpg", null, null));
+        mascotaRepository.save(new Mascota("Rocky", "Rottweiler", 2, 32, "ninguna", "https://cdn.pixabay.com/photo/2016/11/26/23/45/dog-1861839_1280.jpg", null, null));
+        mascotaRepository.save(new Mascota("Molly", "Shih Tzu", 4, 35, "ninguna", "https://cdn.pixabay.com/photo/2019/11/16/04/32/shihtzu-4629612_1280.jpg", null, null));
+        mascotaRepository.save(new Mascota("Daisy", "Bulldog", 6, 20, "ninguna", "https://cdn.pixabay.com/photo/2017/06/24/09/13/continental-bulldog-2437110_1280.jpg", null, null));
+        mascotaRepository.save(new Mascota("Bailey", "Shiba Inu", 5, 17, "ninguna", "https://cdn.pixabay.com/photo/2021/05/29/07/06/shiba-6292660_1280.jpg", null, null));
+        mascotaRepository.save(new Mascota("Lola", "Pomeranian", 3, 8, "ninguna", "https://cdn.pixabay.com/photo/2016/07/26/02/01/pomeranian-1541798_1280.jpg", null, null));
+        mascotaRepository.save(new Mascota("Bella", "French Bulldog", 2, 16, "ninguna", "https://cdn.pixabay.com/photo/2019/12/22/17/13/french-bulldog-4713013_1280.jpg", null, null));
+        mascotaRepository.save(new Mascota("Cooper", "Akita", 1, 5, "ninguna", "https://cdn.pixabay.com/photo/2017/07/24/15/07/akita-2534986_1280.jpg", null, null));
+        mascotaRepository.save(new Mascota("Bentley", "Corgi", 3, 10, "ninguna", "https://cdn.pixabay.com/photo/2021/10/13/09/01/corgi-6705821_1280.jpg", null, null));
+        mascotaRepository.save(new Mascota("Sophie", "Maltese", 4, 7, "ninguna", "https://cdn.pixabay.com/photo/2016/01/05/17/51/maltese-1123016_1280.jpg", null, null));
+        mascotaRepository.save(new Mascota("Charlie", "Cocker Spaniel", 2, 14, "ninguna", "https://cdn.pixabay.com/photo/2018/12/15/16/01/beagle-3877115_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Lola", "Great Dane", 5, 55, "ninguna", null, null, null));
-        mascotaRepository.save(new Mascota("Riley", "Doberman", 3, 30, "ninguna", null, null, null));
+        mascotaRepository.save(new Mascota("Riley", "Doberman", 3, 30, "ninguna", "https://cdn.pixabay.com/photo/2016/06/05/20/35/doberman-dog-1438132_1280.jpg", null, null));
 
         mascotaRepository.save(new Mascota("Benetta", "Globicephala melas", 7, 3, "Silverado",
-                "http://dummyimage.com/109x100.png/dddddd/000000", null, null));
+                "https://cdn.pixabay.com/photo/2016/11/19/00/21/dog-1837445_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Damiano", "Choloepus hoffmani", 5, 3, "W201",
-                "http://dummyimage.com/215x100.png/ff4444/ffffff", null, null));
+                "https://cdn.pixabay.com/photo/2018/08/27/21/16/pet-3635985_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Walker", "Agkistrodon piscivorus", 14, 3, "Cabriolet",
-                "http://dummyimage.com/227x100.png/5fa2dd/ffffff", null, null));
+                "https://cdn.pixabay.com/photo/2022/05/28/07/33/shiba-inu-7226742_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Harli", "Corvus albus", 10, 4, "Tracker",
-                "http://dummyimage.com/121x100.png/cc0000/ffffff", null, null));
+                "https://cdn.pixabay.com/photo/2016/12/03/07/45/dog-1879244_960_720.jpg", null, null));
         mascotaRepository.save(new Mascota("Gabrielle", "Physignathus cocincinus", 11, 3, "Thunderbird",
-                "http://dummyimage.com/177x100.png/5fa2dd/ffffff", null, null));
+                "https://cdn.pixabay.com/photo/2019/09/08/05/04/siberian-husky-4460138_960_720.jpg", null, null));
         mascotaRepository.save(new Mascota("Jillie", "Cygnus atratus", 6, 4, "MKS",
-                "http://dummyimage.com/192x100.png/ff4444/ffffff", null, null));
+                "https://cdn.pixabay.com/photo/2016/03/05/17/52/rescue-1238145_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Kain", "Meles meles", 15, 3, "Sportage",
-                "http://dummyimage.com/204x100.png/dddddd/000000", null, null));
+                "https://cdn.pixabay.com/photo/2023/07/15/08/43/labrador-8128379_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Glyn", "Nesomimus trifasciatus", 7, 3, "QX56",
-                "http://dummyimage.com/184x100.png/dddddd/000000", null, null));
+                "https://cdn.pixabay.com/photo/2017/06/19/20/32/frank-2420802_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Haskel", "Merops nubicus", 5, 3, "Windstar",
-                "http://dummyimage.com/129x100.png/dddddd/000000", null, null));
+                "https://cdn.pixabay.com/photo/2020/01/02/14/01/siberian-husky-4735878_960_720.jpg", null, null));
         mascotaRepository.save(new Mascota("Josefina", "Psittacula krameri", 15, 4, "NX",
-                "http://dummyimage.com/135x100.png/dddddd/000000", null, null));
+                "https://cdn.pixabay.com/photo/2016/06/27/14/35/french-bulldog-1482630_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Cindelyn", "Mephitis mephitis", 13, 3, "Savana 3500",
-                "http://dummyimage.com/100x100.png/5fa2dd/ffffff", null, null));
+                "https://cdn.pixabay.com/photo/2016/03/05/17/52/rescue-1238145_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Kevan", "Hippotragus equinus", 3, 3, "Protege",
-                "http://dummyimage.com/195x100.png/5fa2dd/ffffff", null, null));
+                "https://cdn.pixabay.com/photo/2016/08/21/22/24/dog-1610937_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Lavina", "Colobus guerza", 6, 3, "240SX",
-                "http://dummyimage.com/153x100.png/dddddd/000000", null, null));
+                "https://cdn.pixabay.com/photo/2016/08/14/04/06/shiba-inu-1592018_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Sol", "unavailable", 13, 3, "C70",
-                "http://dummyimage.com/143x100.png/ff4444/ffffff", null, null));
+                "https://cdn.pixabay.com/photo/2016/03/18/10/53/dog-1264667_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Boone", "Macropus rufogriseus", 3, 4, "Corvette",
-                "http://dummyimage.com/169x100.png/ff4444/ffffff", null, null));
+                "https://cdn.pixabay.com/photo/2019/12/03/22/22/dog-4671215_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Judie", "Tachyglossus aculeatus", 5, 3, "Park Avenue",
-                "http://dummyimage.com/195x100.png/cc0000/ffffff", null, null));
+                "https://cdn.pixabay.com/photo/2018/05/11/08/11/pets-3389730_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Abran", "Sylvicapra grimma", 18, 4, "Ram",
-                "http://dummyimage.com/176x100.png/cc0000/ffffff", null, null));
+                "https://cdn.pixabay.com/photo/2014/06/23/19/17/pug-375462_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Garek", "Dipodomys deserti", 9, 3, "Eclipse",
-                "http://dummyimage.com/218x100.png/5fa2dd/ffffff", null, null));
+                "https://cdn.pixabay.com/photo/2019/07/21/14/05/french-bulldog-4352827_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Addie", "Tadorna tadorna", 12, 4, "Savana 2500",
-                "http://dummyimage.com/205x100.png/cc0000/ffffff", null, null));
+                "https://cdn.pixabay.com/photo/2016/11/21/12/04/animal-1844929_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Allison", "Felis silvestris lybica", 12, 3, "XC90",
-                "http://dummyimage.com/193x100.png/ff4444/ffffff", null, null));
+                "https://cdn.pixabay.com/photo/2015/12/18/16/54/dog-1098804_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Pierce", "Pelecans onocratalus", 16, 4, "DeVille",
-                "http://dummyimage.com/229x100.png/cc0000/ffffff", null, null));
+                "https://cdn.pixabay.com/photo/2021/02/03/03/32/dog-5976489_960_720.jpg", null, null));
         mascotaRepository.save(new Mascota("Hadria", "Coracias caudata", 2, 4, "GLC",
-                "http://dummyimage.com/156x100.png/ff4444/ffffff", null, null));
+                "https://cdn.pixabay.com/photo/2018/04/06/13/07/dog-3295799_960_720.jpg", null, null));
         mascotaRepository.save(new Mascota("Cassondra", "Tamiasciurus hudsonicus", 16, 3, "5 Series",
-                "http://dummyimage.com/237x100.png/5fa2dd/ffffff", null, null));
+                "https://cdn.pixabay.com/photo/2016/01/25/10/46/dog-1160443_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Gray", "Tursiops truncatus", 10, 3, "DB9",
-                "http://dummyimage.com/228x100.png/cc0000/ffffff", null, null));
+                "https://cdn.pixabay.com/photo/2015/06/24/19/30/dog-820564_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Oswell", "Canis aureus", 9, 3, "Escape",
-                "http://dummyimage.com/233x100.png/5fa2dd/ffffff", null, null));
+                "https://cdn.pixabay.com/photo/2016/07/26/02/01/pomeranian-1541798_1280.jpg", null, null));
 
         mascotaRepository.save(new Mascota("Dana", "Castor canadensis", 9, 3, "Focus",
-                "http://dummyimage.com/182x100.png/5fa2dd/ffffff", null, null));
+                "https://cdn.pixabay.com/photo/2019/02/25/14/45/french-bulldog-4019784_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Lucais", "Tachyglossus aculeatus", 16, 4, "Allante",
-                "http://dummyimage.com/242x100.png/5fa2dd/ffffff", null, null));
+                "https://cdn.pixabay.com/photo/2020/11/12/13/44/dog-5735582_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Darby", "Casmerodius albus", 1, 3, "Azera",
-                "http://dummyimage.com/230x100.png/dddddd/000000", null, null));
+                "https://cdn.pixabay.com/photo/2014/03/20/23/48/siberian-husky-291721_960_720.jpg", null, null));
         mascotaRepository.save(new Mascota("Lelah", "Otaria flavescens", 16, 3, "Land Cruiser",
-                "http://dummyimage.com/178x100.png/cc0000/ffffff", null, null));
+                "https://cdn.pixabay.com/photo/2018/07/08/21/18/labradoodle-3524825_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Barclay", "Dasypus novemcinctus", 13, 3, "Intrepid",
-                "http://dummyimage.com/138x100.png/5fa2dd/ffffff", null, null));
+                "https://cdn.pixabay.com/photo/2017/09/01/21/51/golden-retriever-2705639_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Dorelia", "Alligator mississippiensis", 11, 4, "Excel",
-                "http://dummyimage.com/208x100.png/ff4444/ffffff", null, null));
+                "https://cdn.pixabay.com/photo/2017/07/15/07/47/pug-2505763_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Halsy", "Haliaeetus leucocephalus", 15, 4, "Silverado 1500",
                 "http://dummyimage.com/174x100.png/5fa2dd/ffffff", null, null));
         mascotaRepository.save(new Mascota("Holly", "Pelecans onocratalus", 20, 4, "Savana 3500",
-                "http://dummyimage.com/202x100.png/5fa2dd/ffffff", null, null));
+                "https://cdn.pixabay.com/photo/2016/12/27/03/04/pet-1933138_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Farah", "Crotalus triseriatus", 10, 3, "Camaro",
-                "http://dummyimage.com/105x100.png/ff4444/ffffff", null, null));
+                "https://cdn.pixabay.com/photo/2020/03/31/19/19/dog-4988984_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Bart", "Limnocorax flavirostra", 4, 4, "FX",
-                "http://dummyimage.com/198x100.png/5fa2dd/ffffff", null, null));
+                "https://cdn.pixabay.com/photo/2019/03/22/14/05/golden-doodle-4073353_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Marylee", "Diomedea irrorata", 1, 4, "Blazer",
-                "http://dummyimage.com/164x100.png/dddddd/000000", null, null));
+                "https://cdn.pixabay.com/photo/2014/02/28/22/45/french-bulldog-277255_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Brock", "Ciconia episcopus", 9, 3, "X5 M",
-                "http://dummyimage.com/123x100.png/5fa2dd/ffffff", null, null));
+                "https://cdn.pixabay.com/photo/2021/12/21/16/38/dog-6885621_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Orelia", "Tayassu pecari", 13, 4, "Navigator",
-                "http://dummyimage.com/179x100.png/cc0000/ffffff", null, null));
+                "https://cdn.pixabay.com/photo/2013/12/22/10/57/german-shepherd-232393_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Glenn", "Psittacula krameri", 5, 4, "CC",
-                "http://dummyimage.com/173x100.png/cc0000/ffffff", null, null));
+                "https://cdn.pixabay.com/photo/2017/09/25/13/11/dog-2785066_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Carolann", "Connochaetus taurinus", 5, 3, "240",
-                "http://dummyimage.com/214x100.png/ff4444/ffffff", null, null));
+                "https://cdn.pixabay.com/photo/2019/12/03/22/22/dog-4671215_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Rickey", "Globicephala melas", 15, 4, "Outlander",
-                "http://dummyimage.com/129x100.png/5fa2dd/ffffff", null, null));
+                "https://cdn.pixabay.com/photo/2016/12/21/17/54/miniature-schnauzer-1923470_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Al", "Sylvicapra grimma", 18, 3, "CTS",
                 "http://dummyimage.com/184x100.png/5fa2dd/ffffff", null, null));
         mascotaRepository.save(new Mascota("Henriette", "Dasypus septemcincus", 2, 3, "GX",
-                "http://dummyimage.com/173x100.png/5fa2dd/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Celina", "Myiarchus tuberculifer", 20, 4, "Mirage",
-                "http://dummyimage.com/188x100.png/5fa2dd/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Blake", "Panthera pardus", 7, 4, "9000",
-                "http://dummyimage.com/202x100.png/5fa2dd/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Tedmund", "Hippotragus equinus", 12, 3, "Rally Wagon 1500",
-                "http://dummyimage.com/218x100.png/cc0000/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Hadlee", "Prionace glauca", 16, 3, "DB9",
-                "http://dummyimage.com/112x100.png/dddddd/000000", null, null));
-        mascotaRepository.save(new Mascota("Gillan", "Laniaurius atrococcineus", 19, 3, "Optima",
-                "http://dummyimage.com/173x100.png/dddddd/000000", null, null));
-        mascotaRepository.save(new Mascota("Virge", "Vanessa indica", 8, 4, "Sonoma",
-                "http://dummyimage.com/126x100.png/ff4444/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Lucie", "Tachyglossus aculeatus", 16, 4, "S-Class",
-                "http://dummyimage.com/238x100.png/dddddd/000000", null, null));
-        mascotaRepository.save(new Mascota("Greggory", "Speotyte cuniculata", 11, 4, "Grand Voyager",
-                "http://dummyimage.com/118x100.png/dddddd/000000", null, null));
-        mascotaRepository.save(new Mascota("Bernardina", "Gopherus agassizii", 17, 4, "Impreza",
-                "http://dummyimage.com/240x100.png/5fa2dd/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Trefor", "Psophia viridis", 20, 3, "Eclipse",
-                "http://dummyimage.com/129x100.png/5fa2dd/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Reece", "Castor fiber", 5, 4, "Land Cruiser",
-                "http://dummyimage.com/190x100.png/cc0000/ffffff", null, null));
-
-        mascotaRepository.save(new Mascota("Humberto", "Cygnus buccinator", 17, 3, "Gallardo",
-                "http://dummyimage.com/232x100.png/ff4444/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Iorgo", "Lybius torquatus", 18, 4, "Talon",
-                "http://dummyimage.com/157x100.png/ff4444/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Melody", "Libellula quadrimaculata", 12, 3, "Yukon",
-                "http://dummyimage.com/202x100.png/5fa2dd/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Tatiana", "Chlidonias leucopterus", 1, 4, "Pathfinder",
-                "http://dummyimage.com/188x100.png/5fa2dd/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Efrem", "Grus rubicundus", 11, 3, "Roadmaster",
-                "http://dummyimage.com/197x100.png/5fa2dd/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Josiah", "Nesomimus trifasciatus", 7, 4, "Focus",
-                "http://dummyimage.com/230x100.png/5fa2dd/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Stella", "Egretta thula", 4, 3, "SJ",
-                "http://dummyimage.com/176x100.png/dddddd/000000", null, null));
-        mascotaRepository.save(new Mascota("Lynnette", "Lamprotornis superbus", 8, 4, "Corolla",
-                "http://dummyimage.com/195x100.png/cc0000/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Cortie", "Thamnolaea cinnmomeiventris", 7, 4, "S80",
-                "http://dummyimage.com/143x100.png/dddddd/000000", null, null));
-        mascotaRepository.save(new Mascota("Anallise", "Megaderma spasma", 8, 4, "Grand Marquis",
-                "http://dummyimage.com/196x100.png/5fa2dd/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Larry", "Phalacrocorax carbo", 20, 3, "C70",
-                "http://dummyimage.com/168x100.png/cc0000/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Delilah", "Dicrostonyx groenlandicus", 3, 4, "Civic",
-                "http://dummyimage.com/119x100.png/ff4444/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Stafani", "Felis silvestris lybica", 16, 4, "Loyale",
-                "http://dummyimage.com/100x100.png/dddddd/000000", null, null));
-        mascotaRepository.save(new Mascota("Florida", "Amphibolurus barbatus", 4, 4, "VUE",
-                "http://dummyimage.com/225x100.png/dddddd/000000", null, null));
-        mascotaRepository.save(new Mascota("Taffy", "Macropus agilis", 4, 3, "Seville",
-                "http://dummyimage.com/137x100.png/dddddd/000000", null, null));
-        mascotaRepository.save(new Mascota("Adorne", "Uraeginthus bengalus", 5, 3, "Mazda5",
-                "http://dummyimage.com/249x100.png/dddddd/000000", null, null));
-        mascotaRepository.save(new Mascota("Lock", "Phascogale calura", 14, 4, "Spyder",
-                "http://dummyimage.com/177x100.png/dddddd/000000", null, null));
-        mascotaRepository.save(new Mascota("Elysha", "Dasypus septemcincus", 8, 3, "Accord",
-                "http://dummyimage.com/132x100.png/dddddd/000000", null, null));
-        mascotaRepository.save(new Mascota("Sharai", "Petaurus norfolcensis", 17, 3, "Bravada",
-                "http://dummyimage.com/186x100.png/5fa2dd/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Brinn", "Ramphastos tucanus", 5, 4, "Intrepid",
-                "http://dummyimage.com/173x100.png/cc0000/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Gerik", "Cereopsis novaehollandiae", 10, 4, "Eclipse",
-                "http://dummyimage.com/122x100.png/cc0000/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Artur", "Haliaetus leucogaster", 3, 4, "3500 Club Coupe",
-                "http://dummyimage.com/105x100.png/dddddd/000000", null, null));
-        mascotaRepository.save(new Mascota("Noami", "Isoodon obesulus", 5, 3, "Catera",
-                "http://dummyimage.com/104x100.png/5fa2dd/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Bogart", "Bubalus arnee", 10, 3, "Escort",
-                "http://dummyimage.com/230x100.png/5fa2dd/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Enrique", "Oryx gazella", 5, 4, "S4",
-                "http://dummyimage.com/173x100.png/5fa2dd/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Kayley", "Isoodon obesulus", 18, 3, "GT-R",
-                "http://dummyimage.com/231x100.png/dddddd/000000", null, null));
-        mascotaRepository.save(new Mascota("Wilfrid", "Ursus arctos", 18, 4, "9-3",
-                "http://dummyimage.com/201x100.png/5fa2dd/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Amandy", "Buteo galapagoensis", 2, 3, "Civic",
-                "http://dummyimage.com/184x100.png/5fa2dd/ffffff", null, null));
-
-        mascotaRepository.save(new Mascota("Garold", "Cacatua tenuirostris", 10, 4, "XK Series",
-                "http://dummyimage.com/122x100.png/5fa2dd/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Bebe", "Cordylus giganteus", 3, 4, "300",
-                "http://dummyimage.com/226x100.png/cc0000/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Carina", "Nesomimus trifasciatus", 3, 3, "5 Series",
-                "http://dummyimage.com/244x100.png/cc0000/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Erny", "Sula nebouxii", 2, 4, "A6",
-                "http://dummyimage.com/131x100.png/5fa2dd/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Ellene", "Panthera leo", 13, 4, "Rainier",
-                "http://dummyimage.com/132x100.png/cc0000/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Zorah", "Lycaon pictus", 18, 3, "Sierra 2500",
-                "http://dummyimage.com/147x100.png/cc0000/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Luella", "Cacatua tenuirostris", 17, 3, "Sportvan G30",
-                "http://dummyimage.com/136x100.png/cc0000/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Lissi", "Phalacrocorax niger", 7, 4, "i-350",
-                "http://dummyimage.com/122x100.png/5fa2dd/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Rees", "Ceryle rudis", 7, 4, "LeSabre",
-                "http://dummyimage.com/231x100.png/cc0000/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Vasili", "Ardea golieth", 7, 4, "Focus",
-                "http://dummyimage.com/116x100.png/5fa2dd/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Denice", "Acinonyx jubatus", 10, 3, "Trooper",
-                "http://dummyimage.com/155x100.png/5fa2dd/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Madlen", "Fulica cristata", 6, 3, "Mustang",
-                "http://dummyimage.com/115x100.png/dddddd/000000", null, null));
-        mascotaRepository.save(new Mascota("Laney", "Anas bahamensis", 11, 3, "Tacoma",
-                "http://dummyimage.com/143x100.png/dddddd/000000", null, null));
-        mascotaRepository.save(new Mascota("Patrice", "Hystrix cristata", 4, 4, "Town & Country",
-                "http://dummyimage.com/213x100.png/ff4444/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Shelley", "Cebus apella", 8, 3, "Suburban 1500",
-                "http://dummyimage.com/198x100.png/cc0000/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Thane", "Ictonyx striatus", 7, 4, "Savana 3500",
-                "http://dummyimage.com/242x100.png/ff4444/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Alex", "Nesomimus trifasciatus", 4, 4, "LeSabre",
-                "http://dummyimage.com/153x100.png/cc0000/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Giselle", "Apteryx australis", 19, 4, "Passat",
-                "http://dummyimage.com/157x100.png/5fa2dd/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Filberte", "Laniarius ferrugineus", 16, 4, "Accord",
-                "http://dummyimage.com/121x100.png/dddddd/000000", null, null));
-        mascotaRepository.save(new Mascota("Maible", "Megaderma spasma", 11, 3, "Neon",
-                "http://dummyimage.com/207x100.png/ff4444/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Moses", "Paraxerus cepapi", 13, 4, "Savana 1500",
-                "http://dummyimage.com/143x100.png/5fa2dd/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Amos", "Lorythaixoides concolor", 13, 4, "GTO",
-                "http://dummyimage.com/230x100.png/5fa2dd/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Wilbert", "Anser cygnoides", 2, 3, "Envoy",
-                "http://dummyimage.com/238x100.png/cc0000/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Karlee", "Ploceus intermedius", 19, 3, "900",
-                "http://dummyimage.com/122x100.png/5fa2dd/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Jordon", "Mazama gouazoubira", 16, 4, "XLR",
-                "http://dummyimage.com/133x100.png/5fa2dd/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Rouvin", "Ardea cinerea", 11, 3, "Town Car",
-                "http://dummyimage.com/240x100.png/cc0000/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Tracey", "Spermophilus parryii", 5, 3, "Fusion",
-                "http://dummyimage.com/153x100.png/dddddd/000000", null, null));
-        mascotaRepository.save(new Mascota("Gerhardt", "Phascogale calura", 18, 3, "F450",
-                "http://dummyimage.com/176x100.png/5fa2dd/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Urbano", "Leptoptilos crumeniferus", 13, 4, "Suburban 1500",
-                "http://dummyimage.com/116x100.png/dddddd/000000", null, null));
-        mascotaRepository.save(new Mascota("Estell", "Canis mesomelas", 16, 4, "Yukon",
-                "http://dummyimage.com/132x100.png/cc0000/ffffff", null,
-
-                null));
-        mascotaRepository.save(new Mascota("Jewelle", "Estrilda erythronotos", 16, 4, "Trans Sport",
-                "http://dummyimage.com/218x100.png/cc0000/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Perry", "Acinonyx jubatus", 14, 4, "Aerio",
-                "https://cdn.pixabay.com/photo/2018/03/31/06/31/dog-3277416_1280.jpg", null, null));
-        mascotaRepository.save(new Mascota("Liana", "Cacatua tenuirostris", 10, 3, "Camry",
-                "https://cdn.pixabay.com/photo/2016/03/27/21/16/pet-1284307_1280.jpg", null, null));
-        mascotaRepository.save(new Mascota("Jasmin", "Papio ursinus", 20, 4, "Mustang",
-                "https://cdn.pixabay.com/photo/2016/02/18/18/37/puppy-1207816_1280.jpg", null, null));
-        mascotaRepository.save(new Mascota("Flore", "Cervus duvauceli", 15, 4, "Pathfinder",
-                "https://cdn.pixabay.com/photo/2019/09/10/09/23/dog-4465690_1280.jpg", null, null));
-        mascotaRepository.save(new Mascota("Marylinda", "Plectopterus gambensis", 19, 4, "Sienna",
-                "https://cdn.pixabay.com/photo/2014/03/14/20/13/dog-287420_1280.jpg", null, null));
-        mascotaRepository.save(new Mascota("Elaina", "Lorythaixoides concolor", 5, 4, "Pathfinder",
-                "https://cdn.pixabay.com/photo/2016/11/29/11/26/dog-1869167_1280.jpg", null, null));
-        mascotaRepository.save(new Mascota("Rouvin", "Amphibolurus barbatus", 16, 3, "S-Series",
-                "https://cdn.pixabay.com/photo/2014/12/10/05/50/english-bulldog-562723_1280.jpg", null,
-                null));
-        mascotaRepository.save(new Mascota("Henrik", "Cervus canadensis", 6, 3, "Tahoe",
-                "https://cdn.pixabay.com/photo/2018/05/07/10/48/husky-3380548_1280.jpg", null, null));
-        mascotaRepository.save(new Mascota("Dania", "Aonyx capensis", 6, 4, "Ram 1500",
-                "https://cdn.pixabay.com/photo/2017/09/25/13/14/dog-2785077_1280.jpg", null, null));
-        mascotaRepository.save(new Mascota("Diana", "Eubalaena australis", 3, 4, "Grand Prix",
-                "https://cdn.pixabay.com/photo/2017/03/27/13/23/dog-2178696_1280.jpg", null, null));
-        mascotaRepository.save(new Mascota("Tracie", "Anas platyrhynchos", 8, 3, "Mazda6",
-                "https://cdn.pixabay.com/photo/2020/11/08/10/25/dog-5723334_1280.jpg", null, null));
-        mascotaRepository.save(new Mascota("Jackie", "Larus dominicanus", 19, 3, "Club Wagon",
-                "http://dummyimage.com/237x100.png/5fa2dd/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Davida", "Panthera leo", 17, 4, "1500 Club Coupe",
-                "http://dummyimage.com/218x100.png/5fa2dd/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Giffer", "Choloepus hoffmani", 12, 4, "Neon",
-                "http://dummyimage.com/204x100.png/cc0000/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Sigismund", "Scolopax minor", 3, 4, "Montero Sport",
-                "http://dummyimage.com/123x100.png/5fa2dd/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Teddy", "Plegadis falcinellus", 18, 3, "Explorer",
-                "http://dummyimage.com/128x100.png/ff4444/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Verney", "Nesomimus trifasciatus", 18, 3, "3500",
-                "http://dummyimage.com/147x100.png/ff4444/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Alaric", "Cacatua tenuirostris", 3, 4, "Ram Van B150",
-                "http://dummyimage.com/115x100.png/5fa2dd/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Deloria", "Anastomus oscitans", 11, 4, "Suburban 2500",
-                "http://dummyimage.com/243x100.png/ff4444/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Ricki", "Larus fuliginosus", 5, 3, "Tacoma Xtra",
-                "http://dummyimage.com/205x100.png/5fa2dd/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Billie", "Canis lupus", 5, 3, "Explorer",
-                "http://dummyimage.com/123x100.png/ff4444/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Nanette", "Geochelone elephantopus", 2, 4, "SL-Class",
-                "http://dummyimage.com/202x100.png/5fa2dd/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Zorana", "Nycticorax nycticorax", 3, 3, "Grand Prix",
-                "http://dummyimage.com/116x100.png/dddddd/000000", null, null));
-        mascotaRepository.save(new Mascota("Jackie", "Cacatua tenuirostris", 17, 3, "Exige",
-                "http://dummyimage.com/243x100.png/cc0000/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Chico", "Varanus sp.", 16, 3, "Viper",
-                "http://dummyimage.com/187x100.png/ff4444/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Wilone", "Columba palumbus", 4, 4, "Ranger",
-                "http://dummyimage.com/147x100.png/cc0000/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Andeee", "Paroaria gularis", 16, 4, "S6",
-                "http://dummyimage.com/202x100.png/5fa2dd/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Nannie", "Phoeniconaias minor", 4, 4, "Cavalier",
-                "http://dummyimage.com/242x100.png/cc0000/ffffff", null, null));
-        mascotaRepository.save(new Mascota("Rube", "Lutra canadensis", 3, 4, "TL",
-                "http://dummyimage.com/194x100.png/dddddd/000000", null, null));
+                "https://cdn.pixabay.com/photo/2016/03/05/17/52/rescue-1238145_1280.jpg", null, null));
 
         tratamientoRepository
                 .save(new Tratamiento(null, "Dolor de cabeza", "2021-01-01", "2021-01-10", null, null));
