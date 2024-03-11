@@ -1,0 +1,47 @@
+/*------------------------------------------Error---------------------------------------------------*/
+
+#error-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#error-content {
+    background-color: #ff8080;
+    margin: 5vw;
+    border-radius: 1vw;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    width: fit-content;
+    height: fit-content;
+    padding: 2vw;
+}
+
+#error-content h1 {
+    font-size: 11vw;
+    font-weight: bold;
+    margin: 0;
+}
+
+#error-content h2 {
+    font-size: 4vw;
+    font-weight: bold;
+}
+
+#error-content button {
+    font-weight: bold;
+    align-self: center;
+    padding: 1vw 2vw;
+    margin: 1vw;
+    background-color: #ffffff;
+    border-radius: 1vw;
+    border-style: none;
+    color: #ff8080;
+    transition: 0.4s;
+}
+
+#error-content button:hover {
+    background-color: #ffa074;
+    color: black;
+    cursor: pointer;
+}

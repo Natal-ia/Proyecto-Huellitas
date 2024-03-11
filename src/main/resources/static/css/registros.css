@@ -1,0 +1,70 @@
+/*------------------------------------------Registros---------------------------------------------------*/
+
+.background-registro {
+    background-image: url("../img/registro-cliente.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.form-general-group {
+    text-align: center;
+    background-color: #ffd09691;
+    border-radius: 1vw;
+    margin: 0 27vw;
+    margin-top: 3vw;
+    padding: 2vw;
+    padding-top: 1vw;
+    backdrop-filter: blur(0.1vw);
+}
+
+.form-general-group h2 {
+    font-size: 2vw;
+    margin-bottom: 1vw;
+}
+
+.form-group {
+    padding: 1vw;
+}
+
+.form-group input {
+    border-radius: 1vw;
+    border-style: none;
+    padding: 1vw;
+    background-color: rgba(255, 255, 255, 0.651);
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.form-general-group button {
+    position: relative;
+    left: 15vw;
+    transition: all .5s ease;
+    color: #ee6060;
+    border: 3px solid #ff7474;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    font-size: 1.2vw;
+    background-color: rgba(255, 255, 255, 0.199);
+    font-weight: bolder;
+    padding: 0.8vw;
+    outline: none;
+    border-radius: 1vw;
+}
+
+.form-general-group button:hover {
+    color: white;
+    background-color: #ff7474;
+}
+
+.background-registro.mascota {
+    background-image: url("../img/registro-mascota.jpg");
+}
+
+.background-registro.tratamiento {
+    background-image: url("../img/registro-tratamiento.jpg");
+}
