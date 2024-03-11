@@ -10,11 +10,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import proyecto.huellitas.demo.entidad.Droga;
 import proyecto.huellitas.demo.entidad.Mascota;
 import proyecto.huellitas.demo.entidad.Tratamiento;
 import proyecto.huellitas.demo.repositorio.MascotaRepository;
+import proyecto.huellitas.demo.servicio.DrogaService;
 import proyecto.huellitas.demo.servicio.MascotaService;
 import proyecto.huellitas.demo.servicio.TratamientoService;
+import proyecto.huellitas.demo.servicio.VeterinarioService;
 
 @RequestMapping("/tratamientos")
 @Controller
@@ -26,6 +29,10 @@ public class TratamientoController {
     MascotaService mascotaService;
     @Autowired
     MascotaRepository mascotaRepository;
+    @Autowired
+    DrogaService drogaService;
+    @Autowired
+    VeterinarioService veterinarioService;
 
     @GetMapping("/all")
     public String mostrarTratamiento(Model model) {
@@ -63,7 +70,7 @@ public class TratamientoController {
     @GetMapping("/add")
     public String mostrarFormularioCrearTratamiento(Model model) {
 
-        Tratamiento tratamiento = new Tratamiento("", "", "", "", "",null);
+        Tratamiento tratamiento = new Tratamiento(null, "", "", "", null,null);
 
         model.addAttribute("tratamiento", tratamiento);
 
@@ -74,7 +81,7 @@ public class TratamientoController {
     public String mostrarFormularioCrearTratamientoBackDetalle(Model model, @PathVariable("id") Long identificacion) {
         
 
-        Tratamiento tratamiento = new Tratamiento("", "", "", "", "",null);
+        Tratamiento tratamiento = new Tratamiento(null, "", "", "", null,null);
 
         model.addAttribute("tratamiento", tratamiento);
 

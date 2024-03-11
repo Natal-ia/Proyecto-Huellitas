@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro Cliente</title>
-    <link rel="stylesheet" th:href="@{/css/landing.css}">
-    <link rel="stylesheet" th:href="@{/css/registros.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
 
 </head>
@@ -13,12 +12,10 @@
 
     <div class="form-general-group">
         
-        <h2>Registro De Cliente</h2>
-        <form th:object="${cliente}" th:action="@{/clientes/agregar}" th:method="post">
-          
-            <!--formulario para registrar un nuevo cliente-->
+        <h2>Registro De Veterinario</h2>
+        <form th:object="${veterinario}" th:action="@{/veterinarios/agregar}" th:method="post">
             <div class="form-group">
-                <label for="id">ID</label><br>
+                <label for="id">id</label><br>
                 <input th:field="*{id}" type="number" id="id" name="id"required><br>
             </div>
             <div class="form-group">
@@ -32,14 +29,20 @@
             </div>
 
             <div class="form-group">
-                <label for="correo">CORREO</label><br>
-                <input th:field="*{correo}" type="email" id="correo" name="correo"required><br>
+                <label for="especialidad">Especialidad</label><br>
+                <input th:field="*{especialidad}" type="text" id="especialidad" name="especialidad"required><br>
             </div>
 
             <div class="form-group">
-                <label for="celular">CELULAR</label><br>
-                <input th:field="*{celular}" type="number" id="celular" name="celular"required><br>
+                <label for="numAtenciones">Numero de Atenciones</label><br>
+                <input th:field="*{numAtenciones}" type="number" id="numAtenciones" name="numAtenciones"required><br>
             </div>
+            
+            <div class="form-group">
+                <label for="foto">Foto:</label><br>
+                <input th:field="*{foto}" type="url" id="foto" name="foto"><br>
+            </div>
+
 
             <button type="submit">Registrar</button>
         </form>

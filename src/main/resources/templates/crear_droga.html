@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Cliente</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+
+</head>
+<body class="background-registro">
+
+    <div class="form-general-group">
+        
+        <h2>Registro de Droga</h2>
+        <form th:object="${droga}" th:action="@{/drogas/agregar}" th:method="post">
+            <div class="form-group">
+                <label for="id">ID</label><br>
+                <input th:field="*{id}" type="number" id="id" name="id"required><br>
+            </div>
+
+            <div class="form-group">
+                <label for="nombre">NOMBRE</label><br>
+                <input th:field="*{nombre}" type="text" id="nombre" name="nombre"required><br>
+            </div>
+
+            <div class="form-group">
+                <label for="precioCompra">PRECIO DE COMPRA</label><br>
+                <input th:field="*{precioCompra}" type="double" id="precioCompra" name="precioCompra"required><br>
+            </div>
+            
+            <div class="form-group">
+                <label for="precioVenta">PRECIO DE VENTA</label><br>
+                <input th:field="*{precioVenta}" type="double" id="precioVenta" name="precioVenta"required><br>
+            </div>
+            <div class="form-group">
+                <label for="unidadesDisponibles">UNIDADES DISPONIBLES</label><br>
+                <input th:field="*{unidadesDisponibles}" type="number" id="unidadesDisponibles" name="unidadesDisponibles"required><br>
+            </div>
+            <div class="form-group">
+                <label for="unidadesVendidas">UNIDADES VENDIDAS </label><br>
+                <input th:field="*{unidadesVendidas}" type="number" id="unidadesVendidas" name="unidadesVendidas"required><br>
+            </div>
+            
+
+            <button type="submit">Registrar</button>
+        </form>
+    </div>
+</body>
+</html>

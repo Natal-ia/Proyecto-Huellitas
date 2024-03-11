@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Mascotas</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+    <html lang="en" xmlns:th="http://www.thymeleaf.org">
+</head>
+
+
+<body>
+    <header class="navbar-specific">
+        <a id="button-huellitas" th:href="@{/}"><button>
+            <img class="logo" th:src="@{/img/logo.png}" alt="Logo huellitas felices">
+            <h2>Huellitas Felices</h2></button>
+          </a>
+        <h3 id="header_title"> Informacion de la Veterinario</h3>
+
+        <a href="javascript:history.back()"><button id="button_back">Volver</button></a>
+    </header>
+
+    <section class="content-mascota-specific">
+        <title>Detalle de Veterinario</title>
+        </head>
+        <div id="mascota-container">
+            <img src="" alt="Foto del veterinario" th:src="${veterinario.foto == null or veterinario.foto == '' ? '/img/bichon.png' : veterinario.foto}">
+            <div id="informacionMascota">
+                <h2><strong th:text="${veterinario.nombre}"></h2> 
+                <p><strong>Cedula:</strong> <span th:text="${veterinario.cedula}"></span></p>
+                <p><strong>Especialidad:</strong> <span th:text="${veterinario.especialidad}"></span></p>
+                <p><strong>Numero de Atenciones:</strong> <span th:text="${veterinario.numAtenciones}"></span></p>
+                <a th:href="@{/veterinarios/update/{id}(id=${veterinario.id})}"><button id="button_modificar">Modificar</button></a>
+            </div>
+        </div>
+    </section>
+
+    
+    
+</body>
+
+</html>

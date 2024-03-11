@@ -8,7 +8,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Clientes</title>
   <link rel="stylesheet" th:href="@{/css/style.css}">
-  <link rel="stylesheet" th:href="@{/css/landing.css}">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +20,6 @@
 <body>
     <header>
       
-        <!-- Barra de navegación -->
         <div class="navbar-full">
           <a id="button-huellitas" th:href="@{/}"><button>
             <img class="logo" th:src="@{/img/logo.png}" alt="Logo huellitas felices">
@@ -29,38 +27,36 @@
           </a>
             <nav class="navbar-options">
                 <a th:href="@{/mascotas/all}">Mascotas</a>
-                <a href="#">Cliente</a>
+                <a href="#">Drogas</a>
             </nav>
-            <!--<a href="javascript:history.back()"><button id="button_back">Volver</button></a>-->
+            <a href="javascript:history.back()"><button id="button_back">Volver</button></a>
          
         </div>
       </header>
  
 <section id="todas-mascotas">
-  <h1 id="todas-mascotas-title">Lista de clientes</h1>
+  <h1 id="todas-mascotas-title">Lista de Drogas</h1>
     <div id="cliente-container">
 
-      <!-- Botón para agregar un nuevo cliente -->
-      <a th:href="@{/clientes/add}"><button class="add-btn">Agregar Cliente</button></a>
+      <a th:href="@{/drogas/add}"><button class="add-btn">Agregar Droga</button></a>
       
     <section id="todos-clientes">
-      <!-- Tabla con todos los clientes -->
     <table class="tabla-general">
       <thead>
         <tr>
+            <th>ID</th>
           <th>Nombre</th>
-          <th>Número de cédula</th>
-          <th>Cedula</th>
+          <th>Unidades Disponibles</th>
           <th></th>
         </tr>
       </thead>
       <tbody>
-        <!-- Celdas de la tabla con los datos de los clientes recorridos -->
-        <tr th:each="cliente : ${clientes}">
-          <td th:text="${cliente.nombre}"></td>
-          <td th:text="${cliente.id}"></td>
-          <td th:text="${cliente.cedula}"></td>
-          <td id="casilla-detalle"><a th:href="@{/clientes/find(id=${cliente.id})}"><button class="add-btn btn-detalle">Ver Detalle</button></a></td>
+        <tr th:each="droga : ${drogas}">
+            <td th:text="${droga.id}"></td>
+            <td th:text="${droga.nombre}"></td>
+            <td th:text="${droga.unidadesDisponibles}"></td>
+          
+          <td id="casilla-detalle"><a th:href="@{/drogas/find(id=${droga.id})}"><button class="add-btn btn-detalle">Ver Detalle</button></a></td>
         </tr>
       </tbody>
     </table>

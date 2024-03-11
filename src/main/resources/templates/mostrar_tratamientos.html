@@ -44,26 +44,22 @@
         <!-- Contenedor de la mascota -->
         <div id="mascota-container">
 
-            <!-- Información del tratamiento -->
+            <!-- Check if the mascota.foto is null or empty, if so, set it to a default image URL -->
+
             <div id="informacion-tratamiento" class="informacion-tratamiento">
              
-                <h2 style="text-align: center;"><strong th:text="${tratamiento.mascota.nombre}"></strong></h2> 
-
-                <p><strong>Droga Aplicada:</strong> <span th:text="${tratamiento.droga}"></span></p>
-               
+                <h2 style="text-align: center;"><strong th:text="${tratamiento.mascota?.nombre}"></strong></h2>
+                <h2><strong>Id de mascota: </strong><strong th:text="${tratamiento.mascota?.id}"></strong></h2>                
+                <p><strong>Droga Aplicada:</strong> <span th:text="${tratamiento.droga?.nombre}"></span></p>
                 <p><strong>Descripción:</strong> <span th:text="${tratamiento.descripcion}"></span></p>
                
                 <p><strong>Fecha de Inicio:</strong> <span th:text="${tratamiento.fechaInicio}"></span></p>
                
                 <p><strong>Fecha de Fin:</strong> <span th:text="${tratamiento.fechaFin}"></span></p>
- 
-                <p><strong>Veterinario:</strong> <span th:text="${tratamiento.veterinario}"></span></p>
-               
-                <p><strong>Enfermedad:</strong> <span th:text="${tratamiento.mascota.enfermedad}"></span></p>
-                <!-- Botón para modificar el tratamiento -->
-                <a th:href="@{/tratamientos/update/{id}(id=${tratamiento.id})}">
-                    <button id="button_modificar_tratamiento">Modificar</button>
-                </a>
+                <p><strong>Veterinario:</strong> <span th:text="${tratamiento.veterinario?.nombre}"></span></p>
+                <p><strong>Enfermedad:</strong> <span th:text="${tratamiento.mascota?.enfermedad}"></span></p>
+                <!--<p><strong>Tratamiento:</strong> <span th:text="${mascota.tratamiento}"></span></p>-->
+                <a th:href="@{/tratamientos/update/{id}(id=${tratamiento.id})}"><button id="button_modificar">Modificar</button></a>
             </div>
         </div>
     </section>

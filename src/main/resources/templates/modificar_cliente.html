@@ -16,7 +16,11 @@
     <div class="form-general-group">
     <h2>Editar Cliente</h2>
     <form th:object="${cliente}" th:action="@{/clientes/update/{id}(id=${cliente.id})}" th:method="post">
-        <!-- formulario para modificar un cliente trayendo toda su información-->
+        <!-- formulario para modificar un cliente trayendo toda su información-->        <div class="form-group">
+            <label for="cedula">CÉDULA</label><br>
+            <input th:field="*{cedula}" type="number" id="cedula" name="cedula"required><br>
+        </div>
+
         <div class="form-group">
             <label for="nombre">Nombre:</label><br>
             <input th:field="*{nombre}" type="text" id="nombre" name="nombre" required><br>

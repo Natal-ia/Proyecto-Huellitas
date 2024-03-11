@@ -4,14 +4,14 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class Tratamiento {
-    private String droga;
+ 
     private String descripcion;
     private String fechaInicio;
     private String fechaFin;
-    private String veterinario;
 
     @Id
     @GeneratedValue
@@ -21,11 +21,18 @@ public class Tratamiento {
     @ManyToOne
     private Mascota mascota;
 
+    @ManyToOne
+    private Droga droga;
+
+    @ManyToOne
+    private Veterinario veterinario;
+
+
 
     public Tratamiento() {
     }
 
-    public Tratamiento(String droga, String descripcion, String fechaInicio, String fechaFin, String veterinario, Mascota mascota) {
+    public Tratamiento(Droga droga, String descripcion, String fechaInicio, String fechaFin, Veterinario veterinario, Mascota mascota) {
         this.droga = droga;
         this.descripcion = descripcion;
         this.fechaInicio = fechaInicio;
@@ -33,7 +40,13 @@ public class Tratamiento {
         this.veterinario = veterinario;
         this.mascota = mascota;
     }
-    public Tratamiento(Long id, String droga, String descripcion, String fechaInicio, String fechaFin, String veterinario, Mascota mascota) {
+    public Tratamiento( String descripcion, String fechaInicio, String fechaFin, Mascota mascota) {
+        this.descripcion = descripcion;
+        this.fechaInicio = fechaInicio;
+        this.fechaFin = fechaFin;
+        this.mascota = mascota;
+    }
+    public Tratamiento(Long id, Droga droga, String descripcion, String fechaInicio, String fechaFin, Veterinario veterinario, Mascota mascota) {
         this.id = id;
         this.droga = droga;
         this.descripcion = descripcion;
@@ -43,10 +56,10 @@ public class Tratamiento {
         this.mascota = mascota;
     }
 
-    public String getDroga() {
+    public Droga getDroga() {
         return droga;
     }
-    public void setDroga(String droga) {
+    public void setDroga(Droga droga) {
         this.droga = droga;
     }
     public String getDescripcion() {
@@ -67,10 +80,10 @@ public class Tratamiento {
     public void setFechaFin(String fechaFin) {
         this.fechaFin = fechaFin;
     }
-    public String getVeterinario() {
+    public Veterinario getVeterinario() {
         return veterinario;
     }
-    public void setVeterinario(String veterinario) {
+    public void setVeterinario(Veterinario veterinario) {
         this.veterinario = veterinario;
     }
     public Long getId() {
