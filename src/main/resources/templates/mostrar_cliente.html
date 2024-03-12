@@ -24,7 +24,7 @@
         </a>
         <h3 id="header_title"> Informacion del cliente</h3>
 
-        <a href="javascript:history.back()"><button id="button_back">Volver</button></a>
+        <a href="/clientes/all"><button id="button_back">Volver</button></a>
     </header>
 
     <!-- Tarjetón del cliente -->
@@ -45,7 +45,7 @@
         </div>
 
         <!-- Tarjetón de las mascotas del cliente th:href="@{/mascotas/deactivate/{id}(id=${mascota.id})}"-->
-        <section id="mascotas-table-vista" class="">
+        <section id="mascotas-table-vista">
             <!-- Check if cliente.mascotas is not null before iterating -->
             <th:block th:if="${cliente.mascotas != null}">
                 <div th:each="mascota : ${cliente.mascotas}">

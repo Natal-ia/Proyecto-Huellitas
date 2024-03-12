@@ -23,25 +23,27 @@
 }
 
 #error-content {
-    background-color: #ff8080a5;
-    margin: 5vw;
+    background-color: #ffac809e;
+    margin: 7vw 5vw;
     border-radius: 1vw;
     color: rgb(255, 255, 255);
     text-align: center;
     width: fit-content;
     height: fit-content;
-    padding: 2vw;
+    padding: 2vw 4vw;
 }
 
 #error-content h1 {
     font-size: 9vw;
     font-weight: bold;
     margin: 0;
+    font-family: 'Amatic SC', sans-serif;
 }
 
 #error-content h2 {
     font-size: 4vw;
     font-weight: bold;
+    font-family: 'Amatic SC', sans-serif;
 }
 
 #error-content button {

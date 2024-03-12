@@ -41,14 +41,29 @@
         </div>
 
         <!-- Tarjetón de las mascotas del cliente-->
-        <section id="todas-mascotas">
-            <section id="mascotas-table-vista" class="clientes-specific  lista-mascotas-vista">
-                <a style="text-decoration: none; color: black;" th:href="@{/mascotas/find(id=${mascota.id})}"
-                <div th:each="mascota : ${cliente.mascotas}" class="mascota-info info-vista">
-                    <img class = "mascota_cliente" src="" alt="Foto de la mascota" th:src="${mascota.foto == null or mascota.foto == '' ? '/img/bichon.png' : mascota.foto}">
-                    <h2 th:text="${mascota.nombre}"></h2>
-                </a>
-            </section>
+        <section id="mascotas-table-vista">
+            <!-- Check if cliente.mascotas is not null before iterating -->
+            <th:block th:if="${cliente.mascotas != null}">
+                <div th:each="mascota : ${cliente.mascotas}">
+                    <a style="text-decoration: none; color: black;" th:if="${mascota.estado}"
+                        th:href="@{/mascotas/find(id=${mascota.id})}">
+                        <!--<div class="specified-mascota" th:classappend="${mascota.estado == false} ? 'inactive'"> -->
+                        <div class="mascota-info info-vista">
+                            <img class="mascota_cliente" src="" alt="Foto de la mascota"
+                                th:src="${mascota.foto == null or mascota.foto == '' ? '/img/bichon.png' : mascota.foto}">
+                            <h2 th:text="${mascota.nombre}"></h2>
+                        </div>
+                    </a>
+                    <div th:if="${!mascota.estado}" class="mascota-info info-vista specified-mascota-inactive">
+                        <img class="mascota_cliente" src="" alt="Foto de la mascota"
+                            th:src="${mascota.foto == null or mascota.foto == '' ? '/img/bichon.png' : mascota.foto}">
+                        <div class="column">
+                            <h2 th:text="${mascota.nombre}"></h2>
+                        <a th:href="@{'/mascotas/activate/' + ${mascota.id} + '/' + ${cliente.id}}">Activate</a>
+                        </div>
+                    </div>
+                </div>
+            </th:block>
         </section>
     </div>
 

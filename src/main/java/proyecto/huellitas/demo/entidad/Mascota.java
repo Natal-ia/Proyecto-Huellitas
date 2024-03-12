@@ -19,7 +19,7 @@ public class Mascota {
     private double peso;
     private String enfermedad;
     private String foto;
-    private Boolean estado;
+    private Boolean estado = true;
 
     @Id
     @GeneratedValue

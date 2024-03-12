@@ -18,6 +18,10 @@ lima pastel     #CDFADB
     margin-top: 3vw;
 }
 
+.seccion-boton{
+    display: flex;
+    flex-direction: row;
+}
 #add-client{
     margin-left: 10vw;
 }

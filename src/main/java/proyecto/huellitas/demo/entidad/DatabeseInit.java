@@ -93,13 +93,13 @@ public class DatabeseInit implements ApplicationRunner {
         mascotaRepository.save(new Mascota("Molly", "Shih Tzu", 4, 35, "ninguna", "https://cdn.pixabay.com/photo/2019/11/16/04/32/shihtzu-4629612_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Daisy", "Bulldog", 6, 20, "ninguna", "https://cdn.pixabay.com/photo/2017/06/24/09/13/continental-bulldog-2437110_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Bailey", "Shiba Inu", 5, 17, "ninguna", "https://cdn.pixabay.com/photo/2021/05/29/07/06/shiba-6292660_1280.jpg", null, null));
-        mascotaRepository.save(new Mascota("Lola", "Pomeranian", 3, 8, "ninguna", "https://cdn.pixabay.com/photo/2016/07/26/02/01/pomeranian-1541798_1280.jpg", null, null));
+        mascotaRepository.save(new Mascota("Lola", "Pomeranian", 3, 8, "ninguna", "https://cdn.pixabay.com/photo/2020/08/21/13/13/puppy-5506147_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Bella", "French Bulldog", 2, 16, "ninguna", "https://cdn.pixabay.com/photo/2019/12/22/17/13/french-bulldog-4713013_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Cooper", "Akita", 1, 5, "ninguna", "https://cdn.pixabay.com/photo/2017/07/24/15/07/akita-2534986_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Bentley", "Corgi", 3, 10, "ninguna", "https://cdn.pixabay.com/photo/2021/10/13/09/01/corgi-6705821_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Sophie", "Maltese", 4, 7, "ninguna", "https://cdn.pixabay.com/photo/2016/01/05/17/51/maltese-1123016_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Charlie", "Cocker Spaniel", 2, 14, "ninguna", "https://cdn.pixabay.com/photo/2018/12/15/16/01/beagle-3877115_1280.jpg", null, null));
-        mascotaRepository.save(new Mascota("Lola", "Great Dane", 5, 55, "ninguna", null, null, null));
+        mascotaRepository.save(new Mascota("Lola", "Great Dane", 5, 55, "ninguna", "https://cdn.pixabay.com/photo/2022/04/04/19/29/dog-7112233_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Riley", "Doberman", 3, 30, "ninguna", "https://cdn.pixabay.com/photo/2016/06/05/20/35/doberman-dog-1438132_1280.jpg", null, null));
 
         mascotaRepository.save(new Mascota("Benetta", "Globicephala melas", 7, 3, "Silverado",
@@ -186,7 +186,7 @@ public class DatabeseInit implements ApplicationRunner {
         mascotaRepository.save(new Mascota("Rickey", "Globicephala melas", 15, 4, "Outlander",
                 "https://cdn.pixabay.com/photo/2016/12/21/17/54/miniature-schnauzer-1923470_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Al", "Sylvicapra grimma", 18, 3, "CTS",
-                "http://dummyimage.com/184x100.png/5fa2dd/ffffff", null, null));
+                "https://cdn.pixabay.com/photo/2020/10/21/00/35/dog-5671778_640.jpg", null, null));
         mascotaRepository.save(new Mascota("Henriette", "Dasypus septemcincus", 2, 3, "GX",
                 "https://cdn.pixabay.com/photo/2016/03/05/17/52/rescue-1238145_1280.jpg", null, null));
 
