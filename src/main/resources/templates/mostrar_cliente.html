@@ -24,7 +24,7 @@
         </div>
 
         <h3 id="header_title"> Informacion del cliente</h3>
-        <a href="/clientes/all"><button id="button_back">Volver</button></a>
+        <a href="javascript:history.back()"><button id="button_back">Volver</button></a>
 
 
     </header>
@@ -46,16 +46,25 @@
                 </div>     
         </div>
 
-        <!-- Tarjetón de las mascotas del cliente-->
+        <!-- Tarjetón de las mascotas del cliente th:href="@{/mascotas/deactivate/{id}(id=${mascota.id})}"-->
         <section id="todas-mascotas">
-            <section id="mascotas-table-vista" class="clientes-specific  lista-mascotas-vista">
-                <a style="text-decoration: none; color: black;" th:href="@{/mascotas/find(id=${mascota.id})}"
-                <div th:each="mascota : ${cliente.mascotas}" class="mascota-info info-vista">
-                    <img class = "mascota_cliente" src="" alt="Foto de la mascota" th:src="${mascota.foto == null or mascota.foto == '' ? '/img/bichon.png' : mascota.foto}">
-                    <h2 th:text="${mascota.nombre}"></h2>
-                </a>
+            <section id="mascotas-table-vista" class="clientes-specific lista-mascotas-vista">
+                <!-- Check if cliente.mascotas is not null before iterating -->
+                <th:block th:if="${cliente.mascotas != null}">
+                    <a style="text-decoration: none; color: black;" th:href="@{/mascotas/find(id=${mascota.id})}" th:each="mascota : ${cliente.mascotas}">
+                        <div class="mascota-info info-vista" th:classappend="${mascota.estado == false} ? 'inactive'">
+                            <img class="mascota_cliente" src="" alt="Foto de la mascota" th:src="${mascota.foto == null or mascota.foto == '' ? '/img/bichon.png' : mascota.foto}">
+                            <h2 th:text="${mascota.nombre}"></h2>
+                        </div>
+                        <a th:if="${!mascota.estado}" th:href="@{'/mascotas/activate/' + ${mascota.id} + '/' + ${cliente.id}}" class="add-btn">Activate</a>
+                    </a>
+                </th:block>
             </section>
         </section>
+        
+        
+        </section>
+        
     </div>
 
     <script src="https://kit.fontawesome.com/0fca6b0410.js" crossorigin="anonymous"></script>

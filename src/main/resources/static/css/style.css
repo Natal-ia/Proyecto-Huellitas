@@ -19,7 +19,7 @@ lima pastel     #CDFADB
     margin-top: 3vw;
 }
 
-#cliente-container .add-btn {
+#add-client{
     margin-left: 10vw;
 }
 
@@ -132,6 +132,7 @@ lima pastel     #CDFADB
     border-color: #ffa074;
 }
 
+
 .btn-detalle:hover {
     background-color: #ffa074;
 }
@@ -139,6 +140,7 @@ lima pastel     #CDFADB
 .mascota-info {
     display: inline-flex;
     justify-content: space-evenly;
+    padding-right: auto;
 }
 
 
@@ -146,6 +148,7 @@ lima pastel     #CDFADB
     padding: 2vw;
     margin: 0 1vw;
     width: 30vw;
+    height: 16vw;
     border-radius: 1vw;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
@@ -183,7 +186,8 @@ lima pastel     #CDFADB
 #mascota-container-todas .mascota-actions {
     display: flex;
     flex-direction: column;
-    width: 10vw;
+    width: 5vw;
+    padding: 1vw;
 }
 
 
@@ -284,8 +288,14 @@ lima pastel     #CDFADB
 
 }
 
-#clientes-table #casilla-detalle {
+
+#casilla-detalle btn-detalle{
     background-color: white;
+    width: fit-content;
+    margin: 0 0 0 -10vw;
+}
+#casilla-detalle a{
+    width: fit-content;
 }
 
 #todas-mascotas,
@@ -347,6 +357,7 @@ header .navbar-full {
     display: inline-flex;
     margin-bottom: 8vw;
 }
+
 
 .mascotas-clientes {
     background-color: #FFCF96;
@@ -541,4 +552,10 @@ header .navbar-full {
 
 .btn-trat{
     margin-left: 8.8vw;
+}
+
+.mascota-info.inactive {
+    opacity: 0.5;
+    pointer-events:unset;
+    user-select: none;
 }

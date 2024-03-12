@@ -11,5 +11,9 @@ import proyecto.huellitas.demo.entidad.Cliente;
 @Repository
 public interface MascotaRepository extends JpaRepository<Mascota, Long>{
     
-
+    default void changeEstadoById(Long id) {
+        Mascota mascota = findById(id).orElseThrow(() -> new RuntimeException("Mascota not found with id: " + id));
+        mascota.changeEstado();
+        save(mascota);
+    }
 } 

@@ -1,11 +1,10 @@
 package proyecto.huellitas.demo.servicio;
 import java.util.Collection;
 import java.util.List;
-
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import proyecto.huellitas.demo.entidad.Cliente;
+import proyecto.huellitas.demo.controlador.NotFoundException;
 import proyecto.huellitas.demo.entidad.Mascota;
 import proyecto.huellitas.demo.entidad.Tratamiento;
 import proyecto.huellitas.demo.repositorio.MascotaRepository;
@@ -23,10 +22,14 @@ public class MascotaServiceImpl implements MascotaService {
     @Autowired
     TratamientoRepository TratamientoRepository;
     
-
     @Override
     public Mascota SearchById(Long id) {
-        return repo.findById(id).get();
+        Optional<Mascota> optionalMascota = repo.findById(id);
+        if (optionalMascota.isPresent()) {
+            return optionalMascota.get();
+        } else {
+            throw new NotFoundException(); 
+        }
     }
 
     @Override
@@ -36,8 +39,12 @@ public class MascotaServiceImpl implements MascotaService {
 
     @Override
     public void DeleteById(Long id) {
-
         repo.deleteById(id);
+    }
+
+    @Override
+    public void changeState(Long id) {
+        repo.changeEstadoById(id);
     }
 
     @Override
@@ -48,7 +55,6 @@ public class MascotaServiceImpl implements MascotaService {
 
     @Override
     public void Add(Mascota mascota) {
-        
         repo.save(mascota);
     }
 

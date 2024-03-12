@@ -13,9 +13,11 @@
 
 </head>
 
-<body>
+<body id="error-body">
+    <video autoplay muted loop id="error-video" >
+        <source th:src="@{/video/video_perrito.mp4}" type="video/mp4">
+    </video> 
     <div id="error-body">
-        <!-- Sección del cuadro de error -->
         <section id="error-content">
             <h1>ERROR</h1>
             <h2>Página no encontrada</h2>
@@ -23,5 +25,4 @@
         </section>
     </div>
 </body>
-
 </html>
