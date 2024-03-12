@@ -72,29 +72,9 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
+  <script th:src="@{/searchbar.js}" type="text/javascript"></script>
   <script src="https://kit.fontawesome.com/0fca6b0410.js" crossorigin="anonymous"></script>
 </body>
-
-<script>
-  function searchMascota() {
-    var input, filter, mascotas, mascotaContainer, nombre, i, txtValue;
-    input = document.getElementById('searchInput');
-    filter = input.value.toUpperCase();
-    mascotas = document.getElementById("mascotas-table");
-    mascotaContainer = mascotas.querySelectorAll('#mascota-container-todas');
-    
-    for (i = 0; i < mascotaContainer.length; i++) {
-      nombre = mascotaContainer[i].getElementsByTagName("h2")[0];
-      txtValue = nombre.textContent || nombre.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        mascotaContainer[i].style.display = "";
-      } else {
-        mascotaContainer[i].style.display = "none";
-      }
-    }
-  }
-</script>
 
 
 </html>
