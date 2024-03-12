@@ -32,7 +32,7 @@
         <h3 id="header_title"> Informacion del tratamiento</h3>
 
         <!-- Botón para volver atrás -->
-        <a href="javascript:history.back()"><button id="button_back">Volver</button></a>
+        <a href=""><button id="button_back">Volver</button></a>
        
         <!-- <img class="volver" th:src="@{/img/bichon.png}" alt="Volver"> -->
 
@@ -40,16 +40,9 @@
 
     <section class="content-mascota-specific">
         <title>Detalle de Tratamiento</title> 
-
-        <!-- Contenedor de la mascota -->
         <div id="mascota-container">
-
-            <!-- Check if the mascota.foto is null or empty, if so, set it to a default image URL -->
-
             <div id="informacion-tratamiento" class="informacion-tratamiento">
-             
-                <h2 style="text-align: center;"><strong th:text="${tratamiento.mascota?.nombre}"></strong></h2>
-                <h2><strong>Id de mascota: </strong><strong th:text="${tratamiento.mascota?.id}"></strong></h2>                
+                <h2 style="text-align: center;"><strong th:text="${tratamiento.mascota?.nombre}"></strong></h2>                
                 <p><strong>Droga Aplicada:</strong> <span th:text="${tratamiento.droga?.nombre}"></span></p>
                 <p><strong>Descripción:</strong> <span th:text="${tratamiento.descripcion}"></span></p>
                

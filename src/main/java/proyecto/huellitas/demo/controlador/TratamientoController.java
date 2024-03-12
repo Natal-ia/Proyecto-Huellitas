@@ -89,9 +89,6 @@ public class TratamientoController {
     }
 
 
-
-
-
     @PostMapping("/agregar")
     public String agregarTratamiento(@ModelAttribute("tratamiento") Tratamiento tratamiento) {
 
@@ -100,10 +97,10 @@ public class TratamientoController {
             tratamiento.setMascota(asociar);
             tratamiento.setId(null);
             tratamientoService.Add(tratamiento);
+            return "redirect:/mascotas/find/" + asociar.getId();
         } else {
-            // Handle the case when the associated client is not found
+            throw new NotFoundException();
         }
-        return "redirect:/tratamientos/all";
     }
 
     

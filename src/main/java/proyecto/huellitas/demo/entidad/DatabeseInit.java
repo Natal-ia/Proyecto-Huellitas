@@ -72,10 +72,10 @@ public class DatabeseInit implements ApplicationRunner {
                 "https://www.webconsultas.com/sites/default/files/styles/wch_image_schema/public/temas/caracteristicas-perro-labrador.jpg",
                 null, null));
         mascotaRepository.save(new Mascota("Tommy", "labrador", 5, 25, "ninguna",
-                "https://www.webconsultas.com/sites/default/files/styles/wch_image_schema/public/temas/caracteristicas-perro-labrador.jpg",
+                "https://us.123rf.com/450wm/ithorhanna/ithorhanna2309/ithorhanna230900277/213274703-hermoso-adorable-cachorrito-lindo-bebé-perro-perro-pequeño-perrito-cachorro-esponjoso.jpg",
                 null, null));
-        mascotaRepository.save(new Mascota("Firulais", "labrador", 5, 25, "ninguna",
-                "https://www.webconsultas.com/sites/default/files/styles/wch_image_schema/public/temas/caracteristicas-perro-labrador.jpg",
+        mascotaRepository.save(new Mascota("Firulais", "Korgi", 5, 7, "ninguna",
+                "https://www.seguroparaperros.com/wp-content/uploads/2021/11/cuidado-perros-primavera-1.jpg",
                 null, null));
         mascotaRepository.save(new Mascota("Pepito", "Pastor Aleman", 1, 24, "ninguna",
                 "https://www.bunko.pet/__export/1626998425404/sites/debate/img/2021/07/22/pastor_aleman_cachorro_crop1626998340680.jpeg_554688468.jpeg",
@@ -166,7 +166,7 @@ public class DatabeseInit implements ApplicationRunner {
         mascotaRepository.save(new Mascota("Dorelia", "Alligator mississippiensis", 11, 4, "Excel",
                 "https://cdn.pixabay.com/photo/2017/07/15/07/47/pug-2505763_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Halsy", "Haliaeetus leucocephalus", 15, 4, "Silverado 1500",
-                "http://dummyimage.com/174x100.png/5fa2dd/ffffff", null, null));
+                "https://media.istockphoto.com/id/636475496/es/foto/retrato-de-cachorro-marrón-con-fondo-bokeh.jpg?s=612x612&w=0&k=20&c=xVLp2lHN7AhVyTMBXWTf1yfRyJovXT1R0hUwk98Riw8=", null, null));
         mascotaRepository.save(new Mascota("Holly", "Pelecans onocratalus", 20, 4, "Savana 3500",
                 "https://cdn.pixabay.com/photo/2016/12/27/03/04/pet-1933138_1280.jpg", null, null));
         mascotaRepository.save(new Mascota("Farah", "Crotalus triseriatus", 10, 3, "Camaro",
