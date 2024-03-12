@@ -44,8 +44,9 @@
 
     <section id="mascotas-table">
       <a th:href="@{/mascotas/add}"><button class="add-btn">Agregar Mascota</button></a>
+
       <br>
-        <div id="mascota-container-todas" th:each="mascota : ${mascotas}">
+      <div id="mascota-container-todas" th:each="mascota : ${mascotas}" th:if="${mascota.estado}">
                   <!-- Celdas de la tabla con los datos de las mascotas recorridos -->
           <div class="mascota-info">
             <img class = "img-mascota-todas" src="" alt="Foto de la mascota" th:src="${mascota.foto == null or mascota.foto == '' ? '/img/bichon.png' : mascota.foto}">
@@ -60,7 +61,7 @@
             <a th:href="@{/mascotas/find(id=${mascota.id})}">
               <i class="more-info fa-solid fa-circle-info" style="color: #ff7474; font-size: 1.8vw; margin-top: 2vw;"></i>
             </a>
-            <a th:href="@{/mascotas/delete/{id}(id=${mascota.id})}"  style="color: #eb0000; font-size: 1.8vw; margin-top: 0.8vw;">
+            <a th:href="@{/mascotas/deactivate/{id}(id=${mascota.id})}"  style="color: #eb0000; font-size: 1.8vw; margin-top: 0.8vw;">
               <i class="delete-btn fa-solid fa-trash" style="color: #eb0000;"></i>
           </a>
           </div>

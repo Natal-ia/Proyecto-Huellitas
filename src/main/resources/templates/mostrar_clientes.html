@@ -41,7 +41,7 @@
     <div id="cliente-container">
 
       <!-- Botón para agregar un nuevo cliente -->
-      <a th:href="@{/clientes/add}"><button class="add-btn">Agregar Cliente</button></a>
+      <a th:href="@{/clientes/add}"><button class="add-btn" id="add-client">Agregar Cliente</button></a>
       
     <section id="todos-clientes">
       <!-- Tabla con todos los clientes -->
@@ -49,8 +49,8 @@
       <thead>
         <tr>
           <th>Nombre</th>
-          <th>Número de cédula</th>
-          <th>Cedula</th>
+          <th>Cédula</th>
+          <th>Correo</th>
           <th></th>
         </tr>
       </thead>
@@ -58,8 +58,8 @@
         <!-- Celdas de la tabla con los datos de los clientes recorridos -->
         <tr th:each="cliente : ${clientes}">
           <td th:text="${cliente.nombre}"></td>
-          <td th:text="${cliente.id}"></td>
           <td th:text="${cliente.cedula}"></td>
+          <td th:text="${cliente.correo}"></td>
           <td id="casilla-detalle"><a th:href="@{/clientes/find(id=${cliente.id})}"><button class="add-btn btn-detalle">Ver Detalle</button></a></td>
         </tr>
       </tbody>

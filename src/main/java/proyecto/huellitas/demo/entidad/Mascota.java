@@ -19,6 +19,7 @@ public class Mascota {
     private double peso;
     private String enfermedad;
     private String foto;
+    private Boolean estado;
 
     @Id
     @GeneratedValue
@@ -40,6 +41,7 @@ public class Mascota {
         this.foto = foto;
         this.cliente = cliente;
         this.tratamientos = tratamientos;
+        this.estado = true;
     }
 
     public Mascota(Long id, String nombre, String raza, int edad, double peso, String enfermedad, String foto,
@@ -53,6 +55,7 @@ public class Mascota {
         this.foto = foto;
         this.cliente = cliente;
         this.tratamientos = tratamientos;
+        this.estado = true;
     }
 
     public Mascota() {
@@ -128,5 +131,17 @@ public class Mascota {
 
     public void setTratamientos(List<Tratamiento> tratamientos) {
         this.tratamientos = tratamientos;
+    }
+
+    public Boolean getEstado() {
+        return estado;
+    }
+
+    public void setEstado(Boolean estado) {
+        this.estado = estado;
+    }
+
+    public void changeEstado() {
+        this.estado = !this.estado;
     }
 }

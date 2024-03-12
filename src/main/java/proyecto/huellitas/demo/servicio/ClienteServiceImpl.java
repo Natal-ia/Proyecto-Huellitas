@@ -2,11 +2,13 @@ package proyecto.huellitas.demo.servicio;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import jakarta.transaction.Transactional;
+import proyecto.huellitas.demo.controlador.NotFoundException;
 import proyecto.huellitas.demo.entidad.Cliente;
 import proyecto.huellitas.demo.entidad.Mascota;
 import proyecto.huellitas.demo.repositorio.MascotaRepository;
@@ -26,7 +28,12 @@ public class ClienteServiceImpl implements ClienteService {
 
     @Override
     public Cliente SearchById(Long id) {
-        return repo.findById(id).orElse(null);
+        Optional<Cliente> optionalCliente = repo.findById(id);
+        if (optionalCliente.isPresent()) {
+            return optionalCliente.get();
+        } else {
+            throw new NotFoundException(); 
+        }
     }
 
     @Override
@@ -36,8 +43,11 @@ public class ClienteServiceImpl implements ClienteService {
 
     @Override
     public void DeleteById(Long id) {
-
-        repo.deleteById(id);
+        try{
+             repo.deleteById(id);
+        }catch (Exception e) {
+            throw new NotFoundException();
+        }
     }
 
     @Override

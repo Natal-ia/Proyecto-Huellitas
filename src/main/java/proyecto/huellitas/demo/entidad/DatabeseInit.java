@@ -274,21 +274,6 @@ public class DatabeseInit implements ApplicationRunner {
         veterinarioRepository.save(new Veterinario("daniel", "1000149472", "sacrificador", 500,
                 "https://i.imgflip.com/612dfk.png"));
 
-        /*
-         * // asociar mascotas a clientes VIEJO
-         * Long cont = 1L;
-         * Boolean flag = false;
-         * for (Mascota ms : mascotaRepository.findAll()) {
-         * Cliente asociar = clienteRepository.findById(cont).get();
-         * ms.setCliente(asociar);
-         * mascotaRepository.save(ms);
-         * if (flag) {
-         * cont += 1;
-         * }
-         * flag = !flag;
-         * }
-         */
-
 
          // asociar mascotas a clientes NUEVO 
         // Get all clients and pets
@@ -354,8 +339,6 @@ public class DatabeseInit implements ApplicationRunner {
                 ms3.setVeterinario(asociarV);
                 tratamientoRepository.save(ms3);
             } else {
-                // Handle case where Veterinario is not found
-                // For example: Log an error message or take appropriate action
                 System.err.println("Veterinario with ID " + cont4 + " not found.");
             }
             if (flag4) {
@@ -363,17 +346,5 @@ public class DatabeseInit implements ApplicationRunner {
             }
             flag4 = !flag4;
         }
-
-        /*
-         * for (Tratamiento ms : tratamientoRepository.findAll()) {
-         * Random random = new Random();
-         * // Generate a random number between 1 and 20 (inclusive)
-         * Long randomNumber = random.nextLong(22) + 1;
-         * 
-         * Mascota asociar = mascotaRepository.findById(randomNumber).get();
-         * ms.setMascota(asociar);
-         * tratamientoRepository.save(ms);
-         * }
-         */
     }
 }

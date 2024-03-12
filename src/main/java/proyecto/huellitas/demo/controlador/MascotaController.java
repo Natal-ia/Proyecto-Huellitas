@@ -48,7 +48,7 @@ public class MascotaController {
             return "mostrar_mascotas";
     
         }else{
-            return "pagina_error";
+            throw new NotFoundException();
         }
     
     }
@@ -60,9 +60,8 @@ public class MascotaController {
         if (mascota!=null) {
             model.addAttribute("mascota", mascota);
             return "mostrar_mascotas";
-    
         }else{
-            return "pagina_error";
+            throw new NotFoundException();
         }
     }
     
@@ -84,18 +83,29 @@ public String agregarMascota(@ModelAttribute("mascota") Mascota mascota) {
         mascota.setCliente(asociar);
         mascota.setId(null);
         mascotaService.Add(mascota);
-    } else {
+    } else {    
         // Handle the case when the associated client is not found
     }
     return "redirect:/mascotas/all";
 }
-    
     
     @GetMapping("/delete/{id}")
     public String borrarMascota(@PathVariable("id") Long identificacion){
         mascotaService.DeleteById(identificacion);
         return "redirect:/mascotas/all";
     }
+    @GetMapping("/deactivate/{id}")
+    public String changeStateMascota(@PathVariable("id") Long identificacion){
+        mascotaService.changeState(identificacion);
+        return "redirect:/mascotas/all";
+    }
+
+    @GetMapping("/activate/{mascotaId}/{clientId}")
+    public String changeStateMascota2(@PathVariable("mascotaId") Long mascotaId, @PathVariable("clientId") Long clientId) {
+        mascotaService.changeState(mascotaId);
+        return "redirect:/clientes/find?id=" + clientId;
+    }
+    
     
     @GetMapping("/update/{id}")
     public String mostrarFormularioUpdate(@PathVariable("id") Long identificacion, Model model){

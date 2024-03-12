@@ -1,6 +1,5 @@
 package proyecto.huellitas.demo.controlador;
 
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
@@ -8,10 +7,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 public class ErrorController {
     
     @ExceptionHandler(NotFoundException.class)
-    public String error(Model model, NotFoundException ex){
-
-        model.addAttribute("id", ex.getId());
-
+    public String error(NotFoundException ex){
         return ("pagina_error");     
     }
 }

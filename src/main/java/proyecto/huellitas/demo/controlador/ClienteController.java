@@ -50,9 +50,12 @@ public class ClienteController {
     @GetMapping("/find/{id}")
     public String mostrarInfoClienteConMascotas(Model model, @PathVariable("id") Long identificacion) {
         Cliente cliente = clienteService.SearchById(identificacion);
-        model.addAttribute("cliente", cliente);
-        return "mostrar_cliente";
-
+        if (cliente!=null) {
+            model.addAttribute("cliente", cliente);
+            return "mostrar_cliente";
+        }else{
+            throw new NotFoundException();
+        }
      
     }
 
@@ -90,11 +93,10 @@ public class ClienteController {
         clienteService.Add(cliente);
         return "redirect:/clientes/all";
     }
-
+    
     @GetMapping("/delete/{id}")
     public String borrarCliente(@PathVariable("id") Long identificacion) {
         clienteService.DeleteById(identificacion);
-
         return "redirect:/clientes/all";
     }
 
