@@ -18,6 +18,12 @@ lima pastel     #CDFADB
     margin-top: 3vw;
 }
 
+.input-busqueda{
+    border-radius: 20vw;
+    border-style: none;
+    background-color: aliceblue;
+    padding: 1vw;
+}
 .seccion-boton{
     display: flex;
     flex-direction: row;
