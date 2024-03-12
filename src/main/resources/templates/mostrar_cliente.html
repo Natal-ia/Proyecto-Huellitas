@@ -17,54 +17,58 @@
 
 <body>
     <header class="navbar-specific">
-        <div>
-            <img class="logo" th:src="@{/img/logo.png}" alt="Logo huellitas felices">
-            <h2>Huellitas Felices</h2>
-
-        </div>
-
+        <a id="button-huellitas" th:href="@{/}"><button>
+                <img class="logo" th:src="@{/img/logo.png}" alt="Logo huellitas felices">
+                <h2>Huellitas Felices</h2>
+            </button>
+        </a>
         <h3 id="header_title"> Informacion del cliente</h3>
+
         <a href="javascript:history.back()"><button id="button_back">Volver</button></a>
-
-
     </header>
 
     <!-- Tarjetón del cliente -->
     <div id="container-vista">
-        <div id="cliente-container-vista">
-        
-                <div style="text-align: center;" id="informacionCliente">
-                    <h2 class="nombre-cliente" th:text="${cliente.nombre}"></h2>
-                    <p><strong>Cédula:</strong> <span th:text="${cliente.cedula}"></span></p>
-                    <p><strong>Correo:</strong> <span th:text="${cliente.correo}"></span></p>
-                    <p><strong>Celular:</strong> <span th:text="${cliente.celular}"></span></p>
-                    <a th:href="@{/clientes/update/{id}(id=${cliente.id})}"><button class="add-btn btn-detalle">Editar</button></a></td>
-                    <a style="margin-left: 14vw;" th:href="@{/clientes/delete/{id}(id=${cliente.id})}">
-                        <i class="delete-btn fa-solid fa-trash" style="color: #eb0000;"></i>
-                    </a></td>
+        <div>
+            <div style="text-align: center;" id="informacionCliente">
+                <h2 class="nombre-cliente" th:text="${cliente.nombre}"></h2>
+                <p><strong>Cédula:</strong> <span th:text="${cliente.cedula}"></span></p>
+                <p><strong>Correo:</strong> <span th:text="${cliente.correo}"></span></p>
+                <p><strong>Celular:</strong> <span th:text="${cliente.celular}"></span></p>
+                <a th:href="@{/clientes/update/{id}(id=${cliente.id})}"><button
+                        class="add-btn btn-detalle">Editar</button></a></td>
+                <a style="margin-left: 14vw;" th:href="@{/clientes/delete/{id}(id=${cliente.id})}">
+                    <i class="delete-btn fa-solid fa-trash" style="color: #eb0000;"></i>
+                </a></td>
 
-                </div>     
+            </div>
         </div>
 
         <!-- Tarjetón de las mascotas del cliente th:href="@{/mascotas/deactivate/{id}(id=${mascota.id})}"-->
-        <section id="todas-mascotas">
-            <section id="mascotas-table-vista" class="clientes-specific lista-mascotas-vista">
-                <!-- Check if cliente.mascotas is not null before iterating -->
-                <th:block th:if="${cliente.mascotas != null}">
-                    <a style="text-decoration: none; color: black;" th:href="@{/mascotas/find(id=${mascota.id})}" th:each="mascota : ${cliente.mascotas}">
-                        <div class="mascota-info info-vista" th:classappend="${mascota.estado == false} ? 'inactive'">
-                            <img class="mascota_cliente" src="" alt="Foto de la mascota" th:src="${mascota.foto == null or mascota.foto == '' ? '/img/bichon.png' : mascota.foto}">
+        <section id="mascotas-table-vista" class="">
+            <!-- Check if cliente.mascotas is not null before iterating -->
+            <th:block th:if="${cliente.mascotas != null}">
+                <div th:each="mascota : ${cliente.mascotas}">
+                    <a style="text-decoration: none; color: black;" th:if="${mascota.estado}"
+                        th:href="@{/mascotas/find(id=${mascota.id})}">
+                        <!--<div class="specified-mascota" th:classappend="${mascota.estado == false} ? 'inactive'"> -->
+                        <div class="mascota-info info-vista">
+                            <img class="mascota_cliente" src="" alt="Foto de la mascota"
+                                th:src="${mascota.foto == null or mascota.foto == '' ? '/img/bichon.png' : mascota.foto}">
                             <h2 th:text="${mascota.nombre}"></h2>
                         </div>
-                        <a th:if="${!mascota.estado}" th:href="@{'/mascotas/activate/' + ${mascota.id} + '/' + ${cliente.id}}" class="add-btn">Activate</a>
                     </a>
-                </th:block>
-            </section>
+                    <div th:if="${!mascota.estado}" class="mascota-info info-vista specified-mascota-inactive">
+                        <img class="mascota_cliente" src="" alt="Foto de la mascota"
+                            th:src="${mascota.foto == null or mascota.foto == '' ? '/img/bichon.png' : mascota.foto}">
+                        <div class="column">
+                            <h2 th:text="${mascota.nombre}"></h2>
+                        <a th:href="@{'/mascotas/activate/' + ${mascota.id} + '/' + ${cliente.id}}">Activate</a>
+                        </div>
+                    </div>
+                </div>
+            </th:block>
         </section>
-        
-        
-        </section>
-        
     </div>
 
     <script src="https://kit.fontawesome.com/0fca6b0410.js" crossorigin="anonymous"></script>
@@ -72,5 +76,3 @@
 </body>
 
 </html>
-
-
